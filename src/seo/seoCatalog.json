@@ -258,6 +258,32 @@
       ]
     },
     {
+      "id": "prj-gecitli-saglik-ocagi-tadilati",
+      "kind": "project",
+      "projectId": "prj-gecitli-saglik-ocagi-tadilati",
+      "path": "/projeler/gecitli-saglik-ocagi-tadilati",
+      "navLabel": "Geçitli Sağlık Ocağı Tadilatı",
+      "title": "Yüreğir Geçitli Cumhuriyet Sağlık Ocağı Tadilatı | Kuzey Deniz İnşaat",
+      "description": "Adana Yüreğir Geçitli Cumhuriyet Mahallesi Aile Sağlığı Merkezi ve Sağlık Ocağı hizmet binasının iç/dış cephe, tesisat ve muayene odası modernizasyon işleri eksiksiz teslim edilmiştir.",
+      "keywords": "geçitli sağlık ocağı tadilatı, yüreğir sağlık tesisi onarım, adana kamu tadilat müteahhiti, kuzey deniz inşaat referansları",
+      "ogImage": "https://www.kuzeydeniziyapi.com.tr/images/projects/gecitli-saglik-ocagi-tadilati/foto-1.jpg",
+      "ogImageAlt": "Yüreğir Geçitli Sağlık Ocağı Tadilatı — Kuzey Deniz İnşaat",
+      "image": "/images/projects/gecitli-saglik-ocagi-tadilati/foto-1.jpg",
+      "heroBadge": "Kamu Sağlık Tesisi & Bina Tadilatı",
+      "h1": "Yüreğir Geçitli Cumhuriyet Sağlık Ocağı Tadilatı",
+      "leadSummary": "Adana Yüreğir ilçesi Geçitli Cumhuriyet Mahallesi Aile Sağlığı Merkezi ve Sağlık Ocağı hizmet binasının kapsamlı tadilat, onarım, tesisat ve çevre düzenleme işleri anahtar teslim tamamlanmıştır.",
+      "client": "T.C. Sağlık Bakanlığı / Adana İl Sağlık Müdürlüğü",
+      "location": "Geçitli Cumhuriyet Mah., Yüreğir / ADANA",
+      "statusLabel": "Eksiksiz Teslim Edildi",
+      "changefreq": "monthly",
+      "priority": "0.8",
+      "highlights": [
+        "Muayene Odaları, Laboratuvar ve Aşı Odası Kapsamlı Revizyonu",
+        "İç-Dış Cephe Boya, Mantolama ve Çatı İzolasyon Yenilemesi",
+        "Sıhhi Tesisat, Elektrik, Yangın ve İklimlendirme Altyapısı"
+      ]
+    },
+    {
       "id": "prj-kizildere-deprem-konutlari",
       "kind": "project",
       "projectId": "prj-kizildere-deprem-konutlari",
