@@ -75,13 +75,13 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
 
         {/* Thumbnail Switcher if multiple images */}
         {images.length > 1 && (
-          <div className="px-6 pt-4 flex items-center gap-3">
+          <div className="px-6 pt-4 flex items-center gap-3 overflow-x-auto pb-2 scrollbar-thin">
             {images.map((img, idx) => (
               <button
                 key={`${img}-${idx}`}
                 type="button"
                 onClick={() => setActiveImage(idx)}
-                className={`h-14 w-24 rounded-xl overflow-hidden border-2 transition ${
+                className={`h-14 w-24 shrink-0 rounded-xl overflow-hidden border-2 transition ${
                   idx === activeImage
                     ? 'border-blue-400 shadow-lg shadow-blue-500/30'
                     : 'border-slate-700 opacity-65 hover:opacity-100'

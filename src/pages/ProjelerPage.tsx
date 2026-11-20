@@ -16,11 +16,11 @@ type FilterType =
 
 const FILTERS: { id: FilterType; label: string }[] = [
   { id: 'all', label: 'Tüm Projeler' },
+  { id: 'teslim-edildi', label: 'Tamamlananlar / Teslim' },
   { id: 'devam-ediyor', label: 'Devam Edenler' },
-  { id: 'teslim-edildi', label: 'Tamamlananlar' },
-  { id: 'planlama', label: 'Gelecek / Lansman' },
-  { id: 'kamu', label: 'Konut & Villa' },
+  { id: 'kamu', label: 'Kamu Taahhüt & Sağlık' },
   { id: 'ticari-sanayi', label: 'Ticari & Rezidans' },
+  { id: 'planlama', label: 'Lansman / Gelecek' },
 ];
 
 export const ProjelerPage: React.FC = () => {

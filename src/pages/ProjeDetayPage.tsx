@@ -21,23 +21,49 @@ export const ProjeDetayPage: React.FC = () => {
     return () => unsub();
   }, []);
 
-  if (!route) {
+  const liveProject =
+    (route ? projects.find((p) => p.id === route.projectId) : null) ||
+    projects.find((p) => p.id === slug || p.id === `prj-${slug}` || p.code.toLowerCase() === slug?.toLowerCase()) ||
+    SEED_PROJECTS.find((p) => p.id === slug || p.id === `prj-${slug}` || p.code.toLowerCase() === slug?.toLowerCase());
+
+  if (!route && !liveProject) {
     return <NotFoundPage />;
   }
 
-  const liveProject =
-    projects.find((p) => p.id === route.projectId) ||
-    SEED_PROJECTS.find((p) => p.id === route.projectId);
+  const effectiveRoute = route || {
+    id: liveProject!.id,
+    kind: 'project',
+    path: targetPath,
+    navLabel: liveProject!.shortName || liveProject!.title,
+    heroBadge: liveProject!.categoryLabel || 'Kamu & İnşaat Taahhüt Projesi',
+    h1: liveProject!.title,
+    leadSummary: liveProject!.description,
+    image: liveProject!.image,
+    ogImageAlt: liveProject!.title,
+    location: liveProject!.location,
+    client: liveProject!.client,
+    serviceType: liveProject!.categoryLabel,
+    statusLabel: liveProject!.statusBadge,
+    highlights: liveProject!.highlights,
+    sections: [
+      {
+        heading: 'Proje Kapsamı ve İmalat Standartları',
+        summary: liveProject!.description,
+        bullets: liveProject!.highlights,
+      },
+    ],
+    relatedPaths: [],
+  };
 
   const gallery = Array.from(
     new Set([
       ...(liveProject?.image ? [liveProject.image] : []),
       ...(liveProject?.galleryImages || []),
-      ...(route.image ? [route.image] : []),
+      ...(effectiveRoute.image ? [effectiveRoute.image] : []),
     ])
   );
 
-  const related = (route.relatedPaths || [])
+  const related = (effectiveRoute.relatedPaths || [])
     .map((p) => SEO_ROUTES.find((r) => r.path === p))
     .filter(Boolean);
 
@@ -51,19 +77,19 @@ export const ProjeDetayPage: React.FC = () => {
             <span>/</span>
             <Link to="/projeler" className="hover:text-blue-400 transition">Projelerimiz</Link>
             <span>/</span>
-            <span className="text-emerald-300">{route.navLabel}</span>
+            <span className="text-emerald-300">{effectiveRoute.navLabel}</span>
           </nav>
 
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-950/90 border border-emerald-500/40 text-emerald-300 text-xs font-black uppercase tracking-widest">
             <i className="fa-solid fa-circle-check" />
-            <span>{route.heroBadge}</span>
+            <span>{effectiveRoute.heroBadge}</span>
           </div>
 
           <h1 className="text-3xl sm:text-5xl font-black tracking-tight text-white max-w-5xl leading-tight">
-            {liveProject?.title || route.h1}
+            {liveProject?.title || effectiveRoute.h1}
           </h1>
           <p className="text-slate-300 max-w-3xl text-base sm:text-lg leading-relaxed font-medium">
-            {liveProject?.description || route.leadSummary}
+            {liveProject?.description || effectiveRoute.leadSummary}
           </p>
         </div>
       </section>
@@ -82,7 +108,7 @@ export const ProjeDetayPage: React.FC = () => {
                   >
                     <img
                       src={src}
-                      alt={`${liveProject?.title || route.h1} — Görsel ${idx + 1}`}
+                      alt={`${liveProject?.title || effectiveRoute.h1} — Görsel ${idx + 1}`}
                       className={`w-full object-cover ${idx === 0 ? 'h-[400px]' : 'h-56'}`}
                     />
                   </div>
@@ -134,19 +160,19 @@ export const ProjeDetayPage: React.FC = () => {
                 </div>
                 <div className="flex justify-between gap-4 border-b border-slate-800 pb-2">
                   <dt className="text-slate-400 font-semibold">Kurum / İşveren</dt>
-                  <dd className="text-white font-bold text-right">{liveProject?.client || route.client}</dd>
+                  <dd className="text-white font-bold text-right">{liveProject?.client || effectiveRoute.client}</dd>
                 </div>
                 <div className="flex justify-between gap-4 border-b border-slate-800 pb-2">
                   <dt className="text-slate-400 font-semibold">Konum</dt>
-                  <dd className="text-white font-bold">{liveProject?.location || route.location}</dd>
+                  <dd className="text-white font-bold">{liveProject?.location || effectiveRoute.location}</dd>
                 </div>
                 <div className="flex justify-between gap-4 border-b border-slate-800 pb-2">
                   <dt className="text-slate-400 font-semibold">Uzmanlık Alanı</dt>
-                  <dd className="text-blue-300 font-bold text-right">{liveProject?.area || route.heroBadge}</dd>
+                  <dd className="text-blue-300 font-bold text-right">{liveProject?.area || effectiveRoute.heroBadge}</dd>
                 </div>
                 <div className="flex justify-between gap-4">
                   <dt className="text-slate-400 font-semibold">Durum</dt>
-                  <dd className="text-emerald-400 font-black">{liveProject?.statusBadge || route.statusLabel} (%{liveProject?.progress ?? 100})</dd>
+                  <dd className="text-emerald-400 font-black">{liveProject?.statusBadge || effectiveRoute.statusLabel} (%{liveProject?.progress ?? 100})</dd>
                 </div>
               </dl>
             </div>

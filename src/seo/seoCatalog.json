@@ -204,6 +204,84 @@
           ]
         }
       ]
+    },
+    {
+      "id": "prj-ceyhan-ulus-saglik-ocagi",
+      "kind": "project",
+      "projectId": "prj-ceyhan-ulus-saglik-ocagi",
+      "path": "/projeler/ceyhan-ulus-saglik-ocagi",
+      "navLabel": "Ceyhan Ulus Sağlık Ocağı",
+      "title": "Ceyhan Ulus Sağlık Ocağı Yapımı | Kuzey Deniz İnşaat",
+      "description": "Adana Ceyhan Ulus Mahallesi anahtar teslim sağlık ocağı ve aile sağlığı merkezi yapım işi. C30/C35 betonarme karkas, medikal altyapı ve çevre düzenlemesiyle eksiksiz teslim edildi.",
+      "keywords": "ceyhan ulus sağlık ocağı, adana sağlık tesisi yapımı, kamu sağlık müteahhitliği, kuzey deniz inşaat referansları",
+      "ogImage": "https://www.kuzeydeniziyapi.com.tr/images/projects/ceyhan-ulus-saglik-ocagi/foto-1.jpg",
+      "ogImageAlt": "Ceyhan Ulus Sağlık Ocağı Yapımı — Kuzey Deniz İnşaat",
+      "image": "/images/projects/ceyhan-ulus-saglik-ocagi/foto-1.jpg",
+      "heroBadge": "Kamu Sağlık Tesisi & Hizmet Binası",
+      "h1": "Ceyhan Ulus Sağlık Ocağı Yapımı",
+      "leadSummary": "Adana Ceyhan Ulus Mahallesi'nde modern sağlık hizmetlerine erişim sağlayan aile sağlığı merkezi ve sağlık ocağı kompleksi anahtar teslim olarak eksiksiz tamamlanmıştır.",
+      "client": "T.C. Sağlık Bakanlığı / Adana İl Sağlık Müdürlüğü",
+      "location": "Ulus Mah., Ceyhan / ADANA",
+      "statusLabel": "Eksiksiz Teslim Edildi",
+      "changefreq": "monthly",
+      "priority": "0.8",
+      "highlights": [
+        "C30/C35 Depreme Dayanıklı Betonarme Taşıyıcı Karkas & Radye Temel",
+        "Engelli Erişilebilir Rampalar, Asansör & Hissedilebilir Zemin Kaplamaları",
+        "Medikal Gaz, VRF İklimlendirme ve Otomatik Jeneratör Altyapısı"
+      ]
+    },
+    {
+      "id": "prj-yuregir-dis-hastanesi-tretuar",
+      "kind": "project",
+      "projectId": "prj-yuregir-dis-hastanesi-tretuar",
+      "path": "/projeler/yuregir-dis-hastanesi-tretuar",
+      "navLabel": "Yüreğir Diş Hastanesi Tretuar",
+      "title": "Yüreğir Diş Hastanesi Tretuar ve Onarım Yapımı | Kuzey Deniz İnşaat",
+      "description": "Yüreğir Ağız ve Diş Sağlığı Hastanesi tretuar kaplamaları, ambulans yolu güçlendirmesi, drenaj hatları ve bina onarım işleri eksiksiz teslim edilmiştir.",
+      "keywords": "yüreğir diş hastanesi tretuar, hastane çevre onarımı, adana tretuar müteahhit, kamu altyapı taahhüt",
+      "ogImage": "https://www.kuzeydeniziyapi.com.tr/images/projects/yuregir-dis-hastanesi-tretuar/foto-1.jpg",
+      "ogImageAlt": "Yüreğir Diş Hastanesi Tretuar ve Onarım — Kuzey Deniz İnşaat",
+      "image": "/images/projects/yuregir-dis-hastanesi-tretuar/foto-1.jpg",
+      "heroBadge": "Hastane Altyapı, Tretuar & Onarım",
+      "h1": "Yüreğir Diş Hastanesi Tretuar ve Onarım Yapımı",
+      "leadSummary": "Yüreğir Ağız ve Diş Sağlığı Hastanesi yerleşkesinde 4.200 m² tretuar, kilitli parke taşı, ambulans yolu, yağmur suyu drenajı ve çevre onarımları anahtar teslim tamamlanmıştır.",
+      "client": "T.C. Sağlık Bakanlığı / Adana İl Sağlık Müdürlüğü",
+      "location": "Yüreğir / ADANA",
+      "statusLabel": "Eksiksiz Teslim Edildi",
+      "changefreq": "monthly",
+      "priority": "0.8",
+      "highlights": [
+        "Yüksek Dayanımlı Kilitli Parke Taşı ve Bazalt Bordür Kaplamaları",
+        "Ambulans Yolu Ağır Yük Zemin Güçlendirmesi & Rogar Izgaraları",
+        "Hastane Binası Çevre İzolasyon ve Dış Cephe Onarımları"
+      ]
+    },
+    {
+      "id": "prj-kizildere-deprem-konutlari",
+      "kind": "project",
+      "projectId": "prj-kizildere-deprem-konutlari",
+      "path": "/projeler/kizildere-deprem-konutlari",
+      "navLabel": "52 Adet Deprem Konutu",
+      "title": "52 Adet Kızıldere Deprem Konutları İnşaatı | Kuzey Deniz İnşaat",
+      "description": "Adana Kızıldere mevkiinde afetzedeler için projelendirilen 52 adet deprem konutunun radye temel, C35 betonarme ve anahtar teslim ince işçilikle eksiksiz teslimi.",
+      "keywords": "kızıldere deprem konutları, 52 adet deprem evi adana, afet konutu müteahhit, toki afad taahhüt",
+      "ogImage": "https://www.kuzeydeniziyapi.com.tr/images/projects/kizildere-deprem-konutlari/foto-1.jpg",
+      "ogImageAlt": "52 Adet Kızıldere Deprem Konutları — Kuzey Deniz İnşaat",
+      "image": "/images/projects/kizildere-deprem-konutlari/foto-1.jpg",
+      "heroBadge": "Afet ve Deprem Konutları",
+      "h1": "52 Adet Kızıldere Deprem Konutları İnşaatı",
+      "leadSummary": "Deprem bölgesinde hak sahipleri için inşa edilen 52 adet bağımsız konut; mutfak mobilyaları, zemin kaplamaları, banyo donatıları ve çevre ihata duvarlarıyla eksiksiz teslim edilmiştir.",
+      "client": "T.C. Çevre, Şehircilik ve İklim Değişikliği Bakanlığı / AFAD / TOKİ",
+      "location": "Kızıldere / ADANA",
+      "statusLabel": "Eksiksiz Teslim Edildi",
+      "changefreq": "monthly",
+      "priority": "0.85",
+      "highlights": [
+        "52 Adet Deprem Güvenli Bağımsız Konut Eksiksiz Anahtar Teslim",
+        "Radye Jeneral Temel, C35 Yüksek Dayanımlı Betonarme & TBDY 2018 Uyumu",
+        "Tamamlanmış Mutfak Mobilyaları, Banyo Donatıları & Çevre Düzenlemesi"
+      ]
     }
   ],
   "faqs": [

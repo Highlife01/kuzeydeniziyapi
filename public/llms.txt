@@ -21,6 +21,9 @@
 - [Faaliyet Alanları](https://www.kuzeydeniziyapi.com.tr/hizmetler): 4734 Sayılı KİK kamu müteahhitliği, bina ve konut, endüstriyel fabrika, altyapı, enerji santralleri, saha betonu ve kentsel dönüşüm dahil 15 ana mühendislik hizmeti.
 - [Projelerimiz](https://www.kuzeydeniziyapi.com.tr/projeler): Kuzey Panorama Konutları, Poyraz Marin Rezidans, Kuzey Yıldızı Ticaret Merkezi, Mavi Ufuk Villaları ve diğer prestijli projelerimiz.
 - [İletişim](https://www.kuzeydeniziyapi.com.tr/iletisim): Kuzey Deniz İnşaat iletişim ve teklif formu. Web: www.kuzeydeniziyapi.com.tr • E-Posta: info@kuzeydeniziyapi.com.tr • WhatsApp: +90 533 677 91 09
+- [Ceyhan Ulus Sağlık Ocağı](https://www.kuzeydeniziyapi.com.tr/projeler/ceyhan-ulus-saglik-ocagi): Adana Ceyhan Ulus Mahallesi anahtar teslim sağlık ocağı ve aile sağlığı merkezi yapım işi. C30/C35 betonarme karkas, medikal altyapı ve çevre düzenlemesiyle eksiksiz teslim edildi.
+- [Yüreğir Diş Hastanesi Tretuar](https://www.kuzeydeniziyapi.com.tr/projeler/yuregir-dis-hastanesi-tretuar): Yüreğir Ağız ve Diş Sağlığı Hastanesi tretuar kaplamaları, ambulans yolu güçlendirmesi, drenaj hatları ve bina onarım işleri eksiksiz teslim edilmiştir.
+- [52 Adet Deprem Konutu](https://www.kuzeydeniziyapi.com.tr/projeler/kizildere-deprem-konutlari): Adana Kızıldere mevkiinde afetzedeler için projelendirilen 52 adet deprem konutunun radye temel, C35 betonarme ve anahtar teslim ince işçilikle eksiksiz teslimi.
 
 ## Kaynak Dosyalar
 - [XML Site Haritası](https://www.kuzeydeniziyapi.com.tr/sitemap.xml)
