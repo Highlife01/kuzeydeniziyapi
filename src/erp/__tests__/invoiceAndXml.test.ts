@@ -16,14 +16,14 @@ const SAMPLE_UBL_XML = `<?xml version="1.0" encoding="UTF-8"?>
   <cac:AccountingSupplierParty>
     <cac:Party>
       <cac:PartyIdentification>
-        <cbc:ID schemeID="VKN">2640323020</cbc:ID>
+        <cbc:ID schemeID="VKN">6010491372</cbc:ID>
       </cac:PartyIdentification>
       <cac:PartyName>
         <cbc:Name>Toros Yapı Malzemeleri A.Ş.</cbc:Name>
       </cac:PartyName>
       <cac:PartyTaxScheme>
         <cac:TaxScheme>
-          <cbc:Name>Seyhan Vergi Dairesi</cbc:Name>
+          <cbc:Name>Ziyapaşa Vergi Dairesi</cbc:Name>
         </cac:TaxScheme>
       </cac:PartyTaxScheme>
     </cac:Party>
@@ -67,8 +67,8 @@ describe('XML UBL-TR Invoice Parser, OCR Heuristic & Duplicate Guard', () => {
     expect(parsed.ettn).toBe('8d9b8f34-7b1a-4c32-991a-0123456789ab');
     expect(parsed.issueDate).toBe('2026-10-14');
     expect(parsed.supplierName).toBe('Toros Yapı Malzemeleri A.Ş.');
-    expect(parsed.supplierTaxNo).toBe('2640323020');
-    expect(parsed.supplierTaxOffice).toBe('Seyhan Vergi Dairesi');
+    expect(parsed.supplierTaxNo).toBe('6010491372');
+    expect(parsed.supplierTaxOffice).toBe('Ziyapaşa Vergi Dairesi');
     expect(parsed.iban).toBe('TR330006100519786457841326');
     expect(parsed.subtotalKurus).toBe(toKurus(10_000));
     expect(parsed.vatTotalKurus).toBe(toKurus(2_000));
@@ -111,7 +111,7 @@ describe('XML UBL-TR Invoice Parser, OCR Heuristic & Duplicate Guard', () => {
         projectId: 'prj-1',
         supplierId: 'sup-1',
         supplierName: 'Toros A.Ş.',
-        supplierTaxNo: '2640323020',
+        supplierTaxNo: '6010491372',
         supplierTaxOffice: 'Seyhan',
         invoiceNo: 'CBR2026000000042',
         waybillNo: '',
@@ -147,7 +147,7 @@ describe('XML UBL-TR Invoice Parser, OCR Heuristic & Duplicate Guard', () => {
     expect(findDuplicateInvoice({ fileSha256: 'deadbeefsha256' }, existing).duplicate).toBe(true);
     expect(findDuplicateInvoice({ ettn: '8d9b8f34-7b1a-4c32-991a-0123456789ab' }, existing).duplicate).toBe(true);
     expect(
-      findDuplicateInvoice({ invoiceNo: 'CBR2026000000042', supplierTaxNo: '2640323020' }, existing).duplicate
+      findDuplicateInvoice({ invoiceNo: 'CBR2026000000042', supplierTaxNo: '6010491372' }, existing).duplicate
     ).toBe(true);
     expect(
       findDuplicateInvoice({ invoiceNo: 'CBR2026000000999', supplierTaxNo: '9999999999' }, existing).duplicate

@@ -9,13 +9,13 @@ import {
 } from '../types';
 
 export const DEFAULT_SETTINGS: DashboardSettings = {
-  companyName: 'Kuzey Denizi İnşaat Sanayi ve Ticaret A.Ş.',
+  companyName: 'Kuzeydeniz İnşaat Taahhüt Sanayi ve Ticaret Limited Şirketi',
   shortBrand: 'KUZEY DENİZİ',
-  taxOffice: 'Seyhan Vergi Dairesi Müd.',
-  taxNumber: '2640323020',
+  taxOffice: 'Ziyapaşa Vergi Dairesi Müd.',
+  taxNumber: '6010491372',
   phone: '+90 533 677 91 09',
   email: 'info@kuzeydeniziyapi.com.tr',
-  address: 'Güzelyalı Mah. Turgut Özal Bulvarı Kuzey Plaza Kat: 4 No: 112, Çukurova / ADANA',
+  address: 'Güzelyalı Mah. 81178 Sk. Yalı 2 Apt No: 6 İç Kapı No: 02, Çukurova / ADANA',
   mailWebhookUrl: '',
   autoSyncContactToMail: true,
 };

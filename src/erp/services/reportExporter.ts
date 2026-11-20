@@ -406,8 +406,8 @@ export function exportReportPrintablePdf(
   <body style="font-family:sans-serif;padding:32px;color:#0f172a;">
     <div style="display:flex;justify-content:space-between;align-items:center;border-bottom:3px solid #2563eb;padding-bottom:16px;margin-bottom:20px;">
       <div>
-        <div style="font-size:18px;font-weight:900;color:#0f172a;">KUZEY DENİZİ İNŞAAT SAN. VE TİC. A.Ş.</div>
-        <div style="font-size:11px;color:#475569;">Yeşiloba Mah. 46088 Sk. No: 18 B Seyhan / ADANA • VKN: 2640323020 • Tel: 0533 677 91 09</div>
+        <div style="font-size:18px;font-weight:900;color:#0f172a;">KUZEYDENİZ İNŞAAT TAAHHÜT SAN. VE TİC. LTD. ŞTİ.</div>
+        <div style="font-size:11px;color:#475569;">Güzelyalı Mah. 81178 Sk. Yalı 2 Apt No: 6 İç Kapı No: 02, Çukurova / ADANA • VKN: 6010491372 • Tel: 0533 677 91 09</div>
       </div>
       <div style="text-align:right;font-size:11px;color:#475569;">
         <div><strong>Rapor Tarihi:</strong> ${escapeHtml(nowStr)}</div>

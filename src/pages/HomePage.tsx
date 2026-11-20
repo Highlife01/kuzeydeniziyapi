@@ -263,41 +263,41 @@ export const HomePage: React.FC = () => {
 
           <div className="flex items-center gap-4">
             <div className="w-14 h-14 rounded-2xl bg-[#E6F1FB] text-[#0068C9] flex items-center justify-center text-2xl shrink-0">
-              <i className="fa-solid fa-compass-drafting" />
+              <i className="fa-solid fa-calendar-check" />
             </div>
             <div>
-              <div className="font-black text-2xl sm:text-4xl text-[#042A53]">18+</div>
-              <div className="text-xs sm:text-sm font-semibold text-slate-500">Yıllık Sektör Tecrübesi</div>
+              <div className="font-black text-xl sm:text-2xl text-[#042A53]">04/01/2017</div>
+              <div className="text-xs sm:text-sm font-semibold text-slate-500">Resmi Kuruluş Tarihi</div>
             </div>
           </div>
 
           <div className="flex items-center gap-4">
             <div className="w-14 h-14 rounded-2xl bg-[#FFF4EC] text-[#F25C05] flex items-center justify-center text-2xl shrink-0">
-              <i className="fa-solid fa-city" />
+              <i className="fa-solid fa-file-shield" />
             </div>
             <div>
-              <div className="font-black text-2xl sm:text-4xl text-[#042A53]">42</div>
-              <div className="text-xs sm:text-sm font-semibold text-slate-500">Tamamlanan Prestijli Proje</div>
+              <div className="font-black text-xl sm:text-2xl text-[#042A53]">6010491372</div>
+              <div className="text-xs sm:text-sm font-semibold text-slate-500">Ziyapaşa V.D. Resmi Kayıt</div>
             </div>
           </div>
 
           <div className="flex items-center gap-4">
             <div className="w-14 h-14 rounded-2xl bg-[#E6F1FB] text-[#042A53] flex items-center justify-center text-2xl shrink-0">
-              <i className="fa-solid fa-key" />
+              <i className="fa-solid fa-city" />
             </div>
             <div>
-              <div className="font-black text-2xl sm:text-4xl text-[#042A53]">2.450+</div>
-              <div className="text-xs sm:text-sm font-semibold text-slate-500">Teslim Edilen Bağımsız Bölüm</div>
+              <div className="font-black text-xl sm:text-2xl text-[#042A53]">Çukurova / Adana</div>
+              <div className="text-xs sm:text-sm font-semibold text-slate-500">Güzelyalı Merkez Ofis</div>
             </div>
           </div>
 
           <div className="flex items-center gap-4">
             <div className="w-14 h-14 rounded-2xl bg-[#FFF4EC] text-[#F7941D] flex items-center justify-center text-2xl shrink-0">
-              <i className="fa-solid fa-shield-heart" />
+              <i className="fa-solid fa-phone-volume" />
             </div>
             <div>
-              <div className="font-black text-2xl sm:text-4xl text-[#042A53]">%100</div>
-              <div className="text-xs sm:text-sm font-semibold text-slate-500">Zamanında Teslim Başarısı</div>
+              <div className="font-black text-xl sm:text-2xl text-[#042A53]">0533 677 91 09</div>
+              <div className="text-xs sm:text-sm font-semibold text-slate-500">Doğrudan Hat &amp; WhatsApp</div>
             </div>
           </div>
         </div>
@@ -747,7 +747,7 @@ export const HomePage: React.FC = () => {
                   <div>
                     <h4 className="font-bold text-[#042A53]">Merkez Ofis &amp; Showroom</h4>
                     <p className="text-sm text-slate-600 mt-1">
-                      Güzelyalı Mah. Turgut Özal Bulvarı Kuzey Plaza Kat: 4 No: 112 Çukurova / ADANA
+                      Güzelyalı Mah. 81178 Sk. Yalı 2 Apt No: 6 İç Kapı No: 02, Çukurova / ADANA
                     </p>
                   </div>
                 </div>

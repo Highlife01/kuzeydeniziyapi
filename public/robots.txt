@@ -1,4 +1,4 @@
-# Kuzey Denizi İnşaat Sanayi ve Ticaret A.Ş. Robots Directives (https://www.kuzeydeniziyapi.com.tr)
+# Kuzeydeniz İnşaat Taahhüt Sanayi ve Ticaret Limited Şirketi Robots Directives (https://www.kuzeydeniziyapi.com.tr)
 User-agent: *
 Allow: /
 Disallow: /dashboard

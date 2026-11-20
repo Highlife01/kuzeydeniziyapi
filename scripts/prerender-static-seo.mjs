@@ -162,7 +162,7 @@ function generateLlmsTxt() {
 ## Temel Kurumsal Bilgiler
 - **Resmi Ticaret Unvanı:** ${site.legalName}
 - **Kanonik Web Sitesi:** ${CANONICAL_DOMAIN}/
-- **Kuruluş Tarihi:** 25/02/2016
+- **Kuruluş Tarihi:** 04/01/2017
 - **Vergi Dairesi / VKN:** ${site.taxOffice} — ${site.taxNumber}
 - **Merkez Adres:** ${site.address} (Posta Kodu: ${site.postalCode})
 - **Tek Telefon & WhatsApp:** ${site.phoneDisplay} (${site.whatsappUrl})
@@ -216,7 +216,7 @@ function generateLlmsFullTxt() {
   return `# ${site.legalName} — Tam Kurumsal ve Proje Referansı
 
 Web Sitesi: ${CANONICAL_DOMAIN}/
-Kuruluş: 25/02/2016 | Vergi Dairesi: ${site.taxOffice} | VKN: ${site.taxNumber}
+Kuruluş: 04/01/2017 | Vergi Dairesi: ${site.taxOffice} | VKN: ${site.taxNumber}
 Adres: ${site.address} (${site.postalCode})
 Telefon & WhatsApp: ${site.phoneDisplay} | E-Posta: ${site.email}
 

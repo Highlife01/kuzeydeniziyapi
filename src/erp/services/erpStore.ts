@@ -211,9 +211,9 @@ export function getSeedWarehouses(): WarehouseRecord[] {
     {
       id: 'wh-merkez',
       organizationId: ERP_ORG_ID,
-      name: 'Merkez Depo (Seyhan / Yeşiloba)',
+      name: 'Merkez Depo (Çukurova / Güzelyalı)',
       type: 'merkez',
-      location: 'Yeşiloba Mah. 46088 Sk. No: 18 B, Seyhan / ADANA',
+      location: 'Güzelyalı Mah. 81178 Sk. Yalı 2 Apt No: 6 İç Kapı No: 02, Çukurova / ADANA',
       manager: 'Depo Yönetimi',
       createdBy: 'system',
       createdAt: now,

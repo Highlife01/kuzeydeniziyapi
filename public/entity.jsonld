@@ -6,7 +6,7 @@
     "GeneralContractor"
   ],
   "@id": "https://www.kuzeydeniziyapi.com.tr/#organization",
-  "name": "Kuzey Denizi İnşaat Sanayi ve Ticaret A.Ş.",
+  "name": "Kuzeydeniz İnşaat Taahhüt Sanayi ve Ticaret Limited Şirketi",
   "alternateName": "Kuzey Denizi İnşaat",
   "url": "https://www.kuzeydeniziyapi.com.tr/",
   "logo": {
@@ -18,11 +18,11 @@
   "image": "https://www.kuzeydeniziyapi.com.tr/images/logo.png",
   "telephone": "+905336779109",
   "email": "info@kuzeydeniziyapi.com.tr",
-  "foundingDate": "2008-01-15",
-  "taxID": "2640323020",
+  "foundingDate": "2017-01-04",
+  "taxID": "6010491372",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Güzelyalı Mah. Turgut Özal Bulvarı Kuzey Plaza Kat: 4 No: 112",
+    "streetAddress": "Güzelyalı Mah. 81178 Sk. Yalı 2 Apt No: 6 İç Kapı No: 02",
     "addressLocality": "Seyhan",
     "addressRegion": "Adana",
     "postalCode": "01170",
@@ -33,7 +33,7 @@
     "latitude": "37.0420",
     "longitude": "35.2830"
   },
-  "hasMap": "https://maps.google.com/?q=Turgut+%C3%96zal+Bulvar%C4%B1+G%C3%BCzelyal%C4%B1+%C3%87ukurova+Adana",
+  "hasMap": "https://maps.google.com/?q=G%C3%BCzelyal%C4%B1+Mah.+81178+Sk.+Yal%C4%B1+2+Apt+No+6+%C3%87ukurova+Adana",
   "areaServed": [
     {
       "@type": "Place",

@@ -36,7 +36,7 @@ export const IletisimPage: React.FC = () => {
             </div>
             <h3 className="text-lg font-black text-[#042A53]">Merkez Ofis &amp; Showroom</h3>
             <p className="text-sm text-slate-600">
-              Güzelyalı Mah. Turgut Özal Bulvarı Kuzey Plaza Kat: 4 No: 112 Çukurova / ADANA
+              Güzelyalı Mah. 81178 Sk. Yalı 2 Apt No: 6 İç Kapı No: 02, Çukurova / ADANA
             </p>
           </a>
 
@@ -102,7 +102,7 @@ export const IletisimPage: React.FC = () => {
                 />
               </div>
               <a
-                href="https://maps.google.com/?q=Turgut+%C3%96zal+Bulvar%C4%B1+G%C3%BCzelyal%C4%B1+%C3%87ukurova+Adana"
+                href="https://maps.google.com/?q=G%C3%BCzelyal%C4%B1+Mah.+81178+Sk.+Yal%C4%B1+2+Apt+No+6+%C3%87ukurova+Adana"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-xs font-extrabold text-[#0068C9] hover:text-[#F25C05] transition"
@@ -111,9 +111,10 @@ export const IletisimPage: React.FC = () => {
                 <span>Google Haritalar&apos;da Yol Tarifi Al</span>
               </a>
               <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 text-xs text-slate-600 space-y-1">
-                <div className="font-black text-[#042A53]">Adres &amp; İletişim</div>
+                <div className="font-black text-[#042A53]">Adres &amp; Vergi Bilgisi</div>
                 <p>
-                  Güzelyalı Mah. Turgut Özal Bulvarı Kuzey Plaza Kat: 4 No: 112, Çukurova / ADANA
+                  Güzelyalı Mah. 81178 Sk. Yalı 2 Apt No: 6 İç Kapı No: 02, Çukurova / ADANA —
+                  Ziyapaşa Vergi Dairesi Müd. (VKN: 6010491372)
                 </p>
               </div>
             </div>

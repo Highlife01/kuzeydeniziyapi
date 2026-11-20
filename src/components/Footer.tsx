@@ -17,10 +17,10 @@ export const Footer: React.FC = () => {
             </p>
             <div className="flex flex-wrap items-center gap-2">
               <span className="px-3 py-1.5 rounded-lg bg-[#042A53] border border-[#0068C9]/40 text-xs font-bold text-sky-300">
-                Mühendislik &amp; Taahhüt
+                04/01/2017 Kuruluşlu
               </span>
               <span className="px-3 py-1.5 rounded-lg bg-[#042A53] border border-[#F7941D]/40 text-[11px] font-bold text-amber-300">
-                TBDY 2018 Uyumlu
+                VKN: 6010491372 • Ziyapaşa V.D.
               </span>
             </div>
           </div>
@@ -138,7 +138,7 @@ export const Footer: React.FC = () => {
             <div className="space-y-4 text-sm text-slate-300 font-medium">
               <p className="flex items-start gap-3">
                 <i className="fa-solid fa-location-dot text-[#0068C9] mt-1" />
-                <span>Güzelyalı Mah. Turgut Özal Bulvarı Kuzey Plaza Kat: 4 No: 112 Çukurova / ADANA</span>
+                <span>Güzelyalı Mah. 81178 Sk. Yalı 2 Apt No: 6 İç Kapı No: 02, Çukurova / ADANA</span>
               </p>
               <p className="flex items-center gap-3">
                 <i className="fa-solid fa-phone text-[#F7941D]" />
@@ -171,7 +171,7 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-semibold text-slate-400">
-          <p>© 2026 Kuzey Denizi İnşaat Sanayi ve Ticaret A.Ş. Tüm Hakları Saklıdır.</p>
+          <p>© 2026 Kuzeydeniz İnşaat Taahhüt Sanayi ve Ticaret Limited Şirketi Tüm Hakları Saklıdır.</p>
           <div className="flex items-center gap-6">
             <Link to="/kurumsal" className="hover:text-slate-200 transition">
               Gizlilik Politikası

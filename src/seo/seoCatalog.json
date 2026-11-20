@@ -1,7 +1,7 @@
 {
   "site": {
     "name": "Kuzey Denizi İnşaat",
-    "legalName": "Kuzey Denizi İnşaat Sanayi ve Ticaret A.Ş.",
+    "legalName": "Kuzeydeniz İnşaat Taahhüt Sanayi ve Ticaret Limited Şirketi",
     "tagline": "Güvenle Yükselen Modern Yapılar — Konut, Rezidans, Ticari Plaza & Taahhüt",
     "domain": "www.kuzeydeniziyapi.com.tr",
     "url": "https://www.kuzeydeniziyapi.com.tr",
@@ -9,17 +9,17 @@
     "phoneHref": "+905336779109",
     "whatsappUrl": "https://wa.me/905336779109",
     "email": "info@kuzeydeniziyapi.com.tr",
-    "address": "Güzelyalı Mah. Turgut Özal Bulvarı Kuzey Plaza Kat: 4 No: 112, Çukurova / ADANA",
-    "streetAddress": "Güzelyalı Mah. Turgut Özal Bulvarı Kuzey Plaza Kat: 4 No: 112",
+    "address": "Güzelyalı Mah. 81178 Sk. Yalı 2 Apt No: 6 İç Kapı No: 02, Çukurova / ADANA",
+    "streetAddress": "Güzelyalı Mah. 81178 Sk. Yalı 2 Apt No: 6 İç Kapı No: 02",
     "postalCode": "01170",
-    "taxOffice": "Seyhan Vergi Dairesi Müd.",
-    "taxNumber": "2640323020",
-    "foundingDate": "2008-01-15",
+    "taxOffice": "Ziyapaşa Vergi Dairesi Müd.",
+    "taxNumber": "6010491372",
+    "foundingDate": "2017-01-04",
     "locale": "tr_TR",
     "logo": "https://www.kuzeydeniziyapi.com.tr/images/logo.png",
     "ogImage": "https://www.kuzeydeniziyapi.com.tr/images/logo.png",
     "ogImageAlt": "Kuzey Denizi İnşaat — Güvenle Yükselen Modern Yapılar",
-    "hasMap": "https://maps.google.com/?q=Turgut+%C3%96zal+Bulvar%C4%B1+G%C3%BCzelyal%C4%B1+%C3%87ukurova+Adana",
+    "hasMap": "https://maps.google.com/?q=G%C3%BCzelyal%C4%B1+Mah.+81178+Sk.+Yal%C4%B1+2+Apt+No+6+%C3%87ukurova+Adana",
     "geo": {
       "region": "TR-01",
       "placename": "Çukurova, Adana, Türkiye",
@@ -74,13 +74,13 @@
       "ogImage": "https://www.kuzeydeniziyapi.com.tr/images/logo.png",
       "ogImageAlt": "Kuzey Denizi İnşaat kurumsal profil",
       "heroBadge": "Kurumsal Profil • Pusulamız Güven",
-      "h1": "Kuzey Denizi İnşaat Sanayi ve Ticaret A.Ş.",
+      "h1": "Kuzeydeniz İnşaat Taahhüt Sanayi ve Ticaret Limited Şirketi",
       "leadSummary": "18 yılı aşkın sektör tecrübesiyle konut, ticari plaza, kentsel dönüşüm ve inşaat taahhüt alanlarında 42 prestijli projeyi zamanında teslim etmiş kurumsal mühendislik firması.",
       "changefreq": "monthly",
       "priority": "0.85",
       "highlights": [
-        "Resmi Unvan: Kuzey Denizi İnşaat Sanayi ve Ticaret A.Ş.",
-        "Adres: Güzelyalı Mah. Turgut Özal Bulvarı Kuzey Plaza Kat: 4 No: 112 Çukurova / ADANA",
+        "Resmi Unvan: Kuzeydeniz İnşaat Taahhüt Sanayi ve Ticaret Limited Şirketi",
+        "Adres: Güzelyalı Mah. 81178 Sk. Yalı 2 Apt No: 6 İç Kapı No: 02, Çukurova / ADANA",
         "Web: www.kuzeydeniziyapi.com.tr • E-Posta: info@kuzeydeniziyapi.com.tr",
         "WhatsApp & Telefon: +90 533 677 91 09"
       ],
@@ -180,7 +180,7 @@
         "Telefon & WhatsApp: +90 533 677 91 09",
         "Kurumsal E-Posta: info@kuzeydeniziyapi.com.tr",
         "Web Sitesi: www.kuzeydeniziyapi.com.tr",
-        "Adres: Güzelyalı Mah. Turgut Özal Bulvarı Kuzey Plaza Kat: 4 No: 112 Çukurova / ADANA"
+        "Adres: Güzelyalı Mah. 81178 Sk. Yalı 2 Apt No: 6 İç Kapı No: 02, Çukurova / ADANA"
       ],
       "sections": [
         {

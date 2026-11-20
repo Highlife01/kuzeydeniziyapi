@@ -32,8 +32,8 @@ export const DashboardLogin: React.FC = () => {
             <div className="text-xs font-black uppercase tracking-widest text-[#F7941D]">
               Kurumsal Yönetim Dashboard&apos;u
             </div>
-            <h1 className="text-2xl font-black text-white mt-1">
-              Kuzey Denizi İnşaat
+            <h1 className="text-xl sm:text-2xl font-black text-white mt-1 leading-snug">
+              Kuzeydeniz İnşaat Taahhüt Ltd. Şti.
             </h1>
             <p className="text-xs text-sky-200/80 mt-1.5 leading-relaxed">
               ERP, Şantiye Raporları, Finans &amp; İletişim Formu Mesajları

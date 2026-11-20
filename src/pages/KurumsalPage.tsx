@@ -35,28 +35,30 @@ export const KurumsalPage: React.FC = () => {
               Pusulamız Güven: Depreme Dayanıklı Modern Yapılar
             </h2>
             <p className="text-slate-700 leading-relaxed text-base">
-              <strong>Kuzey Denizi İnşaat</strong> olarak, 18 yılı aşkın sektör tecrübemizle
-              modern konut projeleri, A+ ticari plazalar, müstakil villalar ve büyük ölçekli
-              taahhüt projeleri inşa ediyoruz. Logomuzdaki kuzey yıldızı pusulası; doğruluğu,
-              mühendislik hassasiyetini ve geleceğe yön veren yenilikçi vizyonumuzu simgeler.
+              <strong>Kuzeydeniz İnşaat Taahhüt Sanayi ve Ticaret Limited Şirketi</strong> (Kuzey
+              Denizi İnşaat), 04 Ocak 2017 tarihinden bu yana Çukurova / Adana merkezli olarak modern
+              konut projeleri, A+ ticari plazalar, büyük çaplı yapı yenileme/revizyon ve taahhüt
+              projeleri inşa etmektedir. Logomuzdaki kuzey yıldızı pusulası; doğruluğu, mühendislik
+              hassasiyetini ve geleceğe yön veren yenilikçi vizyonumuzu simgeler.
             </p>
             <p className="text-slate-600 leading-relaxed text-sm">
-              Bünyemizdeki inşaat, mimarlık ve makine/elektrik mühendisliği ekiplerimizle zemin
-              etüdünden anahtar teslime, şantiye planlamasından dijital ERP yönetimine kadar tüm
-              süreçleri şeffaf ve uluslararası standartlara tam uyumlu olarak yönetiyoruz.
+              Ziyapaşa Vergi Dairesi Müd. (VKN: 6010491372) mükellefi olan firmamız; bünyesindeki
+              inşaat, mimarlık ve mühendislik ekipleriyle zemin etüdünden anahtar teslime, şantiye
+              planlamasından dijital ERP yönetimine kadar tüm süreçleri şeffaf ve uluslararası
+              standartlara tam uyumlu olarak yönetmektedir.
             </p>
 
             <div className="grid grid-cols-2 gap-5 pt-2">
               <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm">
-                <div className="text-2xl sm:text-3xl font-black text-[#F25C05]">42+ Proje</div>
+                <div className="text-2xl sm:text-3xl font-black text-[#F25C05]">04/01/2017</div>
                 <div className="text-xs font-bold uppercase tracking-wider text-slate-500 mt-1">
-                  Tamamlanan Prestijli Yapı
+                  Resmi İşe Başlama Tarihi
                 </div>
               </div>
               <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm">
-                <div className="text-2xl sm:text-3xl font-black text-[#0068C9]">2.450+</div>
+                <div className="text-2xl sm:text-3xl font-black text-[#0068C9]">6010491372</div>
                 <div className="text-xs font-bold uppercase tracking-wider text-slate-500 mt-1">
-                  Teslim Edilen Bağımsız Bölüm
+                  Ziyapaşa Vergi Dairesi VKN
                 </div>
               </div>
             </div>
