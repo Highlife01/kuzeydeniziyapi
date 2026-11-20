@@ -2,30 +2,30 @@
   "site": {
     "name": "Kuzey Denizi İnşaat",
     "legalName": "Kuzey Denizi İnşaat Sanayi ve Ticaret A.Ş.",
-    "tagline": "Mühendislik, Çatı Yenileme, Yangın Güvenliği ve Kamu Yapı Taahhütleri",
+    "tagline": "Güvenle Yükselen Modern Yapılar — Konut, Rezidans, Ticari Plaza & Taahhüt",
     "domain": "www.kuzeydeniziyapi.com.tr",
     "url": "https://www.kuzeydeniziyapi.com.tr",
-    "phoneDisplay": "0533 677 91 09",
+    "phoneDisplay": "+90 533 677 91 09",
     "phoneHref": "+905336779109",
     "whatsappUrl": "https://wa.me/905336779109",
     "email": "info@kuzeydeniziyapi.com.tr",
-    "address": "Yeşiloba Mah. 46088 Sk. No: 18 B, Seyhan / ADANA",
-    "streetAddress": "Yeşiloba Mah. 46088 Sk. No: 18 B",
-    "postalCode": "01100",
+    "address": "Güzelyalı Mah. Turgut Özal Bulvarı Kuzey Plaza Kat: 4 No: 112, Çukurova / ADANA",
+    "streetAddress": "Güzelyalı Mah. Turgut Özal Bulvarı Kuzey Plaza Kat: 4 No: 112",
+    "postalCode": "01170",
     "taxOffice": "Seyhan Vergi Dairesi Müd.",
     "taxNumber": "2640323020",
-    "foundingDate": "2016-02-25",
+    "foundingDate": "2008-01-15",
     "locale": "tr_TR",
-    "logo": "https://www.kuzeydeniziyapi.com.tr/icons/icon-512.png",
-    "ogImage": "https://www.kuzeydeniziyapi.com.tr/images/og/og-ana-sayfa.jpg",
-    "ogImageAlt": "Kuzey Denizi İnşaat — Adana Adliyesi çatı yenileme referans projesi",
-    "hasMap": "https://www.google.com/maps/search/?api=1&query=Ye%C5%9Filoba%20Mah.%2046088%20Sk.%20No%3A%2018%20B%2C%20Seyhan%2C%20Adana",
+    "logo": "https://www.kuzeydeniziyapi.com.tr/images/logo.png",
+    "ogImage": "https://www.kuzeydeniziyapi.com.tr/images/logo.png",
+    "ogImageAlt": "Kuzey Denizi İnşaat — Güvenle Yükselen Modern Yapılar",
+    "hasMap": "https://maps.google.com/?q=Turgut+%C3%96zal+Bulvar%C4%B1+G%C3%BCzelyal%C4%B1+%C3%87ukurova+Adana",
     "geo": {
       "region": "TR-01",
-      "placename": "Seyhan, Adana, Türkiye",
-      "lat": "36.9855",
-      "lng": "35.2530",
-      "serviceAreas": ["Adana", "Seyhan", "Yüreğir", "Pozantı", "Ceyhan", "Sarıçam", "Mersin", "Tarsus", "Çukurova"]
+      "placename": "Çukurova, Adana, Türkiye",
+      "lat": "37.0420",
+      "lng": "35.2830",
+      "serviceAreas": ["Adana", "Çukurova", "Seyhan", "Yüreğir", "Sarıçam", "Mersin", "Tarsus"]
     }
   },
   "routes": [
@@ -33,33 +33,33 @@
       "id": "home",
       "path": "/",
       "navLabel": "Ana Sayfa",
-      "title": "Kuzey Denizi İnşaat | Adana Çatı ve Yangın Güvenliği",
-      "description": "2016'dan beri Adana'da kamu taahhüt, çatı yenileme ve hastane yangın güvenliği. Referanslar: Adana Adliyesi ve Pozantı Devlet Hastanesi. Tel: 0533 677 91 09",
-      "keywords": "çukurova bartu inşaat, adana inşaat firmaları, adana adliyesi çatı yenileme, pozantı devlet hastanesi yangın işleri, kamu taahhüt adana, kenet çatı yenileme, hastane yangın söndürme sistemleri",
-      "ogImage": "https://www.kuzeydeniziyapi.com.tr/images/og/og-ana-sayfa.jpg",
-      "ogImageAlt": "Kuzey Denizi İnşaat — Adana Adliyesi çatı yenileme referans projesi",
-      "heroBadge": "Kuzey Denizi İnşaat Sanayi ve Ticaret A.Ş. • Adana",
-      "h1": "Adana Adliyesi Çatı Yenileme & Pozantı 80. Yıl Devlet Hastanesi Yangın Güvenliği",
-      "leadSummary": "Kuzey Denizi İnşaat Sanayi ve Ticaret A.Ş.; Adana ve Çukurova genelinde kamu yapıları çatı yenileme, hastane yangın güvenliği sistemleri, deprem güçlendirme ve ağır çelik konstrüksiyon projelerini anahtar teslim hayata geçirir.",
+      "title": "Kuzey Denizi İnşaat | Güvenle Yükselen Modern Yapılar",
+      "description": "Kuzey Denizi İnşaat; yüksek deprem güvenliği, modern konut projeleri, ticari plazalar, inşaat taahhüt ve kentsel dönüşüm. Tel & WhatsApp: +90 533 677 91 09",
+      "keywords": "kuzey denizi inşaat, kuzey denizi yapı, adana inşaat firmaları, modern konut projeleri, ticari plaza, kentsel dönüşüm, deprem güçlendirme",
+      "ogImage": "https://www.kuzeydeniziyapi.com.tr/images/logo.png",
+      "ogImageAlt": "Kuzey Denizi İnşaat — Güvenle Yükselen Modern Yapılar",
+      "heroBadge": "Kuzey Denizi İnşaat • www.kuzeydeniziyapi.com.tr",
+      "h1": "Geleceğin Yaşam Alanlarını Güvenle İnşa Ediyoruz",
+      "leadSummary": "Kuzey Denizi İnşaat mühendislik vizyonuyla; yüksek deprem güvenliği, modern mimari estetik ve yüksek yatırım değerini bir araya getiren prestijli konut, rezidans, ticari merkez ve taahhüt projeleri üretiyoruz.",
       "changefreq": "weekly",
       "priority": "1.0",
       "images": [
-        { "loc": "/images/adana-adliye-gercek.jpg", "title": "Adana Adliyesi Çatı Yenileme", "caption": "Kuzey Denizi İnşaat tarafından tamamlanan Adana Adliyesi çatı yenileme projesi" },
-        { "loc": "/images/pozanti-hastane-gercek.jpg", "title": "Pozantı 80. Yıl Devlet Hastanesi", "caption": "Pozantı 80. Yıl Devlet Hastanesi yangın güvenliği tadilat ve bakım çalışmaları" }
+        { "loc": "/images/logo.png", "title": "Kuzey Denizi İnşaat Logo", "caption": "Kuzey Denizi İnşaat kurumsal logosu" }
       ],
       "highlights": [
-        "Adana Adliyesi Çatı Yenileme: Çatı kaplama yenileme, ısı-su yalıtım katmanları ve yağmur drenaj altyapısı",
-        "Pozantı 80. Yıl Devlet Hastanesi Yangın Güvenliği Standartlarının Güçlendirilmesine Yönelik Tadilat ve Bakım Çalışmaları",
-        "TBDY 2018 Deprem Yönetmeliği ve Binaların Yangından Korunması Yönetmeliği (BYKHY) tam uyumu",
-        "Tek İletişim & WhatsApp Hattı: 0533 677 91 09"
+        "Kuzey Panorama Konutları ve Poyraz Marin Rezidans projeleri",
+        "TBDY 2018 Deprem Yönetmeliği uyumu, C35/C40 yüksek dayanımlı beton & fore kazık",
+        "Konut, Ticari Plaza, İnşaat Taahhüt ve Kentsel Dönüşüm çözümleri",
+        "Doğrudan İletişim & WhatsApp Hattı: +90 533 677 91 09"
       ],
       "sections": [
         {
-          "heading": "Öne Çıkan Kamu & Sağlık Taahhüt Projelerimiz",
-          "summary": "Adana ve Pozantı bölgesinde tamamladığımız gerçek kamu referans projelerimiz.",
+          "heading": "Öne Çıkan Projelerimiz",
+          "summary": "Devam eden, tamamlanan ve lansmana hazırlanan seçkin projelerimiz.",
           "bullets": [
-            "Adana Adliyesi Çatı Yenileme (Adana)",
-            "Pozantı 80. Yıl Devlet Hastanesi Yangın Güvenliği Standartlarının Güçlendirilmesine Yönelik Tadilat ve Bakım Çalışmaları (Pozantı / ADANA)"
+            "Kuzey Panorama Konutları (Çukurova / ADANA)",
+            "Poyraz Marin Rezidans (Güzelyalı / ADANA)",
+            "Kuzey Yıldızı Ticaret Merkezi (Seyhan / ADANA)"
           ]
         }
       ]
@@ -68,39 +68,30 @@
       "id": "kurumsal",
       "path": "/kurumsal",
       "navLabel": "Kurumsal",
-      "title": "Kurumsal Profil | Kuzey Denizi İnşaat A.Ş.",
-      "description": "2016'da Seyhan/Adana'da kurulan Kuzey Denizi İnşaat Sanayi ve Ticaret A.Ş.'nin kurumsal profili, vizyonu, çalışma ilkeleri ve merkez adres bilgileri.",
-      "keywords": "çukurova bartu kurumsal, adana inşaat mühendislik şirketi, kamu müteahhidi adana, yeşiloba seyhan inşaat",
-      "ogImage": "https://www.kuzeydeniziyapi.com.tr/images/og/og-kurumsal.jpg",
+      "title": "Kurumsal Profil | Kuzey Denizi İnşaat",
+      "description": "Kuzey Denizi İnşaat kurumsal profili, vizyonu, misyonu, depreme dayanıklı mühendislik ve kalite standartları.",
+      "keywords": "kuzey denizi inşaat kurumsal, adana inşaat mühendislik şirketi, deprem güvenli yapı, radye temel",
+      "ogImage": "https://www.kuzeydeniziyapi.com.tr/images/logo.png",
       "ogImageAlt": "Kuzey Denizi İnşaat kurumsal profil",
-      "heroBadge": "Kurumsal Profil • 2016'dan Bu Yana Adana",
+      "heroBadge": "Kurumsal Profil • Pusulamız Güven",
       "h1": "Kuzey Denizi İnşaat Sanayi ve Ticaret A.Ş.",
-      "leadSummary": "25 Şubat 2016 tarihinden beri Seyhan / Adana merkezli olarak faaliyet gösteren şirketimiz; resmi şartname disiplini, iş sağlığı-güvenliği önlemleri ve mühendislik ekibiyle kamu ve sanayi yatırımlarına hizmet verir.",
+      "leadSummary": "18 yılı aşkın sektör tecrübesiyle konut, ticari plaza, kentsel dönüşüm ve inşaat taahhüt alanlarında 42 prestijli projeyi zamanında teslim etmiş kurumsal mühendislik firması.",
       "changefreq": "monthly",
       "priority": "0.85",
       "highlights": [
         "Resmi Unvan: Kuzey Denizi İnşaat Sanayi ve Ticaret A.Ş.",
-        "Merkez Adres: Yeşiloba Mah. 46088 Sk. No: 18 B, Seyhan / ADANA",
-        "Vergi Dairesi & VKN: Seyhan Vergi Dairesi Müd. — 2640323020",
-        "Kuruluş Tarihi: 25 Şubat 2016"
+        "Adres: Güzelyalı Mah. Turgut Özal Bulvarı Kuzey Plaza Kat: 4 No: 112 Çukurova / ADANA",
+        "Web: www.kuzeydeniziyapi.com.tr • E-Posta: info@kuzeydeniziyapi.com.tr",
+        "WhatsApp & Telefon: +90 533 677 91 09"
       ],
       "sections": [
         {
-          "heading": "Vizyon, Misyon ve Teknik Yetkinlik",
-          "summary": "Çukurova bölgesinde çatı yenileme ve yangın güvenliği çalışmalarında güvenilir çözüm ortağı.",
+          "heading": "Mühendislik Disiplini & Standartlar",
+          "summary": "Zemin etüdünden anahtar teslime tam şeffaf kalite yönetimi.",
           "bullets": [
-            "25/02/2016 kuruluşlu kurumsal inşaat firması",
-            "Adana Adliyesi Çatı Yenileme ve Pozantı 80. Yıl Devlet Hastanesi Yangın Güvenliği referansları",
-            "Seyhan Vergi Dairesi Müd. VKN: 2640323020"
-          ]
-        },
-        {
-          "heading": "Çalışma İlkelerimiz",
-          "summary": "Kalite kontrol, çevre duyarlılığı ve iş sağlığı-güvenliği her projede temel önceliğimizdir.",
-          "bullets": [
-            "Malzeme giriş onayından saha test tutanaklarına kadar izlenebilir kalite kontrol",
-            "Şantiye ve söküm atıklarında mevzuata uygun ayrıştırma",
-            "Yüksekte çalışmada yaşam hattı ve kişisel koruyucu donanım disiplini"
+            "Zemin İyileştirme, Fore Kazık ve Radye Jeneral Temel",
+            "C35/C40 Yüksek Dayanımlı Beton & B420C Yapı Çeliği",
+            "Isı, Ses & Su Yalıtımı ile Akıllı Ev Teknolojileri"
           ]
         }
       ]
@@ -109,312 +100,96 @@
       "id": "hizmetler",
       "path": "/hizmetler",
       "navLabel": "Faaliyet Alanları",
-      "title": "Hizmetler: Çatı, Yangın Sistemleri, Çelik | Kuzey Denizi",
-      "description": "Adana ve çevresinde kamu binası çatı yenileme, hastane yangın söndürme ve algılama tadilatları, S355 çelik konstrüksiyon ve periyodik tesis bakımı.",
-      "keywords": "çatı yenileme adana, kenet çatı taşyünü yalıtım, hastane yangın tesisatı, sprinkler pompa istasyonu, çelik hangar adana",
-      "ogImage": "https://www.kuzeydeniziyapi.com.tr/images/og/og-hizmetler.jpg",
+      "title": "Faaliyet Alanlarımız | Kuzey Denizi İnşaat",
+      "description": "Konut ve rezidans projeleri, ticari iş merkezleri, kamu/özel sektör inşaat taahhüt ve kentsel dönüşüm hizmetleri.",
+      "keywords": "konut rezidans projeleri, ticari plaza yapıları, inşaat taahhüt, kentsel dönüşüm kat karşılığı",
+      "ogImage": "https://www.kuzeydeniziyapi.com.tr/images/logo.png",
       "ogImageAlt": "Kuzey Denizi İnşaat faaliyet alanları",
-      "heroBadge": "Mühendislik & Saha Hizmetleri",
-      "h1": "Uçtan Uca İnşaat, Çatı Yenileme ve Yangın Güvenliği Çözümleri",
-      "leadSummary": "Kamu binaları, hastaneler, adliye kompleksleri ve organize sanayi tesisleri için kenet çatı sistemleri, yangın pompa odaları, adresli algılama ve ağır çelik yapı imalatı gerçekleştiriyoruz.",
+      "heroBadge": "Mühendislik & İnşaat Çözümleri",
+      "h1": "Bütüncül Mühendislik ve İnşaat Çözümleri",
+      "leadSummary": "Arsa geliştirmeden mimari projelendirmeye, anahtar teslim konut üretiminden büyük ölçekli kamu ve özel sektör taahhüt işlerine kadar geniş uzmanlık.",
       "changefreq": "monthly",
       "priority": "0.9",
       "highlights": [
-        "Kamu Taahhüt & Çatı Yenileme: Gizli kenet sac, TPO/PVC membran, sifonik drenaj",
-        "Yangın Güvenliği & Mekanik Sistemler: UL/FM yangın pompaları, ıslak/kuru sprinkler, duman tahliye",
-        "Ağır Çelik & Entegre Tesis Bakımı: S355 çelik konstrüksiyon ve periyodik teknik servis"
+        "Konut & Rezidans Projeleri: Akıllı ev sistemleri ve geniş peyzaj alanları",
+        "Ticari & Plaza Yapıları: A+ ofis blokları ve cadde mağazaları",
+        "İnşaat Taahhüt & Kentsel Dönüşüm: Depreme dayanıklı, yüksek değerli yapılar"
       ],
       "sections": [
         {
-          "heading": "Ana Uzmanlık Gruplarımız",
-          "summary": "Projeden kesin kabule kadar disiplinler arası mühendislik yönetimi.",
+          "heading": "Uzmanlık Alanlarımız",
+          "summary": "Projeden anahtar teslime disiplinli mühendislik yönetimi.",
           "bullets": [
-            "Adliye, hastane ve okul binalarında aktif hizmet altında güvenli çatı renovasyonu",
-            "BYKHY ve EN 12845 standartlarında hastane yangın güvenliği güçlendirme çalışmaları",
-            "Sanayi tesisleri için geniş açıklıklı çelik makas, vinç kirişi ve yangın hatları"
+            "Konut & Rezidans Üretimi",
+            "Ticari İş Merkezleri & Plazalar",
+            "Kamu & Özel Sektör İnşaat Taahhütleri",
+            "Kentsel Dönüşüm & Kat Karşılığı Arsa Geliştirme"
           ]
         }
       ]
-    },
-    {
-      "id": "hizmet-cati",
-      "kind": "service",
-      "path": "/hizmetler/cati-yenileme-izolasyon",
-      "parentPath": "/hizmetler",
-      "navLabel": "Çatı Yenileme ve İzolasyon",
-      "title": "Adana Çatı Yenileme ve İzolasyon | Kuzey Denizi",
-      "description": "Adana'da adliye, hastane ve kamu binalarında kenet sac çatı, taşyünü ısı yalıtımı, TPO/PVC membran ve sifonik drenaj ile anahtar teslim çatı yenileme.",
-      "keywords": "adana çatı yenileme, kenet çatı, taşyünü çatı yalıtımı, tpo membran, sifonik drenaj, kamu binası çatı tadilatı",
-      "serviceType": "Çatı yenileme ve izolasyon",
-      "ogImage": "https://www.kuzeydeniziyapi.com.tr/images/og/og-cati-yenileme.jpg",
-      "ogImageAlt": "Kamu binası çatı yenileme ve izolasyon uygulaması",
-      "image": "/images/adana-adliye-gercek.jpg",
-      "heroBadge": "Faaliyet Alanı 01 • Kamu Taahhüt & Çatı Sistemleri",
-      "h1": "Kamu Binaları Çatı Yenileme ve İzolasyon Taahhütleri",
-      "leadSummary": "Aktif hizmet veren kamu binalarında kurum işleyişini aksatmadan güvenli iskele, yaşam hattı ve etaplı çatı renovasyonu uyguluyoruz. Adana Adliyesi Çatı Yenileme projemiz bu yaklaşımın sahadaki örneğidir.",
-      "changefreq": "monthly",
-      "priority": "0.8",
-      "images": [
-        { "loc": "/images/adana-adliye-gercek.jpg", "title": "Adana Adliyesi Çatı Yenileme", "caption": "Adana Adliyesi çatı yenileme referans projesi" },
-        { "loc": "/images/cati-izolasyon.jpg", "title": "Çatı ısı ve su yalıtımı", "caption": "Çatı ısı-su yalıtımı ve membran uygulaması (temsilî görsel)" }
-      ],
-      "highlights": [
-        "Kenet Çatı & Çelik Aşık: Gizli klipsli alüminyum/galvaniz kenet sac kaplama ve korozyon korumalı çelik karkas",
-        "Isı, Su & Sifonik Drenaj: Yüksek yoğunluklu taşyünü, TPO/PVC membran ve şiddetli yağışa dayanıklı oluk detayları",
-        "Güvenli Saha: İskele, yaşam hattı ve etaplı uygulama ile kurum işleyişi aksatılmaz"
-      ],
-      "sections": [
-        {
-          "heading": "Uygulama Adımları",
-          "summary": "Çatı yenileme işlerini keşiften teslime kadar planlı etaplarla yürütüyoruz.",
-          "bullets": [
-            "Mevcut çatı söküm ve zemin hazırlığı",
-            "Isı ve su yalıtımı uygulaması",
-            "Yeni çatı kaplama ve yağmur drenaj montajı"
-          ]
-        }
-      ],
-      "relatedPaths": ["/projeler/adana-adliyesi-cati-yenileme"]
-    },
-    {
-      "id": "hizmet-yangin",
-      "kind": "service",
-      "path": "/hizmetler/yangin-guvenligi-sistemleri",
-      "parentPath": "/hizmetler",
-      "navLabel": "Yangın Güvenliği Sistemleri",
-      "title": "Hastane Yangın Güvenliği Sistemleri | Kuzey Denizi",
-      "description": "Hastane ve sanayi tesislerinde EN 12845 ve NFPA standartlarında yangın pompa dairesi, sprinkler, hidrant, adresli algılama ve duman tahliye çalışmaları.",
-      "keywords": "hastane yangın güvenliği adana, yangın pompa dairesi, sprinkler sistemi, adresli yangın algılama, duman tahliye, en 12845",
-      "serviceType": "Yangın güvenliği sistemleri tadilat, bakım ve kurulumu",
-      "ogImage": "https://www.kuzeydeniziyapi.com.tr/images/og/og-yangin-guvenligi.jpg",
-      "ogImageAlt": "Hastane yangın pompa ve sprinkler sistemleri",
-      "image": "/images/pozanti-hastane-gercek.jpg",
-      "heroBadge": "Faaliyet Alanı 02 • Yangın Güvenliği & İleri Mühendislik",
-      "h1": "Hastane ve Sanayi Tesisleri Yangın Söndürme ve Algılama Sistemleri",
-      "leadSummary": "Pozantı 80. Yıl Devlet Hastanesi yangın güvenliği referansımızla; hastaneler, kamu binaları ve sanayi tesisleri için EN 12845 ve NFPA standartlarında yangın altyapılarının tadilat, bakım ve kurulumunu gerçekleştiriyoruz.",
-      "changefreq": "monthly",
-      "priority": "0.8",
-      "images": [
-        { "loc": "/images/pozanti-hastane-gercek.jpg", "title": "Pozantı 80. Yıl Devlet Hastanesi", "caption": "Pozantı 80. Yıl Devlet Hastanesi yangın güvenliği referans projesi" },
-        { "loc": "/images/yangin-sistemleri.jpg", "title": "Yangın pompa ve sprinkler sistemleri", "caption": "Yangın pompa dairesi ve sprinkler hatları (temsilî görsel)" }
-      ],
-      "highlights": [
-        "UL/FM Pompa & Sprinkler: Elektrikli-dizel yedekli pompa daireleri, ıslak/kuru sprinkler ve dış saha hidrant ağları",
-        "Adresli Algılama & Tahliye: Duman-ısı algılama panelleri, basınçlandırma fanları ve itfaiye kabul süreçleri",
-        "Binaların Yangından Korunması Hakkında Yönetmelik (BYKHY) gerekliliklerine uygun uygulama"
-      ],
-      "sections": [
-        {
-          "heading": "Uygulama Adımları",
-          "summary": "Sağlık tesislerinde hizmet sürekliliğini gözeterek planlı ve etaplı çalışıyoruz.",
-          "bullets": [
-            "Mevcut yangın altyapısı tespit ve tadilat planlaması",
-            "Söndürme ve algılama donanımlarının tadilat ve bakımı",
-            "Sistem testleri ve devreye alma kontrolleri"
-          ]
-        }
-      ],
-      "relatedPaths": ["/projeler/pozanti-devlet-hastanesi-yangin-guvenligi"]
-    },
-    {
-      "id": "hizmet-celik",
-      "kind": "service",
-      "path": "/hizmetler/celik-yapi-tesis-bakim",
-      "parentPath": "/hizmetler",
-      "navLabel": "Çelik Yapı ve Tesis Bakımı",
-      "title": "Çelik Konstrüksiyon ve Tesis Bakımı | Kuzey Denizi",
-      "description": "Sanayi hangarları ve lojistik depolar için S355 çelik konstrüksiyon, sandviç panel çatı-cephe ile çatı, su yalıtımı ve yangın sistemlerinde periyodik bakım.",
-      "keywords": "çelik konstrüksiyon adana, çelik hangar, sandviç panel çatı, periyodik tesis bakımı, yangın sistemi bakım sözleşmesi",
-      "serviceType": "Çelik konstrüksiyon ve periyodik tesis bakımı",
-      "ogImage": "https://www.kuzeydeniziyapi.com.tr/images/og/og-celik-yapi.jpg",
-      "ogImageAlt": "Endüstriyel çelik konstrüksiyon yapı",
-      "image": "/images/celik-yapi.jpg",
-      "heroBadge": "Faaliyet Alanı 03 • Ağır Çelik & Entegre Tesis Bakımı",
-      "h1": "Endüstriyel Çelik Yapılar ve Periyodik Teknik Tesis Bakımı",
-      "leadSummary": "Sanayi hangarları ve lojistik antrepoları için S355 çelik konstrüksiyon imalatının yanı sıra, teslim sonrası çatı-cephe su yalıtımı ve yangın sistemlerinin periyodik bakım sözleşmelerini yürütüyoruz.",
-      "changefreq": "monthly",
-      "priority": "0.8",
-      "images": [
-        { "loc": "/images/celik-yapi.jpg", "title": "Çelik konstrüksiyon", "caption": "Geniş açıklıklı endüstriyel çelik konstrüksiyon (temsilî görsel)" }
-      ],
-      "highlights": [
-        "Geniş Açıklıklı Çelik Hangar: Vinç kirişli endüstriyel üretim yapıları, sandviç panel cephe ve çatı kaplamaları",
-        "Periyodik Teknik Bakım: Kış öncesi çatı dere kontrolü, pompa basınç testleri ve teslim öncesi hazırlık"
-      ],
-      "sections": [
-        {
-          "heading": "Hizmet Kapsamı",
-          "summary": "İmalattan teslim sonrası bakıma kadar tek muhatapla yönetim.",
-          "bullets": [
-            "S355 çelik konstrüksiyon imalat ve montajı",
-            "Sandviç panel çatı ve cephe kaplamaları",
-            "Çatı, su yalıtımı ve yangın sistemleri için periyodik bakım sözleşmeleri"
-          ]
-        }
-      ],
-      "relatedPaths": []
     },
     {
       "id": "projeler",
       "path": "/projeler",
       "navLabel": "Projelerimiz",
-      "title": "Referans Projelerimiz | Kuzey Denizi İnşaat",
-      "description": "Adana Adliyesi Çatı Yenileme ve Pozantı 80. Yıl Devlet Hastanesi yangın güvenliği tadilat ve bakım çalışmaları başta olmak üzere tamamlanan projelerimiz.",
-      "keywords": "adana adliyesi çatı yenileme projesi, pozantı 80 yıl devlet hastanesi yangın, çukurova bartu projeleri, adana kamu taahhüt referansları",
-      "ogImage": "https://www.kuzeydeniziyapi.com.tr/images/og/og-projeler.jpg",
-      "ogImageAlt": "Kuzey Denizi İnşaat referans projeleri",
-      "heroBadge": "Referans Portföyü • Adana & Pozantı",
-      "h1": "Referans Kamu & Mühendislik Projelerimiz",
-      "leadSummary": "Adana Adliyesi Çatı Yenileme ve Pozantı 80. Yıl Devlet Hastanesi Yangın Güvenliği Standartlarının Güçlendirilmesine Yönelik Tadilat ve Bakım Çalışmaları.",
+      "title": "Projelerimiz | Kuzey Denizi İnşaat",
+      "description": "Kuzey Panorama Konutları, Poyraz Marin Rezidans, Kuzey Yıldızı Ticaret Merkezi, Mavi Ufuk Villaları ve diğer prestijli projelerimiz.",
+      "keywords": "kuzey panorama konutları, poyraz marin rezidans, kuzey yıldızı ticaret merkezi, mavi ufuk villaları, kuzey park evleri",
+      "ogImage": "https://www.kuzeydeniziyapi.com.tr/images/logo.png",
+      "ogImageAlt": "Kuzey Denizi İnşaat projeleri",
+      "heroBadge": "Seçkin Portföyümüz • Devam Eden & Tamamlananlar",
+      "h1": "İmzamızı Taşıyan Prestijli Projeler",
+      "leadSummary": "Devam eden, tamamlanan ve çok yakında lansmana çıkacak konut, rezidans ve ticari projelerimizi detaylı inceleyin.",
       "changefreq": "weekly",
       "priority": "0.9",
       "highlights": [
-        "CB-01: Adana Adliyesi Çatı Yenileme (Adana — Tamamlandı)",
-        "CB-02: Pozantı 80. Yıl Devlet Hastanesi Yangın Güvenliği Standartlarının Güçlendirilmesine Yönelik Tadilat ve Bakım Çalışmaları (Pozantı / ADANA — Tamamlandı)"
+        "KD-01: Kuzey Panorama Konutları (Devam Ediyor)",
+        "KD-02: Poyraz Marin Rezidans (Satışları Devam Ediyor)",
+        "KD-03: Kuzey Yıldızı Ticaret Merkezi (Tamamlandı)"
       ],
       "sections": [
         {
-          "heading": "Gerçekleşen Kamu Referanslarımız",
-          "summary": "Adana ve Pozantı ilçelerinde tamamlanan kamu tesisi çatı yenileme ve yangın güvenliği projeleri.",
+          "heading": "Proje Portföyümüz",
+          "summary": "Adana ve Çukurova genelinde hayata geçirdiğimiz konut, villa ve plaza projeleri.",
           "bullets": [
-            "Adana Adliyesi Çatı Yenileme",
-            "Pozantı 80. Yıl Devlet Hastanesi Yangın Güvenliği Tadilat ve Bakım Çalışmaları"
+            "Kuzey Panorama Konutları",
+            "Poyraz Marin Rezidans",
+            "Kuzey Yıldızı Ticaret Merkezi",
+            "Mavi Ufuk Müstakil Villaları",
+            "Kuzey Park Evleri",
+            "Kuzey Vadi Karma Yaşam"
           ]
         }
       ]
     },
     {
-      "id": "proje-adana-adliyesi",
-      "kind": "project",
-      "path": "/projeler/adana-adliyesi-cati-yenileme",
-      "parentPath": "/projeler",
-      "projectId": "prj-adana-adliye-cati",
-      "navLabel": "Adana Adliyesi Çatı Yenileme",
-      "title": "Adana Adliyesi Çatı Yenileme Projesi | Kuzey Denizi",
-      "description": "Adana Adalet Sarayı'nda çatı kaplama yenileme, ısı-su yalıtım katmanları ve yağmur drenaj altyapısının kurum işleyişi aksatılmadan yenilendiği referans proje.",
-      "keywords": "adana adliyesi çatı yenileme, adana adalet sarayı çatı, kamu binası çatı izolasyonu, çukurova bartu referans",
-      "ogImage": "https://www.kuzeydeniziyapi.com.tr/images/og/og-proje-adana-adliyesi.jpg",
-      "ogImageAlt": "Adana Adliyesi çatı yenileme projesi",
-      "image": "/images/adana-adliye-gercek.jpg",
-      "location": "Adana",
-      "client": "Adana Adalet Sarayı",
-      "statusLabel": "Tamamlandı",
-      "heroBadge": "CB-01 • Kamu Taahhüt & Çatı Yenileme • Tamamlandı",
-      "h1": "Adana Adliyesi Çatı Yenileme",
-      "leadSummary": "Adana Adalet Sarayı kompleksinde çatı kaplama yenileme, ısı-su yalıtım katmanları ve yağmur drenaj sistemlerinin anahtar teslim yenilenmesi projesi.",
-      "changefreq": "monthly",
-      "priority": "0.8",
-      "images": [
-        { "loc": "/images/adana-adliye-gercek.jpg", "title": "Adana Adliyesi Çatı Yenileme", "caption": "Kuzey Denizi İnşaat tarafından tamamlanan Adana Adliyesi çatı yenileme projesi" }
-      ],
-      "highlights": [
-        "Mevcut çatı kaplama ve yalıtım katmanlarının yenilenmesi",
-        "Su yalıtımı ve yağmur drenaj altyapısı güçlendirmesi",
-        "Kurum işleyişi aksatılmadan güvenli saha uygulaması"
-      ],
-      "sections": [
-        {
-          "heading": "Proje Künyesi",
-          "summary": "Proje kodu CB-01 olan çalışma tamamlanarak teslim edilmiştir.",
-          "bullets": [
-            "İşveren: Adana Adalet Sarayı",
-            "Konum: Adana",
-            "Kapsam: Çatı Yenileme & İzolasyon",
-            "Durum: Tamamlandı"
-          ]
-        },
-        {
-          "heading": "İş Adımları",
-          "summary": "Uygulama üç ana etapta tamamlanmıştır.",
-          "bullets": [
-            "Mevcut çatı söküm ve zemin hazırlığı",
-            "Isı ve su yalıtımı uygulaması",
-            "Yeni çatı kaplama ve drenaj montajı"
-          ]
-        }
-      ],
-      "relatedPaths": ["/hizmetler/cati-yenileme-izolasyon"]
-    },
-    {
-      "id": "proje-pozanti-hastanesi",
-      "kind": "project",
-      "path": "/projeler/pozanti-devlet-hastanesi-yangin-guvenligi",
-      "parentPath": "/projeler",
-      "projectId": "prj-pozanti-hastane-yangin",
-      "navLabel": "Pozantı Devlet Hastanesi Yangın Güvenliği",
-      "title": "Pozantı Devlet Hastanesi Yangın Güvenliği | Kuzey Denizi",
-      "description": "Pozantı 80. Yıl Devlet Hastanesi'nde yangın pompa, sprinkler, dolap ve algılama sistemlerinin tadilat ve bakımıyla yangın güvenliğinin güçlendirildiği proje.",
-      "keywords": "pozantı devlet hastanesi yangın, hastane yangın güvenliği tadilatı, sprinkler bakım, yangın algılama sistemi, çukurova bartu referans",
-      "ogImage": "https://www.kuzeydeniziyapi.com.tr/images/og/og-proje-pozanti-hastanesi.jpg",
-      "ogImageAlt": "Pozantı 80. Yıl Devlet Hastanesi yangın güvenliği projesi",
-      "image": "/images/pozanti-hastane-gercek.jpg",
-      "location": "Pozantı / ADANA",
-      "client": "Pozantı 80. Yıl Devlet Hastanesi",
-      "statusLabel": "Tamamlandı",
-      "heroBadge": "CB-02 • Sağlık Tesisi & Yangın Güvenliği • Tamamlandı",
-      "h1": "Pozantı 80. Yıl Devlet Hastanesi Yangın Güvenliği Standartlarının Güçlendirilmesine Yönelik Tadilat ve Bakım Çalışmaları",
-      "leadSummary": "Pozantı 80. Yıl Devlet Hastanesi'nde yangın güvenliği standartlarının güçlendirilmesine yönelik mekanik söndürme, yangın algılama, tahliye ve güvenlik altyapısı tadilat ve bakım çalışmaları.",
-      "changefreq": "monthly",
-      "priority": "0.8",
-      "images": [
-        { "loc": "/images/pozanti-hastane-gercek.jpg", "title": "Pozantı 80. Yıl Devlet Hastanesi", "caption": "Pozantı 80. Yıl Devlet Hastanesi yangın güvenliği tadilat ve bakım çalışmaları" }
-      ],
-      "highlights": [
-        "Yangın güvenliği standartlarına uygun mekanik ve tesisat tadilatları",
-        "Yangın pompa, sprinkler, dolap ve algılama sistemlerinin bakım ve yenilenmesi",
-        "Sağlık tesisi sürekliliği gözetilerek tamamlanan saha çalışmaları"
-      ],
-      "sections": [
-        {
-          "heading": "Proje Künyesi",
-          "summary": "Proje kodu CB-02 olan çalışma tamamlanarak teslim edilmiştir.",
-          "bullets": [
-            "İşveren: Pozantı 80. Yıl Devlet Hastanesi",
-            "Konum: Pozantı / ADANA",
-            "Kapsam: Yangın Güvenliği Tadilat & Bakım",
-            "Durum: Tamamlandı"
-          ]
-        },
-        {
-          "heading": "İş Adımları",
-          "summary": "Çalışmalar hastane hizmet sürekliliği korunarak etaplar halinde yürütülmüştür.",
-          "bullets": [
-            "Mevcut yangın altyapısı tespit ve tadilat planlaması",
-            "Söndürme ve algılama donanımlarının tadilat ve bakımı",
-            "Sistem testleri ve devreye alma kontrolleri"
-          ]
-        }
-      ],
-      "relatedPaths": ["/hizmetler/yangin-guvenligi-sistemleri"]
-    },
-    {
       "id": "iletisim",
       "path": "/iletisim",
       "navLabel": "İletişim",
-      "title": "İletişim ve Keşif Talebi | Kuzey Denizi İnşaat",
-      "description": "Kuzey Denizi İnşaat iletişim ve keşif talep formu. Adres: Yeşiloba Mah. 46088 Sk. No: 18 B Seyhan/Adana. Telefon ve WhatsApp: 0533 677 91 09.",
-      "keywords": "çukurova bartu iletişim, adana çatı yenileme teklif, yangın sistemi keşif adana, 0533 677 91 09, yeşiloba seyhan inşaat adresi",
-      "ogImage": "https://www.kuzeydeniziyapi.com.tr/images/og/og-iletisim.jpg",
-      "ogImageAlt": "Kuzey Denizi İnşaat iletişim ve keşif talebi",
-      "heroBadge": "Keşif, İhale & Teklif Merkezi",
-      "h1": "Proje Keşif ve Teklif Talebi İçin İletişime Geçin",
-      "leadSummary": "Çatı yenileme, hastane yangın güvenliği tadilatları, çelik yapı veya kamu taahhüt teklifleriniz için 0533 677 91 09 numaralı telefondan / WhatsApp'tan ulaşın veya çevrimiçi formumuzu doldurun.",
+      "title": "İletişim ve Teklif Talebi | Kuzey Denizi İnşaat",
+      "description": "Kuzey Denizi İnşaat iletişim ve teklif formu. Web: www.kuzeydeniziyapi.com.tr • E-Posta: info@kuzeydeniziyapi.com.tr • WhatsApp: +90 533 677 91 09",
+      "keywords": "kuzey denizi inşaat iletişim, teklif formu, arsa teklifi, kat karşılığı adana, +90 533 677 91 09",
+      "ogImage": "https://www.kuzeydeniziyapi.com.tr/images/logo.png",
+      "ogImageAlt": "Kuzey Denizi İnşaat iletişim",
+      "heroBadge": "İletişim & Satış Ofisi",
+      "h1": "Yeni Yaşamınıza Birlikte Yön Verelim",
+      "leadSummary": "Projelerimiz hakkında detaylı katalog almak, ödeme planlarını öğrenmek veya kat karşılığı arsa ve taahhüt tekliflerinizi iletmek için +90 533 677 91 09 numaralı telefondan / WhatsApp'tan ulaşabilir veya iletişim formunu doldurabilirsiniz.",
       "changefreq": "monthly",
       "priority": "0.85",
       "highlights": [
-        "Telefon & WhatsApp: 0533 677 91 09",
+        "Telefon & WhatsApp: +90 533 677 91 09",
         "Kurumsal E-Posta: info@kuzeydeniziyapi.com.tr",
-        "Adres: Yeşiloba Mah. 46088 Sk. No: 18 B, Seyhan / ADANA",
-        "Çalışma Saatleri: Pazartesi - Cumartesi 08:30 - 18:00"
+        "Web Sitesi: www.kuzeydeniziyapi.com.tr",
+        "Adres: Güzelyalı Mah. Turgut Özal Bulvarı Kuzey Plaza Kat: 4 No: 112 Çukurova / ADANA"
       ],
       "sections": [
         {
-          "heading": "Hızlı Keşif ve Şartname Danışma",
-          "summary": "Gönderilen keşif ve fiyat talepleri teknik ekibimize iletilir.",
+          "heading": "İletişim Kanallarımız",
+          "summary": "İletişim formuna yazılan mesajlar doğrudan yönetim dashboard'una düşer.",
           "bullets": [
-            "Yerinde teknik metraj ve keşif randevusu",
-            "Kamu ihale ve özel sektör şartname uyumluluk incelemesi",
-            "WhatsApp ve e-posta üzerinden geri dönüş"
+            "Çevrimiçi Teklif & Bilgi Formu",
+            "WhatsApp Canlı Destek (+90 533 677 91 09)",
+            "Kurumsal E-Posta: info@kuzeydeniziyapi.com.tr"
           ]
         }
       ]
@@ -422,16 +197,12 @@
   ],
   "faqs": [
     {
-      "q": "Kuzey Denizi İnşaat A.Ş. hangi alanlarda hizmet vermektedir?",
-      "a": "2016 yılından bu yana Adana ve çevresinde kamu binaları çatı yenileme ve izolasyon işleri, hastane ve tesis yangın güvenliği sistemleri tadilat ve bakımı, TBDY 2018 deprem güçlendirme ile ağır çelik sanayi yapıları alanlarında anahtar teslim hizmet sunmaktadır."
+      "q": "Kuzey Denizi İnşaat hangi alanlarda hizmet vermektedir?",
+      "a": "Konut ve rezidans projeleri, ticari iş merkezleri ve plazalar, kamu ve özel sektör inşaat taahhüt işleri ile kentsel dönüşüm ve kat karşılığı arsa geliştirme alanlarında hizmet sunmaktadır."
     },
     {
-      "q": "Adana Adliyesi ve Pozantı Devlet Hastanesi projelerinde hangi işler yapılmıştır?",
-      "a": "Adana Adliyesi Çatı Yenileme projesi ile çatı kaplama, ısı-su yalıtımı ve drenaj yenilemesi; Pozantı 80. Yıl Devlet Hastanesi'nde ise yangın güvenliği standartlarının güçlendirilmesine yönelik tadilat ve bakım çalışmaları tamamlanmıştır."
-    },
-    {
-      "q": "Teklif ve yerinde keşif talebi için nasıl ulaşabiliriz?",
-      "a": "0533 677 91 09 numaralı telefon ve WhatsApp hattımızdan, info@kuzeydeniziyapi.com.tr e-posta adresimizden veya www.kuzeydeniziyapi.com.tr/iletisim sayfasındaki çevrimiçi formdan doğrudan ulaşabilirsiniz."
+      "q": "Kuzey Denizi İnşaat ile nasıl iletişime geçebiliriz?",
+      "a": "+90 533 677 91 09 numaralı telefon ve WhatsApp hattımızdan, info@kuzeydeniziyapi.com.tr e-posta adresimizden veya www.kuzeydeniziyapi.com.tr/iletisim sayfasındaki çevrimiçi formdan doğrudan ulaşabilirsiniz."
     }
   ]
 }

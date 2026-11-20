@@ -163,3 +163,69 @@
 .erp-workspace[data-erp-theme="light"] main .divide-slate-800 > * + * {
   border-color: #e2e8f0;
 }
+
+/* Kuzey Denizi Architectural Patterns & 6-Second Entrance Intro Keyframes */
+.blueprint-grid-light {
+  background-image:
+    linear-gradient(to right, rgba(4, 42, 83, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(4, 42, 83, 0.045) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.blueprint-grid-dark {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+@keyframes kdWingTopLeft {
+  0% { opacity: 0; transform: translate(-45px, -30px) scale(0.75); }
+  100% { opacity: 1; transform: translate(0, 0) scale(1); }
+}
+
+@keyframes kdWingTopRight {
+  0% { opacity: 0; transform: translate(45px, -30px) scale(0.75); }
+  100% { opacity: 1; transform: translate(0, 0) scale(1); }
+}
+
+@keyframes kdWingBottomLeft {
+  0% { opacity: 0; transform: translate(-35px, 45px) scale(0.75); }
+  100% { opacity: 1; transform: translate(0, 0) scale(1); }
+}
+
+@keyframes kdWingBottomRight {
+  0% { opacity: 0; transform: translate(40px, 40px) scale(0.75); }
+  100% { opacity: 1; transform: translate(0, 0) scale(1); }
+}
+
+@keyframes kdCardReveal {
+  0% { opacity: 0; transform: scale(0.86) translateY(20px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes kdTextSlide {
+  0% { opacity: 0; transform: translateX(-22px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes kdFadeUp {
+  0% { opacity: 0; transform: translateY(18px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes kdShimmerSweep {
+  0% { transform: translateX(-160%) skewX(-22deg); }
+  100% { transform: translateX(260%) skewX(-22deg); }
+}
+
+@keyframes kdProgressBar6s {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+@keyframes kdRingSpin {
+  0% { transform: rotate(0deg) scale(0.95); opacity: 0.25; }
+  50% { transform: rotate(180deg) scale(1.03); opacity: 0.55; }
+  100% { transform: rotate(360deg) scale(0.95); opacity: 0.25; }
+}

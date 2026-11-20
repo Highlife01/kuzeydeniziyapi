@@ -17,7 +17,7 @@ const DIST_DIR = path.join(ROOT_DIR, 'dist');
 const catalog = JSON.parse(fs.readFileSync(CATALOG_PATH, 'utf8'));
 const { site, routes, faqs } = catalog;
 
-const CANONICAL_DOMAIN = 'https://www.kuzeydenizi.com.tr';
+const CANONICAL_DOMAIN = 'https://www.kuzeydeniziyapi.com.tr';
 const INDEXNOW_KEY = 'cb84f1d92e5a4b7c8f103d2e6a9c4b71';
 const TODAY_ISO = new Date().toISOString().split('T')[0];
 

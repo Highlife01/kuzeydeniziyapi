@@ -6,132 +6,135 @@ export const IletisimPage: React.FC = () => {
   return (
     <PublicLayout>
       {/* Sub-page Hero */}
-      <section className="relative py-20 bg-[#070d1e] border-b-2 border-slate-800 overflow-hidden">
-        <div className="absolute inset-0 opacity-30 dot-pattern pointer-events-none" />
+      <section className="relative py-20 bg-[#042A53] border-b-4 border-[#F25C05] overflow-hidden text-white">
+        <div className="absolute inset-0 blueprint-grid-dark opacity-40 pointer-events-none" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-950/90 border border-blue-500/40 text-blue-300 text-xs font-black uppercase tracking-widest">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-[#F7941D] text-xs font-black uppercase tracking-widest">
             <i className="fa-solid fa-headset" />
             <span>İletişim &amp; Teklif Talebi</span>
           </div>
           <h1 className="text-4xl sm:text-5xl font-black tracking-tight text-white">
-            Keşif, İhale ve Mühendislik Teklif Talebi Oluşturun
+            Yeni Yaşamınıza Birlikte Yön Verelim
           </h1>
-          <p className="text-slate-300 max-w-3xl text-base sm:text-lg font-medium">
-            Çatı yenileme, hastane yangın güvenliği sistemleri veya kamu yapı taahhütleriniz için
-            formu doldurun; mesajınız doğrudan Kuzey Denizi Yönetim Dashboard&apos;una düşsün.
+          <p className="text-slate-200 max-w-3xl text-base sm:text-lg font-medium">
+            Projelerimiz hakkında detaylı katalog almak, ödeme planlarını öğrenmek veya kat karşılığı
+            arsa ve taahhüt tekliflerinizi iletmek için formu doldurun; mesajınız doğrudan{' '}
+            <strong className="text-[#F7941D]">Kuzey Denizi Yönetim Dashboard&apos;una</strong> düşsün.
           </p>
         </div>
       </section>
 
       {/* 3-Column Quick Contact Cards */}
-      <section className="py-16 bg-[#030712] border-b-2 border-slate-800">
+      <section className="py-16 bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-6">
           <a
             href="#harita"
-            className="p-7 rounded-3xl bg-[#0b1329] border-2 border-slate-700 hover:border-blue-400 transition space-y-3"
+            className="p-7 rounded-3xl bg-slate-50 border border-slate-200 hover:border-[#0068C9] transition space-y-3 shadow-sm"
           >
-            <div className="w-12 h-12 rounded-2xl bg-blue-600/20 border border-blue-500/40 text-blue-400 flex items-center justify-center text-xl">
+            <div className="w-12 h-12 rounded-2xl bg-[#042A53] text-[#F7941D] flex items-center justify-center text-xl shadow-sm">
               <i className="fa-solid fa-location-dot" />
             </div>
-            <h3 className="text-lg font-black text-white">Merkez Ofisimiz</h3>
-            <p className="text-sm text-slate-300">
-              Yeşiloba Mah. 46088 Sk. No: 18 B, Seyhan / ADANA
+            <h3 className="text-lg font-black text-[#042A53]">Merkez Ofis &amp; Showroom</h3>
+            <p className="text-sm text-slate-600">
+              Güzelyalı Mah. Turgut Özal Bulvarı Kuzey Plaza Kat: 4 No: 112 Çukurova / ADANA
             </p>
           </a>
 
           <a
             href="tel:+905336779109"
-            className="p-7 rounded-3xl bg-[#0b1329] border-2 border-slate-700 hover:border-emerald-400 transition space-y-3"
+            className="p-7 rounded-3xl bg-slate-50 border border-slate-200 hover:border-emerald-500 transition space-y-3 shadow-sm"
           >
-            <div className="w-12 h-12 rounded-2xl bg-emerald-500/20 border border-emerald-400/40 text-emerald-400 flex items-center justify-center text-xl">
+            <div className="w-12 h-12 rounded-2xl bg-[#0068C9] text-white flex items-center justify-center text-xl shadow-sm">
               <i className="fa-solid fa-phone" />
             </div>
-            <h3 className="text-lg font-black text-white">Telefon &amp; WhatsApp</h3>
-            <p className="text-sm text-slate-300">0533 677 91 09 — Pzt-Cmt 08:30 - 18:00</p>
+            <h3 className="text-lg font-black text-[#042A53]">Telefon &amp; WhatsApp</h3>
+            <p className="text-sm font-bold text-[#0068C9]">+90 533 677 91 09</p>
+            <p className="text-xs text-slate-500">Pzt - Cmt: 08:30 - 18:30</p>
           </a>
 
           <a
             href="mailto:info@kuzeydeniziyapi.com.tr"
-            className="p-7 rounded-3xl bg-[#0b1329] border-2 border-slate-700 hover:border-amber-400 transition space-y-3"
+            className="p-7 rounded-3xl bg-slate-50 border border-slate-200 hover:border-[#F25C05] transition space-y-3 shadow-sm"
           >
-            <div className="w-12 h-12 rounded-2xl bg-amber-500/20 border border-amber-400/40 text-amber-400 flex items-center justify-center text-xl">
+            <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#F7941D] to-[#F25C05] text-white flex items-center justify-center text-xl shadow-sm">
               <i className="fa-solid fa-envelope" />
             </div>
-            <h3 className="text-lg font-black text-white">Kurumsal E-Posta</h3>
-            <p className="text-sm text-slate-300">
-              info@kuzeydeniziyapi.com.tr &bull; ihale@kuzeydeniziyapi.com.tr
-            </p>
+            <h3 className="text-lg font-black text-[#042A53]">Kurumsal E-Posta</h3>
+            <p className="text-sm font-bold text-[#042A53]">info@kuzeydeniziyapi.com.tr</p>
+            <p className="text-xs text-slate-500">www.kuzeydeniziyapi.com.tr</p>
           </a>
         </div>
       </section>
 
       {/* 2-Column Form & Map Section */}
-      <section className="py-20 bg-[#070d1e]">
+      <section className="py-20 bg-slate-50 blueprint-grid-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-10">
-          <div className="lg:col-span-7 bg-[#0b1329] p-8 sm:p-10 rounded-3xl border-2 border-slate-700 shadow-2xl">
+          <div className="lg:col-span-7 bg-white p-8 sm:p-10 rounded-3xl border border-slate-200 shadow-xl relative overflow-hidden">
+            <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#0068C9] via-[#042A53] to-[#F25C05]" />
             <div className="mb-7 space-y-2">
-              <h2 className="text-2xl sm:text-3xl font-black text-white">
-                Proje &amp; Keşif Talep Formu
+              <h2 className="text-2xl sm:text-3xl font-black text-[#042A53]">
+                Bilgi, Randevu &amp; Teklif Formu
               </h2>
-              <p className="text-sm text-slate-400">
-                Gönderilen her form gerçek zamanlı olarak Dashboard &rarr; İletişim Mesajları
+              <p className="text-sm text-slate-500">
+                Gönderilen her mesaj gerçek zamanlı olarak Dashboard &rarr; İletişim Mesajları
                 bölümüne düşer.
               </p>
             </div>
             <ContactFormCard
               sourcePage="İletişim Sayfası"
               includeCompanyField
-              submitLabel="Teklif Talebini İlet"
+              submitLabel="Teklif Talebini Gönder"
             />
           </div>
 
           <div id="harita" className="lg:col-span-5 space-y-6">
-            <div className="bg-[#0b1329] p-6 rounded-3xl border-2 border-slate-700 space-y-4">
-              <h3 className="text-lg font-black text-white flex items-center gap-2">
-                <i className="fa-solid fa-map-location-dot text-blue-400" />
-                <span>Ofis Harita Konumu (Adana)</span>
+            <div className="bg-white p-6 rounded-3xl border border-slate-200 shadow-lg space-y-4">
+              <h3 className="text-lg font-black text-[#042A53] flex items-center gap-2">
+                <i className="fa-solid fa-map-location-dot text-[#F25C05]" />
+                <span>Ofis Harita Konumu (Çukurova / Adana)</span>
               </h3>
-              <div className="rounded-2xl overflow-hidden border border-slate-700 h-[316px]">
+              <div className="rounded-2xl overflow-hidden border border-slate-200 h-[316px]">
                 <iframe
-                  title="Kuzey Denizi İnşaat Adana Merkez Konum"
-                  src="https://www.openstreetmap.org/export/embed.html?bbox=35.2350%2C36.9700%2C35.2710%2C37.0010&layer=mapnik&marker=36.9855%2C35.2530"
+                  title="Kuzey Denizi İnşaat Merkez Konum"
+                  src="https://www.openstreetmap.org/export/embed.html?bbox=35.2500%2C37.0200%2C35.3100%2C37.0600&layer=mapnik&marker=37.0420%2C35.2830"
                   className="w-full h-full border-0"
                   loading="lazy"
                 />
               </div>
               <a
-                href="https://maps.google.com/?q=Ye%C5%9Filoba+Mah.+46088+Sk.+No+18+B+Seyhan+Adana"
+                href="https://maps.google.com/?q=Turgut+%C3%96zal+Bulvar%C4%B1+G%C3%BCzelyal%C4%B1+%C3%87ukurova+Adana"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-xs font-extrabold text-blue-400 hover:text-blue-300 transition"
+                className="inline-flex items-center gap-2 text-xs font-extrabold text-[#0068C9] hover:text-[#F25C05] transition"
               >
                 <i className="fa-solid fa-arrow-up-right-from-square" />
                 <span>Google Haritalar&apos;da Yol Tarifi Al</span>
               </a>
-              <div className="p-4 rounded-2xl bg-[#070d1e] border border-slate-700 text-xs text-slate-300 space-y-1">
-                <div className="font-black text-white">Adres &amp; Vergi Bilgisi</div>
+              <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 text-xs text-slate-600 space-y-1">
+                <div className="font-black text-[#042A53]">Adres &amp; İletişim</div>
                 <p>
-                  Yeşiloba Mah. 46088 Sk. No: 18 B, Seyhan / ADANA — Seyhan Vergi Dairesi Müd.
-                  (VKN: 2640323020)
+                  Güzelyalı Mah. Turgut Özal Bulvarı Kuzey Plaza Kat: 4 No: 112, Çukurova / ADANA
                 </p>
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-blue-950/80 to-[#0b1329] p-7 rounded-3xl border-2 border-blue-500/50 space-y-4">
-              <div className="text-xs font-black uppercase tracking-widest text-amber-400">
-                Acil İhale / Teklif Danışma Hattı
+            <div className="bg-[#042A53] text-white p-7 rounded-3xl border border-[#0068C9]/50 shadow-xl space-y-4">
+              <div className="text-xs font-black uppercase tracking-widest text-[#F7941D]">
+                Hızlı Müşteri &amp; WhatsApp Hattı
               </div>
-              <div className="text-2xl font-black text-white">0533 677 91 09</div>
+              <div className="text-2xl font-black text-white">+90 533 677 91 09</div>
               <p className="text-xs text-slate-300">
-                Kamu şartnameleri, teknik keşif ve acil çatı/yangın müdahale talepleri için doğrudan
-                mühendislik koordinasyon hattımıza ulaşabilirsiniz.
+                Projeler, daire tipleri, ödeme planları ve teknik keşif talepleri için doğrudan
+                WhatsApp veya telefon üzerinden ulaşabilirsiniz.
               </p>
               <a
-                href="tel:+905336779109"
-                className="w-full inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-black text-sm py-3.5 rounded-xl border border-blue-300 transition"
+                href="https://wa.me/905336779109?text=Merhaba%2C%20Kuzey%20Denizi%20%C4%B0n%C5%9Faat%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20ba5a] text-white font-black text-sm py-3.5 rounded-xl shadow-lg transition"
               >
-                <i className="fa-solid fa-phone-volume" />
-                <span>Doğrudan Ara</span>
+                <i className="fa-brands fa-whatsapp text-lg" />
+                <span>WhatsApp ile Mesaj Gönder</span>
               </a>
             </div>
           </div>

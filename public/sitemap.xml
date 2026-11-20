@@ -1,106 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://www.kuzeydenizi.com.tr/</loc>
+    <loc>https://www.kuzeydeniziyapi.com.tr/</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://www.kuzeydenizi.com.tr/images/adana-adliye-gercek.jpg</image:loc>
-      <image:title>Adana Adliyesi Çatı Yenileme</image:title>
-      <image:caption>Kuzey Denizi İnşaat tarafından tamamlanan Adana Adliyesi çatı yenileme projesi</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kuzeydenizi.com.tr/images/pozanti-hastane-gercek.jpg</image:loc>
-      <image:title>Pozantı 80. Yıl Devlet Hastanesi</image:title>
-      <image:caption>Pozantı 80. Yıl Devlet Hastanesi yangın güvenliği tadilat ve bakım çalışmaları</image:caption>
+      <image:loc>https://www.kuzeydeniziyapi.com.tr/images/logo.png</image:loc>
+      <image:title>Kuzey Denizi İnşaat Logo</image:title>
+      <image:caption>Kuzey Denizi İnşaat kurumsal logosu</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://www.kuzeydenizi.com.tr/kurumsal</loc>
+    <loc>https://www.kuzeydeniziyapi.com.tr/kurumsal</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.kuzeydenizi.com.tr/hizmetler</loc>
+    <loc>https://www.kuzeydeniziyapi.com.tr/hizmetler</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.kuzeydenizi.com.tr/hizmetler/cati-yenileme-izolasyon</loc>
-    <lastmod>2026-11-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://www.kuzeydenizi.com.tr/images/adana-adliye-gercek.jpg</image:loc>
-      <image:title>Adana Adliyesi Çatı Yenileme</image:title>
-      <image:caption>Adana Adliyesi çatı yenileme referans projesi</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kuzeydenizi.com.tr/images/cati-izolasyon.jpg</image:loc>
-      <image:title>Çatı ısı ve su yalıtımı</image:title>
-      <image:caption>Çatı ısı-su yalıtımı ve membran uygulaması (temsilî görsel)</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.kuzeydenizi.com.tr/hizmetler/yangin-guvenligi-sistemleri</loc>
-    <lastmod>2026-11-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://www.kuzeydenizi.com.tr/images/pozanti-hastane-gercek.jpg</image:loc>
-      <image:title>Pozantı 80. Yıl Devlet Hastanesi</image:title>
-      <image:caption>Pozantı 80. Yıl Devlet Hastanesi yangın güvenliği referans projesi</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kuzeydenizi.com.tr/images/yangin-sistemleri.jpg</image:loc>
-      <image:title>Yangın pompa ve sprinkler sistemleri</image:title>
-      <image:caption>Yangın pompa dairesi ve sprinkler hatları (temsilî görsel)</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.kuzeydenizi.com.tr/hizmetler/celik-yapi-tesis-bakim</loc>
-    <lastmod>2026-11-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://www.kuzeydenizi.com.tr/images/celik-yapi.jpg</image:loc>
-      <image:title>Çelik konstrüksiyon</image:title>
-      <image:caption>Geniş açıklıklı endüstriyel çelik konstrüksiyon (temsilî görsel)</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.kuzeydenizi.com.tr/projeler</loc>
+    <loc>https://www.kuzeydeniziyapi.com.tr/projeler</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.kuzeydenizi.com.tr/projeler/adana-adliyesi-cati-yenileme</loc>
-    <lastmod>2026-11-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://www.kuzeydenizi.com.tr/images/adana-adliye-gercek.jpg</image:loc>
-      <image:title>Adana Adliyesi Çatı Yenileme</image:title>
-      <image:caption>Kuzey Denizi İnşaat tarafından tamamlanan Adana Adliyesi çatı yenileme projesi</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.kuzeydenizi.com.tr/projeler/pozanti-devlet-hastanesi-yangin-guvenligi</loc>
-    <lastmod>2026-11-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://www.kuzeydenizi.com.tr/images/pozanti-hastane-gercek.jpg</image:loc>
-      <image:title>Pozantı 80. Yıl Devlet Hastanesi</image:title>
-      <image:caption>Pozantı 80. Yıl Devlet Hastanesi yangın güvenliği tadilat ve bakım çalışmaları</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.kuzeydenizi.com.tr/iletisim</loc>
+    <loc>https://www.kuzeydeniziyapi.com.tr/iletisim</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>

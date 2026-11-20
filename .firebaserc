@@ -5,8 +5,8 @@
   "targets": {
     "karacateknik-b202f": {
       "hosting": {
-        "kuzeydeniziyapi": [
-          "kuzeydeniziyapi"
+        "kuzeyyildiziyapi": [
+          "kuzeyyildiziyapi"
         ]
       }
     }

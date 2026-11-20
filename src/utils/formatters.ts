@@ -31,15 +31,15 @@ export function formatDateTimeTR(iso: string): string {
 }
 
 export const SERVICE_OPTIONS = [
-  { value: 'kamu-taahhut', label: 'Kamu & Kurumsal Yapı Taahhütleri' },
-  { value: 'cati-yenileme', label: 'Çatı Konstrüksiyon, Kenet & Yalıtım Yenileme' },
-  { value: 'yangin-muhendislik', label: 'Yangın Algılama, Sprinkler & Pompa Sistemleri' },
-  { value: 'statik-celik', label: 'İleri Statik Mühendislik & Çelik Yapılar' },
-  { value: 'tesis-yonetimi', label: 'Entegre Endüstriyel Tesis & Teknik Bakım' },
-  { value: 'diger', label: 'Diğer Özel Proje & Danışmanlık' },
+  { value: 'konut-rezidans', label: 'Konut & Rezidans Projeleri' },
+  { value: 'ticari-plaza', label: 'Ticari İş Merkezleri & Plaza Yapıları' },
+  { value: 'insaat-taahhut', label: 'Kamu & Özel Sektör İnşaat Taahhüt' },
+  { value: 'kentsel-donusum', label: 'Kentsel Dönüşüm & Kat Karşılığı Arsa' },
+  { value: 'deprem-guclendirme', label: 'Deprem Güçlendirme & Statik Mühendislik' },
+  { value: 'diger', label: 'Diğer Proje & Yatırım Danışmanlığı' },
 ] as const;
 
 export function getServiceLabel(val: string): string {
   const found = SERVICE_OPTIONS.find((s) => s.value === val || s.label === val);
-  return found ? found.label : val || 'Genel Teklif Talebi';
+  return found ? found.label : val || 'Genel Teklif & Bilgi Talebi';
 }

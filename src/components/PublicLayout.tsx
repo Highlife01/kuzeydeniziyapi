@@ -10,7 +10,7 @@ interface PublicLayoutProps {
 
 export const PublicLayout: React.FC<PublicLayoutProps> = ({ isHome = false, children }) => {
   return (
-    <div className="min-h-screen flex flex-col bg-[#030712] text-white relative">
+    <div className="min-h-screen flex flex-col bg-white text-[#042A53] relative">
       <Navbar isHome={isHome} />
       <main className="flex-1">{children}</main>
       <Footer />

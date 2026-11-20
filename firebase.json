@@ -1,6 +1,5 @@
 {
   "hosting": {
-    "site": "kuzeydeniziyapi",
     "public": "dist",
     "cleanUrls": true,
     "trailingSlash": false,
@@ -177,7 +176,8 @@
     ],
     "postdeploy": [
       "node scripts/cleanup-hosting-versions.mjs"
-    ]
+    ],
+    "site": "kuzeyyildiziyapi"
   },
   "firestore": [
     {

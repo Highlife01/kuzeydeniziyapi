@@ -4,12 +4,12 @@ import { BrandLogo } from './BrandLogo';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#021B36] pt-16 pb-12 border-t border-[#042A53] text-white">
+    <footer className="bg-[#021B36] pt-16 pb-12 border-t-4 border-[#F25C05] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-[#042A53]">
           {/* Col 1: Brand Summary */}
           <div className="space-y-5">
-            <BrandLogo light={true} />
+            <BrandLogo withWhiteBg={true} />
             <p className="text-sm text-slate-300 leading-relaxed font-medium">
               Kuzey Denizi İnşaat; deprem güvenliği yüksek modern konutlar, ticari merkezler,
               kamu taahhütleri ve endüstriyel yapılarda üstün mühendislik standartlarıyla
@@ -138,7 +138,7 @@ export const Footer: React.FC = () => {
             <div className="space-y-4 text-sm text-slate-300 font-medium">
               <p className="flex items-start gap-3">
                 <i className="fa-solid fa-location-dot text-[#0068C9] mt-1" />
-                <span>Seyhan / ADANA • Türkiye</span>
+                <span>Güzelyalı Mah. Turgut Özal Bulvarı Kuzey Plaza Kat: 4 No: 112 Çukurova / ADANA</span>
               </p>
               <p className="flex items-center gap-3">
                 <i className="fa-solid fa-phone text-[#F7941D]" />
@@ -158,12 +158,12 @@ export const Footer: React.FC = () => {
               <p className="flex items-center gap-3">
                 <i className="fa-solid fa-globe text-[#0068C9]" />
                 <a
-                  href="https://kuzeydeniziyapi.com.tr"
+                  href="https://www.kuzeydeniziyapi.com.tr"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition"
                 >
-                  kuzeydeniziyapi.com.tr
+                  www.kuzeydeniziyapi.com.tr
                 </a>
               </p>
             </div>

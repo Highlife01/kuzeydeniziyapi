@@ -147,7 +147,7 @@ export function hydrateLegacyProjectToErp(raw: any, actorEmail = 'system'): ErpP
   return {
     id: raw.id,
     organizationId: raw.organizationId || ERP_ORG_ID,
-    code: raw.code || 'CB-01',
+    code: raw.code || 'KD-01',
     title: raw.title || '',
     shortName: raw.shortName || raw.title || '',
     ikn: raw.ikn || '',
@@ -649,7 +649,7 @@ export async function confirmAndPostInvoice(
         id: stockId,
         organizationId: ERP_ORG_ID,
         warehouseId: alloc.targetId,
-        sku: existingMatch?.sku || `CB-${finalizedInvoice.invoiceNo.slice(-4) || idx + 1}`,
+        sku: existingMatch?.sku || `KD-${finalizedInvoice.invoiceNo.slice(-4) || idx + 1}`,
         barcode: existingMatch?.barcode || `869${Date.now().toString().slice(-10)}`,
         name: itemName,
         category: firstItem?.categoryGroup || 'İnşaat İmalatları',
@@ -1369,7 +1369,7 @@ export async function convertTenderToProject(
   const project: ErpProject = {
     id: `prj-ihale-${Date.now()}`,
     organizationId: ERP_ORG_ID,
-    code: tender.ikn || `CB-${Date.now().toString().slice(-4)}`,
+    code: tender.ikn || `KD-${Date.now().toString().slice(-4)}`,
     title: tender.title,
     shortName: tender.title.slice(0, 42),
     ikn: tender.ikn,

@@ -1,5 +1,6 @@
-import React, { Suspense, lazy, useEffect } from 'react';
+import React, { Suspense, lazy, useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
+import { IntroSplash } from './components/IntroSplash';
 import { AuthProvider } from './core/AuthContext';
 import { HomePage } from './pages/HomePage';
 import { getSeoRouteByPath, normalizePathname } from './seo/seoData';
@@ -31,10 +32,10 @@ const DashboardPage = lazy(() =>
 );
 
 const PageLoader: React.FC = () => (
-  <div className="min-h-screen bg-[#030712] flex items-center justify-center text-white">
+  <div className="min-h-screen bg-[#021B36] flex items-center justify-center text-white">
     <div className="text-center space-y-3">
-      <i className="fa-solid fa-circle-notch fa-spin text-2xl text-blue-400" />
-      <div className="text-xs font-bold text-slate-400">Yükleniyor...</div>
+      <i className="fa-solid fa-circle-notch fa-spin text-2xl text-[#F7941D]" />
+      <div className="text-xs font-bold text-slate-300">Yükleniyor...</div>
     </div>
   </div>
 );
@@ -63,11 +64,24 @@ const ScrollAndSeoManager: React.FC = () => {
   return null;
 };
 
+const IntroController: React.FC = () => {
+  const { pathname } = useLocation();
+  const norm = normalizePathname(pathname);
+  const isPrivate = ['/dashboard', '/panel', '/admin', '/yonetim'].some(
+    (p) => norm === p || norm.startsWith(`${p}/`)
+  );
+  const [showIntro, setShowIntro] = useState(!isPrivate);
+
+  if (isPrivate || !showIntro) return null;
+  return <IntroSplash onComplete={() => setShowIntro(false)} />;
+};
+
 export const App: React.FC = () => {
   return (
     <AuthProvider>
       <BrowserRouter>
         <ScrollAndSeoManager />
+        <IntroController />
         <Suspense fallback={<PageLoader />}>
           <Routes>
             <Route path="/" element={<HomePage />} />

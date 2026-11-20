@@ -1,31 +1,19 @@
 {
-  "name": "Çukurova Bartu – ERP, Şantiye ve Finans Yönetim Sistemi",
-  "short_name": "Çukurova Bartu ERP",
-  "description": "Kamu müteahhitliği ERP, şantiye puantaj, fatura OCR, hakediş ve proje finans yönetim sistemi",
+  "name": "Kuzey Denizi İnşaat – ERP, Şantiye ve Finans Yönetim Sistemi",
+  "short_name": "Kuzey Denizi ERP",
+  "description": "Kuzey Denizi İnşaat ERP, şantiye puantaj, fatura OCR, hakediş ve proje finans yönetim sistemi",
   "start_url": "/dashboard",
   "scope": "/",
   "display": "standalone",
   "orientation": "any",
-  "background_color": "#030712",
-  "theme_color": "#030712",
+  "background_color": "#021B36",
+  "theme_color": "#042A53",
   "icons": [
     {
-      "src": "/icons/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/icons/icon-512.png",
+      "src": "/images/logo.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
-    },
-    {
-      "src": "/icons/icon-maskable-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
     },
     {
       "src": "/favicon.svg",

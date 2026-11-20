@@ -25,7 +25,9 @@ export const ContactFormCard: React.FC<ContactFormCardProps> = ({
   const [successInfo, setSuccessInfo] = useState<{ id: string; cloudSaved: boolean } | null>(null);
 
   const inputCls =
-    'w-full px-4 py-3.5 rounded-xl bg-[#0f172a] border-2 border-slate-600 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/50 text-white placeholder-slate-400 text-sm font-medium transition shadow-inner';
+    'w-full px-4 py-3.5 rounded-xl bg-white border-2 border-slate-200 focus:outline-none focus:border-[#0068C9] focus:ring-2 focus:ring-[#0068C9]/20 text-[#042A53] placeholder-slate-400 text-sm font-medium transition shadow-sm';
+
+  const labelCls = 'block text-xs font-extrabold uppercase tracking-wider text-[#042A53] mb-2';
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -66,26 +68,26 @@ export const ContactFormCard: React.FC<ContactFormCardProps> = ({
   return (
     <form id="contactForm" onSubmit={handleSubmit} className="space-y-5">
       {error && (
-        <div className="p-4 rounded-xl bg-red-950/80 border border-red-500/60 text-red-200 text-sm font-semibold flex items-center gap-3">
-          <i className="fa-solid fa-circle-exclamation text-red-400" />
+        <div className="p-4 rounded-xl bg-red-50 border border-red-200 text-red-700 text-sm font-semibold flex items-center gap-3">
+          <i className="fa-solid fa-circle-exclamation text-red-500" />
           <span>{error}</span>
         </div>
       )}
 
       {successInfo && (
-        <div className="p-5 rounded-2xl bg-emerald-950/80 border-2 border-emerald-500/70 text-emerald-100 space-y-2">
-          <div className="flex items-center gap-2.5 font-extrabold text-base text-emerald-300">
+        <div className="p-5 rounded-2xl bg-emerald-50 border-2 border-emerald-300 text-emerald-950 space-y-2">
+          <div className="flex items-center gap-2.5 font-extrabold text-base text-emerald-700">
             <i className="fa-solid fa-circle-check text-xl" />
             <span>Mesajınız Kuzey Denizi Yönetim Paneli&apos;ne İletildi!</span>
           </div>
-          <p className="text-xs text-emerald-200/90 leading-relaxed">
-            Talep Kodunuz: <strong className="font-mono text-white">{successInfo.id}</strong> —
+          <p className="text-xs text-emerald-800 leading-relaxed">
+            Talep Kodunuz: <strong className="font-mono text-[#042A53]">{successInfo.id}</strong> —
             Mühendislik ve teklif ekibimiz en kısa sürede sizinle iletişime geçecektir.
           </p>
           <div className="pt-1">
             <Link
               to="/dashboard?tab=messages"
-              className="inline-flex items-center gap-2 text-xs font-black text-white bg-emerald-600 hover:bg-emerald-500 px-3.5 py-2 rounded-lg transition"
+              className="inline-flex items-center gap-2 text-xs font-black text-white bg-emerald-600 hover:bg-emerald-500 px-3.5 py-2 rounded-lg transition shadow-sm"
             >
               <i className="fa-solid fa-inbox" />
               <span>Dashboard Gelen Mesajlarda Gör</span>
@@ -96,9 +98,7 @@ export const ContactFormCard: React.FC<ContactFormCardProps> = ({
 
       <div className="grid sm:grid-cols-2 gap-5">
         <div>
-          <label className="block text-xs font-extrabold uppercase tracking-wider text-slate-300 mb-2">
-            Ad Soyad / Yetkili *
-          </label>
+          <label className={labelCls}>Ad Soyad / Yetkili *</label>
           <input
             type="text"
             required
@@ -111,9 +111,7 @@ export const ContactFormCard: React.FC<ContactFormCardProps> = ({
 
         {includeCompanyField ? (
           <div>
-            <label className="block text-xs font-extrabold uppercase tracking-wider text-slate-300 mb-2">
-              Kurum / Firma Adı
-            </label>
+            <label className={labelCls}>Kurum / Firma Adı</label>
             <input
               type="text"
               value={company}
@@ -124,9 +122,7 @@ export const ContactFormCard: React.FC<ContactFormCardProps> = ({
           </div>
         ) : (
           <div>
-            <label className="block text-xs font-extrabold uppercase tracking-wider text-slate-300 mb-2">
-              Telefon Numarası *
-            </label>
+            <label className={labelCls}>Telefon Numarası *</label>
             <input
               type="tel"
               required
@@ -142,9 +138,7 @@ export const ContactFormCard: React.FC<ContactFormCardProps> = ({
       <div className="grid sm:grid-cols-2 gap-5">
         {includeCompanyField && (
           <div>
-            <label className="block text-xs font-extrabold uppercase tracking-wider text-slate-300 mb-2">
-              Telefon Numarası *
-            </label>
+            <label className={labelCls}>Telefon Numarası *</label>
             <input
               type="tel"
               required
@@ -157,31 +151,27 @@ export const ContactFormCard: React.FC<ContactFormCardProps> = ({
         )}
 
         <div className={includeCompanyField ? '' : 'sm:col-span-2'}>
-          <label className="block text-xs font-extrabold uppercase tracking-wider text-slate-300 mb-2">
-            E-Posta Adresi *
-          </label>
+          <label className={labelCls}>E-Posta Adresi *</label>
           <input
             type="email"
             required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="ornek@kurum.com.tr"
+            placeholder="ornek@kuzeydeniziyapi.com.tr"
             className={inputCls}
           />
         </div>
       </div>
 
       <div>
-        <label className="block text-xs font-extrabold uppercase tracking-wider text-slate-300 mb-2">
-          İlgilenilen Faaliyet Alanı *
-        </label>
+        <label className={labelCls}>İlgilenilen Konu / Faaliyet Alanı *</label>
         <select
           required
           value={service}
           onChange={(e) => setService(e.target.value)}
           className={inputCls}
         >
-          <option value="">Lütfen Bir Hizmet Alanı Seçiniz</option>
+          <option value="">Seçiniz...</option>
           {SERVICE_OPTIONS.map((opt) => (
             <option key={opt.value} value={opt.value}>
               {opt.label}
@@ -191,27 +181,24 @@ export const ContactFormCard: React.FC<ContactFormCardProps> = ({
       </div>
 
       <div>
-        <label className="block text-xs font-extrabold uppercase tracking-wider text-slate-300 mb-2">
-          Proje Notları, Lokasyon ve Şartname Gereksinimleri *
-        </label>
+        <label className={labelCls}>Proje Detayı &amp; Mesajınız *</label>
         <textarea
-          rows={4}
           required
+          rows={4}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          placeholder="Projenin bulunduğu il/ilçe, yaklaşık alan (m²), çatı/yangın kapsamı veya teslim takviminiz..."
-          className={inputCls}
+          placeholder="Daire tipi, arsa veya taahhüt projeniz hakkında detayları paylaşabilirsiniz..."
+          className={`${inputCls} resize-none`}
         />
       </div>
 
       <button
-        id="submitBtn"
         type="submit"
         disabled={submitting}
-        className="w-full inline-flex items-center justify-center gap-3 bg-blue-600 hover:bg-blue-500 disabled:opacity-60 text-white font-black text-base px-8 py-4 rounded-xl shadow-xl shadow-blue-600/40 border border-blue-300 transform hover:scale-[1.01] transition"
+        className="w-full flex items-center justify-center gap-3 bg-gradient-to-r from-[#F7941D] to-[#F25C05] hover:brightness-110 disabled:opacity-60 text-white font-black text-base py-4 px-8 rounded-2xl shadow-lg shadow-orange-500/25 transition"
       >
         <i className={`fa-solid ${submitting ? 'fa-spinner fa-spin' : 'fa-paper-plane'}`} />
-        <span>{submitting ? 'Gönderiliyor...' : submitLabel}</span>
+        <span>{submitting ? 'İletiliyor...' : submitLabel}</span>
       </button>
     </form>
   );

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'cukurovabartu-erp-v2';
+const CACHE_NAME = 'kuzeydenizi-erp-v1';
 const STATIC_ASSETS = ['/', '/manifest.json', '/favicon.svg', '/icons/icon-192.png'];
 
 self.addEventListener('install', (event) => {

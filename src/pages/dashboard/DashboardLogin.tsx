@@ -27,7 +27,7 @@ export const DashboardLogin: React.FC = () => {
 
       <div className="relative w-full max-w-md bg-[#042A53] border-2 border-[#0068C9]/40 rounded-3xl p-8 sm:p-10 shadow-2xl space-y-6">
         <div className="flex flex-col items-center text-center space-y-3">
-          <BrandLogo size="lg" showText={false} light={true} />
+          <BrandLogo size="lg" showText={true} withWhiteBg={true} />
           <div>
             <div className="text-xs font-black uppercase tracking-widest text-[#F7941D]">
               Kurumsal Yönetim Dashboard&apos;u

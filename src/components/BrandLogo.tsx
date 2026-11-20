@@ -4,14 +4,14 @@ interface BrandLogoProps {
   size?: 'sm' | 'md' | 'lg';
   showText?: boolean;
   subtitle?: string;
-  light?: boolean;
+  withWhiteBg?: boolean;
 }
 
 export const BrandLogo: React.FC<BrandLogoProps> = ({
   size = 'md',
   showText = true,
   subtitle = 'İNŞAAT',
-  light = true,
+  withWhiteBg = true,
 }) => {
   const iconSize =
     size === 'sm'
@@ -20,10 +20,10 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
         ? 'w-14 h-14'
         : 'w-11 h-11';
 
-  return (
+  const content = (
     <div className="flex items-center gap-3 select-none">
       <svg
-        className={`${iconSize} flex-shrink-0 transition-transform duration-300 hover:scale-105`}
+        className={`${iconSize} flex-shrink-0 transition-transform duration-300 group-hover:scale-105`}
         viewBox="0 0 120 120"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -55,25 +55,31 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
       {showText && (
         <div className="flex flex-col leading-none">
           <span
-            className={`font-black tracking-tight ${
+            className={`font-black tracking-tight text-[#042A53] ${
               size === 'sm' ? 'text-base' : size === 'lg' ? 'text-2xl' : 'text-lg sm:text-xl'
-            } ${light ? 'text-white' : 'text-[#042A53]'}`}
+            }`}
           >
             Kuzey Denizi
           </span>
           <div className="flex items-center gap-1.5 mt-1">
-            <span className="h-[2px] w-4 bg-gradient-to-r from-transparent to-[#F7941D] rounded-full" />
-            <span
-              className={`font-bold tracking-[0.32em] text-[9px] sm:text-[10px] uppercase ${
-                light ? 'text-slate-300' : 'text-[#042A53]'
-              }`}
-            >
+            <span className="h-[2px] w-4 sm:w-5 bg-gradient-to-r from-transparent to-[#F7941D] rounded-full" />
+            <span className="font-bold tracking-[0.34em] text-[9px] sm:text-[10px] uppercase text-[#042A53]">
               {subtitle}
             </span>
-            <span className="h-[2px] w-4 bg-gradient-to-l from-transparent to-[#FF5500] rounded-full" />
+            <span className="h-[2px] w-4 sm:w-5 bg-gradient-to-l from-transparent to-[#F25C05] rounded-full" />
           </div>
         </div>
       )}
     </div>
   );
+
+  if (withWhiteBg) {
+    return (
+      <div className="inline-flex items-center bg-white rounded-2xl px-3.5 py-2 shadow-lg border border-slate-200/90">
+        {content}
+      </div>
+    );
+  }
+
+  return content;
 };

@@ -29,22 +29,22 @@ export const Navbar: React.FC<NavbarProps> = ({ isHome = false }) => {
   };
 
   const navLinks = [
-    { to: '/', label: 'Ana Sayfa', hasChevron: false },
-    { to: '/kurumsal', label: 'Kurumsal', hasChevron: true },
-    { to: '/hizmetler', label: 'Faaliyet Alanları', hasChevron: true },
-    { to: '/projeler', label: 'Projelerimiz', hasChevron: true },
-    { to: '/iletisim', label: 'İletişim', hasChevron: false },
+    { to: '/', label: 'Ana Sayfa' },
+    { to: '/kurumsal', label: 'Kurumsal' },
+    { to: '/hizmetler', label: 'Faaliyet Alanları' },
+    { to: '/projeler', label: 'Projelerimiz' },
+    { to: '/iletisim', label: 'İletişim' },
   ];
 
   return (
     <>
       {/* Top Utility Bar */}
-      <div className="bg-[#021B36] py-2.5 border-b border-[#042A53] hidden md:block relative z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4 text-xs font-semibold text-slate-300">
+      <div className="bg-[#021B36] py-2.5 border-b border-[#042A53] hidden md:block relative z-50 text-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4 text-xs font-semibold">
           <div className="flex items-center gap-4 xl:gap-6 shrink-0">
             <span className="flex items-center gap-2 whitespace-nowrap">
-              <i className="fa-solid fa-location-dot text-[#0068C9]" />
-              Seyhan / ADANA
+              <i className="fa-solid fa-location-dot text-[#F7941D]" />
+              Çukurova / ADANA
             </span>
             <a
               href="tel:+905336779109"
@@ -62,35 +62,36 @@ export const Navbar: React.FC<NavbarProps> = ({ isHome = false }) => {
             </a>
           </div>
           <div className="flex items-center gap-4 shrink-0">
-            <span className="hidden xl:inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#042A53]/80 border border-[#0068C9]/40 text-sky-200 font-bold whitespace-nowrap">
+            <span className="hidden xl:inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#042A53] border border-[#0068C9]/50 text-sky-200 font-bold whitespace-nowrap">
               <i className="fa-solid fa-shield-halved text-[#F7941D]" />
-              TBDY 2018 Deprem ve Kamu Şartname Standartları
+              www.kuzeydeniziyapi.com.tr
             </span>
             <span className="hidden xl:inline-block h-3.5 w-px bg-slate-700" />
             <span className="flex items-center gap-1.5 text-slate-300 whitespace-nowrap">
-              <i className="fa-regular fa-clock text-amber-400" />
+              <i className="fa-regular fa-clock text-[#F7941D]" />
               Pzt - Cmt: 08:30 - 18:30
             </span>
           </div>
         </div>
       </div>
 
-      {/* Main Sticky Navbar */}
+      {/* Main Sticky Crisp White Architectural Navbar */}
       <header
         id="navbar"
         className={`${
           isHome ? 'fixed top-0 md:top-[41px] left-0 right-0' : 'sticky top-0'
-        } z-50 bg-[#042A53]/95 backdrop-blur-2xl border-b border-[#021B36] shadow-2xl transition-all`}
+        } z-50 bg-white/95 backdrop-blur-xl border-b border-slate-200 shadow-sm transition-all`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-6 xl:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between gap-2 xl:gap-4 h-20">
-            <Link to="/" aria-label="Kuzey Denizi İnşaat Ana Sayfa" className="shrink-0">
-              <BrandLogo light={true} />
+            {/* Logo natively on crisp white surface */}
+            <Link to="/" aria-label="Kuzey Denizi İnşaat Ana Sayfa" className="shrink-0 group">
+              <BrandLogo withWhiteBg={false} />
             </Link>
 
             {/* Desktop Center Nav */}
             <nav
-              className="hidden lg:flex items-center gap-2.5 xl:gap-6 shrink-0"
+              className="hidden lg:flex items-center gap-1.5 xl:gap-2 shrink-0"
               aria-label="Ana Menü"
             >
               {navLinks.map((item) => {
@@ -99,16 +100,13 @@ export const Navbar: React.FC<NavbarProps> = ({ isHome = false }) => {
                   <Link
                     key={item.to}
                     to={item.to}
-                    className={`group inline-flex items-center gap-1.5 text-xs xl:text-sm font-bold whitespace-nowrap transition ${
+                    className={`px-3.5 xl:px-4 py-2 rounded-xl text-xs xl:text-sm font-bold whitespace-nowrap transition ${
                       active
-                        ? 'px-3.5 py-2 rounded-xl bg-[#0068C9]/30 border border-[#0068C9] text-white shadow-sm'
-                        : 'text-slate-200 hover:text-[#F7941D] py-2'
+                        ? 'bg-[#E6F1FB] text-[#0068C9] shadow-sm'
+                        : 'text-[#042A53] hover:text-[#F25C05] hover:bg-slate-50'
                     }`}
                   >
-                    <span>{item.label}</span>
-                    {item.hasChevron && (
-                      <i className="fa-solid fa-chevron-down text-[10px] opacity-70 group-hover:rotate-180 transition-transform duration-300" />
-                    )}
+                    {item.label}
                   </Link>
                 );
               })}
@@ -118,20 +116,20 @@ export const Navbar: React.FC<NavbarProps> = ({ isHome = false }) => {
             <div className="hidden lg:flex items-center gap-2.5 xl:gap-3 shrink-0">
               <Link
                 to="/dashboard"
-                className="relative inline-flex items-center gap-2 px-3 xl:px-4 py-2.5 rounded-xl bg-[#021B36] hover:bg-[#063363] border border-[#0068C9]/60 hover:border-[#F7941D] text-slate-100 text-xs font-extrabold uppercase tracking-wider whitespace-nowrap transition shadow-lg"
+                className="relative inline-flex items-center gap-2 px-3.5 xl:px-4 py-2.5 rounded-xl bg-[#042A53] hover:bg-[#021B36] text-white text-xs font-extrabold uppercase tracking-wider whitespace-nowrap transition shadow-md"
               >
-                <i className="fa-solid fa-gauge-high text-amber-400" />
+                <i className="fa-solid fa-gauge-high text-[#F7941D]" />
                 <span className="hidden xl:inline">Dashboard</span>
                 <span className="xl:hidden">Panel</span>
                 {unreadCount > 0 && (
-                  <span className="inline-flex items-center justify-center min-w-[20px] h-5 px-1.5 rounded-full bg-red-600 text-white text-[10px] font-black animate-pulse">
+                  <span className="inline-flex items-center justify-center min-w-[20px] h-5 px-1.5 rounded-full bg-[#F25C05] text-white text-[10px] font-black animate-pulse">
                     {unreadCount}
                   </span>
                 )}
               </Link>
               <Link
                 to="/iletisim"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-[#F7941D] to-[#F25C05] hover:brightness-110 text-white font-extrabold text-xs xl:text-sm px-4 xl:px-6 py-2.5 xl:py-3 rounded-xl shadow-xl shadow-orange-500/25 border border-amber-300/40 whitespace-nowrap transform hover:scale-105 transition"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-[#F7941D] to-[#F25C05] hover:brightness-110 text-white font-extrabold text-xs xl:text-sm px-4 xl:px-5 py-2.5 xl:py-3 rounded-xl shadow-lg shadow-orange-500/25 whitespace-nowrap transform hover:scale-[1.02] transition"
               >
                 <i className="fa-solid fa-paper-plane" />
                 <span className="hidden xl:inline">Teklif &amp; Keşif Al</span>
@@ -143,12 +141,12 @@ export const Navbar: React.FC<NavbarProps> = ({ isHome = false }) => {
             <div className="flex lg:hidden items-center gap-2">
               <Link
                 to="/dashboard"
-                className="relative inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-[#021B36] border border-[#0068C9] text-xs font-bold text-white"
+                className="relative inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-[#042A53] text-xs font-bold text-white shadow-sm"
               >
-                <i className="fa-solid fa-gauge-high text-amber-400" />
+                <i className="fa-solid fa-gauge-high text-[#F7941D]" />
                 <span>Panel</span>
                 {unreadCount > 0 && (
-                  <span className="inline-flex items-center justify-center min-w-[18px] h-4 px-1 rounded-full bg-red-600 text-[10px] font-black">
+                  <span className="inline-flex items-center justify-center min-w-[18px] h-4 px-1 rounded-full bg-[#F25C05] text-white text-[10px] font-black">
                     {unreadCount}
                   </span>
                 )}
@@ -158,9 +156,9 @@ export const Navbar: React.FC<NavbarProps> = ({ isHome = false }) => {
                 type="button"
                 onClick={() => setMobileOpen((prev) => !prev)}
                 aria-label="Menüyü Aç/Kapat"
-                className="p-2.5 rounded-xl bg-[#021B36] border-2 border-slate-700 text-white hover:border-[#0068C9] transition"
+                className="p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-[#042A53] hover:bg-[#E6F1FB] transition"
               >
-                <i className={`fa-solid ${mobileOpen ? 'fa-xmark' : 'fa-bars'} text-lg`} />
+                <i className={`fa-solid ${mobileOpen ? 'fa-xmark' : 'fa-bars-staggered'} text-lg`} />
               </button>
             </div>
           </div>
@@ -170,7 +168,7 @@ export const Navbar: React.FC<NavbarProps> = ({ isHome = false }) => {
         {mobileOpen && (
           <div
             id="mobile-menu"
-            className="lg:hidden bg-[#042A53] border-b-2 border-[#021B36] px-6 pt-4 pb-6 space-y-3"
+            className="lg:hidden bg-white border-t border-slate-200 px-6 pt-4 pb-6 space-y-2.5 shadow-2xl"
           >
             {navLinks.map((item) => (
               <Link
@@ -178,8 +176,8 @@ export const Navbar: React.FC<NavbarProps> = ({ isHome = false }) => {
                 to={item.to}
                 className={`block px-4 py-3 rounded-xl font-bold text-sm transition ${
                   isActive(item.to)
-                    ? 'bg-[#0068C9]/30 border border-[#0068C9] text-white'
-                    : 'text-slate-200 hover:bg-[#021B36]'
+                    ? 'bg-[#E6F1FB] text-[#0068C9]'
+                    : 'text-[#042A53] hover:bg-slate-50'
                 }`}
               >
                 {item.label}
@@ -187,18 +185,18 @@ export const Navbar: React.FC<NavbarProps> = ({ isHome = false }) => {
             ))}
             <Link
               to="/dashboard"
-              className="flex items-center justify-between px-4 py-3 rounded-xl bg-[#021B36] border border-[#0068C9] text-amber-300 font-bold text-sm"
+              className="flex items-center justify-between px-4 py-3 rounded-xl bg-[#042A53] text-white font-bold text-sm"
             >
               <span>Yönetim Dashboard&apos;u</span>
               {unreadCount > 0 && (
-                <span className="px-2 py-0.5 rounded-full bg-red-600 text-white text-xs font-black">
+                <span className="px-2 py-0.5 rounded-full bg-[#F25C05] text-white text-xs font-black">
                   {unreadCount} Yeni Mesaj
                 </span>
               )}
             </Link>
             <Link
               to="/iletisim"
-              className="block text-center bg-gradient-to-r from-[#F7941D] to-[#F25C05] text-white font-black py-3.5 rounded-xl border border-amber-300 shadow-lg"
+              className="block text-center bg-gradient-to-r from-[#F7941D] to-[#F25C05] text-white font-black py-3.5 rounded-xl shadow-lg"
             >
               Hemen Teklif Alın
             </Link>

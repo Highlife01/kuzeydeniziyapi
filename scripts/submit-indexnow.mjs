@@ -10,7 +10,7 @@ const CATALOG_PATH = path.join(ROOT_DIR, 'src', 'seo', 'seoCatalog.json');
 const catalog = JSON.parse(fs.readFileSync(CATALOG_PATH, 'utf8'));
 const { routes } = catalog;
 
-const HOST = 'www.kuzeydenizi.com.tr';
+const HOST = 'www.kuzeydeniziyapi.com.tr';
 const BASE_URL = `https://${HOST}`;
 const KEY = 'cb84f1d92e5a4b7c8f103d2e6a9c4b71';
 const KEY_LOCATION = `${BASE_URL}/${KEY}.txt`;
