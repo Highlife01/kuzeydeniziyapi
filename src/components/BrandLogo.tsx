@@ -59,7 +59,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
               size === 'sm' ? 'text-base' : size === 'lg' ? 'text-2xl' : 'text-lg sm:text-xl'
             }`}
           >
-            Kuzey Denizi
+            Kuzey Deniz
           </span>
           <div className="flex items-center gap-1.5 mt-1">
             <span className="h-[2px] w-4 sm:w-5 bg-gradient-to-r from-transparent to-[#F7941D] rounded-full" />

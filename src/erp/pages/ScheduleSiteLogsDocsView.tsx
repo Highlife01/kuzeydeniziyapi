@@ -200,7 +200,7 @@ export const ScheduleSiteLogsDocsView: React.FC<ScheduleSiteLogsDocsViewProps> =
       if (!win) return;
       win.document.write(`<!doctype html><html lang="tr"><head><meta charset="UTF-8"><title>Şantiye Günlüğü ${escapeHtml(l.date)}</title></head>
       <body style="font-family:sans-serif;padding:32px;color:#0f172a;">
-        <h2>KUZEY DENİZİ İNŞAAT — ŞANTİYE GÜNLÜK RAPORU</h2>
+        <h2>KUZEY DENİZ İNŞAAT — ŞANTİYE GÜNLÜK RAPORU</h2>
         <p><strong>Proje:</strong> ${escapeHtml(prj?.title || '—')} | <strong>Tarih:</strong> ${escapeHtml(l.date)} | <strong>Hava:</strong> ${escapeHtml(l.weather)} | <strong>Personel:</strong> ${l.workerCount}</p><hr/>
         <p><strong>Yapılan İmalatlar:</strong><br/>${escapeHtml(l.worksDone)}</p>
         <p><strong>Gelen Malzemeler:</strong> ${escapeHtml(l.materialsArrived || '—')}</p>

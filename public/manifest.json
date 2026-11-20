@@ -1,7 +1,7 @@
 {
-  "name": "Kuzey Denizi İnşaat – ERP, Şantiye ve Finans Yönetim Sistemi",
-  "short_name": "Kuzey Denizi ERP",
-  "description": "Kuzey Denizi İnşaat ERP, şantiye puantaj, fatura OCR, hakediş ve proje finans yönetim sistemi",
+  "name": "Kuzey Deniz İnşaat – ERP, Şantiye ve Finans Yönetim Sistemi",
+  "short_name": "Kuzey Deniz ERP",
+  "description": "Kuzey Deniz İnşaat ERP, şantiye puantaj, fatura OCR, hakediş ve proje finans yönetim sistemi",
   "start_url": "/dashboard",
   "scope": "/",
   "display": "standalone",

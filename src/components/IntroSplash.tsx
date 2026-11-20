@@ -30,7 +30,7 @@ export const IntroSplash: React.FC<IntroSplashProps> = ({ onComplete }) => {
   return (
     <div
       role="dialog"
-      aria-label="Kuzey Denizi İnşaat Giriş İntrosu"
+      aria-label="Kuzey Deniz İnşaat Giriş İntrosu"
       className={`fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-gradient-to-br from-[#021B36] via-[#042A53] to-[#011226] overflow-hidden transition-all duration-700 ${
         exiting ? 'opacity-0 scale-105 pointer-events-none' : 'opacity-100 scale-100'
       }`}
@@ -149,7 +149,7 @@ export const IntroSplash: React.FC<IntroSplashProps> = ({ onComplete }) => {
               }}
             >
               <span className="font-black text-3xl sm:text-5xl tracking-tight text-[#042A53] leading-none">
-                Kuzey Denizi
+                Kuzey Deniz
               </span>
               <div className="flex items-center gap-3 mt-3 w-full justify-center sm:justify-start">
                 <span className="h-[3px] w-10 sm:w-14 bg-gradient-to-r from-transparent to-[#F7941D] rounded-full" />

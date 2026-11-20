@@ -131,7 +131,7 @@ export const ReportsAiUsersSettingsView: React.FC<ReportsAiUsersSettingsViewProp
           <div>
             <h2 className="text-xl font-black text-white">Kurumsal Raporlar &amp; Excel / PDF Dışa Aktarım ({visibleReports.length} Rapor)</h2>
             <p className="text-xs text-slate-400">
-              Kuzey Denizi kurumsal anteti ile yalnızca yetkili olunan verilerden rapor oluşturma
+              Kuzey Deniz kurumsal anteti ile yalnızca yetkili olunan verilerden rapor oluşturma
             </p>
           </div>
           <div className="flex flex-wrap gap-2 text-xs">

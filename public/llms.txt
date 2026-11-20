@@ -16,11 +16,11 @@
 - **Pozantı 80. Yıl Devlet Hastanesi Yangın Güvenliği Standartlarının Güçlendirilmesine Yönelik Tadilat ve Bakım Çalışmaları:** Yangın güvenliği standartlarına uygun mekanik ve tesisat tadilatları, söndürme ve algılama sistemlerinin bakımı.
 
 ## Sayfalar
-- [Ana Sayfa](https://www.kuzeydeniziyapi.com.tr/): Kuzey Denizi İnşaat; yüksek deprem güvenliği, modern konut projeleri, ticari plazalar, inşaat taahhüt ve kentsel dönüşüm. Tel & WhatsApp: +90 533 677 91 09
-- [Kurumsal](https://www.kuzeydeniziyapi.com.tr/kurumsal): Kuzey Denizi İnşaat kurumsal profili, vizyonu, misyonu, depreme dayanıklı mühendislik ve kalite standartları.
+- [Ana Sayfa](https://www.kuzeydeniziyapi.com.tr/): Kuzey Deniz İnşaat; yüksek deprem güvenliği, modern konut projeleri, ticari plazalar, inşaat taahhüt ve kentsel dönüşüm. Tel & WhatsApp: +90 533 677 91 09
+- [Kurumsal](https://www.kuzeydeniziyapi.com.tr/kurumsal): Kuzey Deniz İnşaat kurumsal profili, vizyonu, misyonu, depreme dayanıklı mühendislik ve kalite standartları.
 - [Faaliyet Alanları](https://www.kuzeydeniziyapi.com.tr/hizmetler): Konut ve rezidans projeleri, ticari iş merkezleri, kamu/özel sektör inşaat taahhüt ve kentsel dönüşüm hizmetleri.
 - [Projelerimiz](https://www.kuzeydeniziyapi.com.tr/projeler): Kuzey Panorama Konutları, Poyraz Marin Rezidans, Kuzey Yıldızı Ticaret Merkezi, Mavi Ufuk Villaları ve diğer prestijli projelerimiz.
-- [İletişim](https://www.kuzeydeniziyapi.com.tr/iletisim): Kuzey Denizi İnşaat iletişim ve teklif formu. Web: www.kuzeydeniziyapi.com.tr • E-Posta: info@kuzeydeniziyapi.com.tr • WhatsApp: +90 533 677 91 09
+- [İletişim](https://www.kuzeydeniziyapi.com.tr/iletisim): Kuzey Deniz İnşaat iletişim ve teklif formu. Web: www.kuzeydeniziyapi.com.tr • E-Posta: info@kuzeydeniziyapi.com.tr • WhatsApp: +90 533 677 91 09
 
 ## Kaynak Dosyalar
 - [XML Site Haritası](https://www.kuzeydeniziyapi.com.tr/sitemap.xml)

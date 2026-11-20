@@ -78,7 +78,7 @@ export const ContactFormCard: React.FC<ContactFormCardProps> = ({
         <div className="p-5 rounded-2xl bg-emerald-50 border-2 border-emerald-300 text-emerald-950 space-y-2">
           <div className="flex items-center gap-2.5 font-extrabold text-base text-emerald-700">
             <i className="fa-solid fa-circle-check text-xl" />
-            <span>Mesajınız Kuzey Denizi Yönetim Paneli&apos;ne İletildi!</span>
+            <span>Mesajınız Kuzey Deniz Yönetim Paneli&apos;ne İletildi!</span>
           </div>
           <p className="text-xs text-emerald-800 leading-relaxed">
             Talep Kodunuz: <strong className="font-mono text-[#042A53]">{successInfo.id}</strong> —

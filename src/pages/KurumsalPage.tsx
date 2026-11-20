@@ -12,7 +12,7 @@ export const KurumsalPage: React.FC = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-[#F7941D] text-xs font-black uppercase tracking-widest">
             <i className="fa-solid fa-compass" />
-            <span>Kuzey Denizi İnşaat A.Ş. Yönetim &amp; Profil</span>
+            <span>Kuzey Deniz İnşaat Ltd. Şti. Yönetim &amp; Profil</span>
           </div>
           <h1 className="text-4xl sm:text-5xl font-black tracking-tight text-white">
             Kurumsal Güç ve Mühendislik Disiplini
@@ -77,7 +77,7 @@ export const KurumsalPage: React.FC = () => {
           <div className="lg:col-span-6 relative rounded-3xl overflow-hidden border-4 border-white shadow-2xl min-h-[420px]">
             <img
               src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1000&q=85"
-              alt="Kuzey Denizi İnşaat Mühendislik Ekibi"
+              alt="Kuzey Deniz İnşaat Mühendislik Ekibi"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#021B36]/80 via-transparent to-transparent" />

@@ -11,7 +11,7 @@ export const Footer: React.FC = () => {
           <div className="space-y-5">
             <BrandLogo withWhiteBg={true} />
             <p className="text-sm text-slate-300 leading-relaxed font-medium">
-              Kuzey Denizi İnşaat; deprem güvenliği yüksek modern konutlar, ticari merkezler,
+              Kuzey Deniz İnşaat; deprem güvenliği yüksek modern konutlar, ticari merkezler,
               kamu taahhütleri ve endüstriyel yapılarda üstün mühendislik standartlarıyla
               geleceğin sağlam yapılarını inşa eder.
             </p>

@@ -378,7 +378,7 @@ export async function askErpAssistant(
 
   return {
     answer:
-      `**Kuzey Denizi İnşaat Canlı Finansal Yönetim Özeti:**\n` +
+      `**Kuzey Deniz İnşaat Canlı Finansal Yönetim Özeti:**\n` +
       `• Aktif / Tamamlanan Proje: **${kpis.activeProjectsCount} Aktif / ${kpis.completedProjectsCount} Tamamlanan**\n` +
       `• Toplam Sözleşme Bedeli: **${formatKurusTRY(kpis.totalContractValueKurus)}**\n` +
       `• Toplam Gerçekleşen Maliyet: **${formatKurusTRY(kpis.totalActualCostKurus)}**\n` +

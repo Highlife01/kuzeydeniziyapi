@@ -19,7 +19,7 @@ export const IletisimPage: React.FC = () => {
           <p className="text-slate-200 max-w-3xl text-base sm:text-lg font-medium">
             Projelerimiz hakkında detaylı katalog almak, ödeme planlarını öğrenmek veya kat karşılığı
             arsa ve taahhüt tekliflerinizi iletmek için formu doldurun; mesajınız doğrudan{' '}
-            <strong className="text-[#F7941D]">Kuzey Denizi Yönetim Dashboard&apos;una</strong> düşsün.
+            <strong className="text-[#F7941D]">Kuzey Deniz Yönetim Dashboard&apos;una</strong> düşsün.
           </p>
         </div>
       </section>
@@ -95,7 +95,7 @@ export const IletisimPage: React.FC = () => {
               </h3>
               <div className="rounded-2xl overflow-hidden border border-slate-200 h-[316px]">
                 <iframe
-                  title="Kuzey Denizi İnşaat Merkez Konum"
+                  title="Kuzey Deniz İnşaat Merkez Konum"
                   src="https://www.openstreetmap.org/export/embed.html?bbox=35.2500%2C37.0200%2C35.3100%2C37.0600&layer=mapnik&marker=37.0420%2C35.2830"
                   className="w-full h-full border-0"
                   loading="lazy"
@@ -129,7 +129,7 @@ export const IletisimPage: React.FC = () => {
                 WhatsApp veya telefon üzerinden ulaşabilirsiniz.
               </p>
               <a
-                href="https://wa.me/905336779109?text=Merhaba%2C%20Kuzey%20Denizi%20%C4%B0n%C5%9Faat%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+                href="https://wa.me/905336779109?text=Merhaba%2C%20Kuzey%20Deniz%20%C4%B0n%C5%9Faat%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20ba5a] text-white font-black text-sm py-3.5 rounded-xl shadow-lg transition"

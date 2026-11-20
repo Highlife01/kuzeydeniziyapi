@@ -1107,7 +1107,7 @@ export const ErpDashboardShell: React.FC = () => {
                   {
                     id: 'general',
                     companyName: next.companyName,
-                    shortBrand: 'KUZEY DENİZİ',
+                    shortBrand: 'KUZEY DENİZ',
                     taxOffice: next.taxOffice,
                     taxNumber: next.taxNumber,
                     phone: next.phone,
@@ -1189,7 +1189,7 @@ export const ErpDashboardShell: React.FC = () => {
                   key: Date.now(),
                   to: msg.email,
                   subject: `Teklif Talebiniz Hk. — ${msg.serviceLabel}`,
-                  body: `Sayın ${msg.name},\n\n"${msg.serviceLabel}" hakkındaki talebiniz tarafımıza ulaşmıştır.\n\nSaygılarımızla,\nKuzey Denizi İnşaat\nTel: 0533 677 91 09`,
+                  body: `Sayın ${msg.name},\n\n"${msg.serviceLabel}" hakkındaki talebiniz tarafımıza ulaşmıştır.\n\nSaygılarımızla,\nKuzey Deniz İnşaat\nTel: 0533 677 91 09`,
                 });
                 navigateMenu('mailControl');
               }}

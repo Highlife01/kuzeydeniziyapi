@@ -29,7 +29,7 @@ const HERO_SLIDES: HeroSlide[] = [
     titleHighlight: 'Güvenle',
     titleAfter: ' İnşa Ediyoruz',
     subtitle:
-      'Kuzey Denizi İnşaat mühendislik vizyonuyla; yüksek deprem güvenliği, modern mimari estetik ve yüksek yatırım değerini bir araya getiren prestijli projeler üretiyoruz.',
+      'Kuzey Deniz İnşaat mühendislik vizyonuyla; yüksek deprem güvenliği, modern mimari estetik ve yüksek yatırım değerini bir araya getiren prestijli projeler üretiyoruz.',
     worksDone: [
       'Kuzey Panorama Konutları',
       'Poyraz Marin Rezidans',
@@ -67,7 +67,7 @@ const HERO_SLIDES: HeroSlide[] = [
     titleHighlight: 'Huzurlu',
     titleAfter: ' ve Seçkin Mekanlar',
     subtitle:
-      'Geniş peyzaj alanları, elektrikli araç şarj altyapısı ve birinci sınıf malzeme işçiliğiyle Kuzey Denizi projelerinde yeni bir yaşam başlıyor.',
+      'Geniş peyzaj alanları, elektrikli araç şarj altyapısı ve birinci sınıf malzeme işçiliğiyle Kuzey Deniz projelerinde yeni bir yaşam başlıyor.',
     worksDone: [
       'Mavi Ufuk Villaları',
       'Kuzey Park Evleri',
@@ -312,7 +312,7 @@ export const HomePage: React.FC = () => {
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
                 <img
                   src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1000&q=85"
-                  alt="Kuzey Denizi İnşaat Mühendislik Ekibi"
+                  alt="Kuzey Deniz İnşaat Mühendislik Ekibi"
                   loading="lazy"
                   className="w-full h-[380px] sm:h-[480px] object-cover"
                 />
@@ -347,7 +347,7 @@ export const HomePage: React.FC = () => {
               </h2>
 
               <p className="text-slate-600 leading-relaxed">
-                <strong>Kuzey Denizi İnşaat</strong> olarak, kuruluşumuzdan bu yana konut, ticari
+                <strong>Kuzey Deniz İnşaat</strong> olarak, kuruluşumuzdan bu yana konut, ticari
                 merkez, kentsel dönüşüm ve altyapı/üstyapı taahhüt projelerinde şehrin silüetine
                 değer katan kalıcı eserler üretiyoruz. Logomuzdaki kuzey yıldızı pusulası; doğruluğu,
                 mühendislik hassasiyetini ve geleceğe yön veren vizyonumuzu simgeler.
@@ -648,7 +648,7 @@ export const HomePage: React.FC = () => {
             <div className="grid lg:grid-cols-12 gap-10 items-center relative z-10">
               <div className="lg:col-span-5 space-y-5">
                 <span className="inline-block px-3.5 py-1.5 rounded-full bg-[#F25C05] text-white text-xs font-bold uppercase tracking-wider">
-                  Kuzey Denizi Yapı Standartları
+                  Kuzey Deniz Yapı Standartları
                 </span>
                 <h3 className="font-extrabold text-3xl sm:text-4xl leading-tight">
                   Depreme Dayanıklı, Uzun Ömürlü Mühendislik
@@ -734,7 +734,7 @@ export const HomePage: React.FC = () => {
                 </h2>
                 <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
                   Formu doldurduğunuz anda mesajınız doğrudan{' '}
-                  <strong className="text-[#042A53]">Kuzey Denizi Yönetim Dashboard&apos;una</strong>{' '}
+                  <strong className="text-[#042A53]">Kuzey Deniz Yönetim Dashboard&apos;una</strong>{' '}
                   düşer ve ilgili ekibimize atanır.
                 </p>
               </div>

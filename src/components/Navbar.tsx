@@ -85,7 +85,7 @@ export const Navbar: React.FC<NavbarProps> = ({ isHome = false }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between gap-2 xl:gap-4 h-20">
             {/* Logo natively on crisp white surface */}
-            <Link to="/" aria-label="Kuzey Denizi İnşaat Ana Sayfa" className="shrink-0 group">
+            <Link to="/" aria-label="Kuzey Deniz İnşaat Ana Sayfa" className="shrink-0 group">
               <BrandLogo withWhiteBg={false} />
             </Link>
 
