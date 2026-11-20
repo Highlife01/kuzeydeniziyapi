@@ -32,6 +32,7 @@ export const db = (() => {
 
 export const SUPER_ADMIN_EMAILS = [
   'cebrailkara@gmail.com',
+  'hayrullahcingoz81@gmail.com',
   'info@kuzeydeniziyapi.com.tr',
   'yalinizlargrup@gmail.com',
   'ilkeryaliniz@gmail.com',

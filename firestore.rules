@@ -15,6 +15,7 @@ service cloud.firestore {
       return isSignedIn() && (
         request.auth.token.superAdmin == true ||
         userEmail() == "cebrailkara@gmail.com" ||
+        userEmail() == "hayrullahcingoz81@gmail.com" ||
         userEmail() == "yalinizlargrup@gmail.com" ||
         userEmail() == "ilkeryaliniz@gmail.com" ||
         userEmail() == "info@kuzeydeniziyapi.com.tr"

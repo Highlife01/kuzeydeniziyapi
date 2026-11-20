@@ -9,8 +9,10 @@ function db() {
 
 const SUPER_ADMIN_EMAILS = new Set([
   'cebrailkara@gmail.com',
+  'hayrullahcingoz81@gmail.com',
   'yalinizlargrup@gmail.com',
   'ilkeryaliniz@gmail.com',
+  'info@kuzeydeniziyapi.com.tr',
   'info@cukurovabartu.com.tr',
 ]);
 

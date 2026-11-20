@@ -237,8 +237,10 @@ function createApp() {
       if (!emulator && !decoded.email_verified) {
         const superAdmins = new Set([
           'cebrailkara@gmail.com',
+          'hayrullahcingoz81@gmail.com',
           'yalinizlargrup@gmail.com',
           'ilkeryaliniz@gmail.com',
+          'info@kuzeydeniziyapi.com.tr',
           'info@cukurovabartu.com.tr',
         ]);
         let erpAuthorized = superAdmins.has(emailLower);
@@ -835,8 +837,10 @@ function createApp() {
     const email = String(req.user.email || '').trim().toLowerCase();
     const superAdmins = new Set([
       'cebrailkara@gmail.com',
+      'hayrullahcingoz81@gmail.com',
       'yalinizlargrup@gmail.com',
       'ilkeryaliniz@gmail.com',
+      'info@kuzeydeniziyapi.com.tr',
       'info@cukurovabartu.com.tr',
     ]);
     let canUpload = superAdmins.has(email);
