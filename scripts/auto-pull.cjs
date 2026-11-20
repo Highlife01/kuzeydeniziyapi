@@ -10,8 +10,12 @@ function run() {
     console.log("[auto-pull] origin deposu taranıyor...");
     execSync("git fetch origin", { stdio: "inherit" });
     const remoteBranches = execSync("git branch -r", { encoding: "utf8" });
-    if (!remoteBranches.includes("origin/main")) {
-      console.log("[auto-pull] Uzak repoda henüz 'origin/main' dalı bulunmuyor (yeni repo).");
+    const hasMain = remoteBranches.includes("origin/main");
+    const hasMaster = remoteBranches.includes("origin/master");
+    const targetBranch = hasMain ? "main" : (hasMaster ? "master" : null);
+
+    if (!targetBranch) {
+      console.log("[auto-pull] Uzak repoda henüz 'origin/main' veya 'origin/master' dalı bulunmuyor.");
       return;
     }
     const status = execSync("git status --porcelain", { encoding: "utf8" }).trim();
@@ -19,8 +23,8 @@ function run() {
       console.log("[auto-pull] Çalışma alanında commit edilmemiş değişiklikler var, pull atlandı.");
       return;
     }
-    execSync("git pull --rebase origin main", { stdio: "inherit" });
-    console.log("[auto-pull] Başarıyla güncellendi.");
+    execSync(`git pull --rebase origin ${targetBranch}`, { stdio: "inherit" });
+    console.log(`[auto-pull] ${targetBranch} dalından başarıyla güncellendi.`);
   } catch (err) {
     console.warn("[auto-pull] Uyarı: Güncelleme sırasında bir sorun oluştu:", err.message);
   }
