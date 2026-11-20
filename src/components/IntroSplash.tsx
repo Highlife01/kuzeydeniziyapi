@@ -76,89 +76,22 @@ export const IntroSplash: React.FC<IntroSplashProps> = ({ onComplete }) => {
           {/* Diagonal Glass Shimmer Sweep */}
           <div
             className="absolute inset-y-0 w-32 bg-gradient-to-r from-transparent via-sky-200/45 to-transparent pointer-events-none"
-            style={{ animation: 'kdShimmerSweep 2.4s ease-in-out 2.1s forwards', transform: 'translateX(-160%)' }}
+            style={{ animation: 'kdShimmerSweep 2.4s ease-in-out 1.2s forwards', transform: 'translateX(-160%)' }}
           />
 
-          <div className="flex flex-col sm:flex-row items-center gap-5 sm:gap-7">
-            {/* Animated 4-Wing Compass Star Emblem */}
-            <svg
-              className="w-24 h-24 sm:w-28 sm:h-28 flex-shrink-0"
-              viewBox="0 0 120 120"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              {/* Wing 1: Top Left Blue */}
-              <path
-                d="M8 64 L76 8 C64 34 59 46 56 54 L8 64 Z"
-                fill="url(#introBlueGrad)"
-                style={{
-                  opacity: 0,
-                  animation: 'kdWingTopLeft 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.55s forwards',
-                }}
-              />
-              {/* Wing 2: Top Right Dark Navy */}
-              <g
-                style={{
-                  opacity: 0,
-                  animation: 'kdWingTopRight 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.85s forwards',
-                }}
-              >
-                <path d="M79 8 L72 44 C72 49 76 52 112 58 L60 55 L79 8 Z" fill="#042A53" />
-                <path d="M79 8 L60 55 L73 46 Z" fill="#0068C9" />
-              </g>
-              {/* Wing 3: Bottom Left Amber */}
-              <path
-                d="M9 67 L55 59 L40 112 C45 80 43 72 9 67 Z"
-                fill="url(#introAmberGrad)"
-                style={{
-                  opacity: 0,
-                  animation: 'kdWingBottomLeft 0.9s cubic-bezier(0.16, 1, 0.3, 1) 1.15s forwards',
-                }}
-              />
-              {/* Wing 4: Bottom Right Vibrant Orange */}
-              <path
-                d="M59 59 L111 59 C83 70 69 80 43 113 L59 59 Z"
-                fill="url(#introOrangeGrad)"
-                style={{
-                  opacity: 0,
-                  animation: 'kdWingBottomRight 0.9s cubic-bezier(0.16, 1, 0.3, 1) 1.45s forwards',
-                }}
-              />
-              <defs>
-                <linearGradient id="introBlueGrad" x1="8" y1="64" x2="76" y2="8" gradientUnits="userSpaceOnUse">
-                  <stop offset="0%" stopColor="#0077E6" />
-                  <stop offset="100%" stopColor="#0055B3" />
-                </linearGradient>
-                <linearGradient id="introAmberGrad" x1="9" y1="67" x2="55" y2="112" gradientUnits="userSpaceOnUse">
-                  <stop offset="0%" stopColor="#FBB03B" />
-                  <stop offset="100%" stopColor="#F7941D" />
-                </linearGradient>
-                <linearGradient id="introOrangeGrad" x1="59" y1="59" x2="43" y2="113" gradientUnits="userSpaceOnUse">
-                  <stop offset="0%" stopColor="#FF5500" />
-                  <stop offset="100%" stopColor="#E04800" />
-                </linearGradient>
-              </defs>
-            </svg>
-
-            {/* Brand Typography Reveal */}
-            <div
-              className="flex flex-col items-center sm:items-start"
-              style={{
-                opacity: 0,
-                animation: 'kdTextSlide 0.95s cubic-bezier(0.16, 1, 0.3, 1) 1.9s forwards',
-              }}
-            >
-              <span className="font-black text-3xl sm:text-5xl tracking-tight text-[#042A53] leading-none">
-                Kuzey Deniz
-              </span>
-              <div className="flex items-center gap-3 mt-3 w-full justify-center sm:justify-start">
-                <span className="h-[3px] w-10 sm:w-14 bg-gradient-to-r from-transparent to-[#F7941D] rounded-full" />
-                <span className="font-extrabold text-sm sm:text-lg tracking-[0.42em] text-[#042A53] uppercase leading-none">
-                  İNŞAAT
-                </span>
-                <span className="h-[3px] w-10 sm:w-14 bg-gradient-to-l from-transparent to-[#F25C05] rounded-full" />
-              </div>
-            </div>
+          <div
+            className="flex items-center justify-center"
+            style={{
+              opacity: 0,
+              animation: 'kdFadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.35s forwards',
+            }}
+          >
+            <img
+              src="/images/logo-brand.png"
+              alt="Kuzey Deniz İnşaat"
+              className="w-[270px] sm:w-[420px] md:w-[480px] h-auto object-contain select-none"
+              draggable={false}
+            />
           </div>
         </div>
 
@@ -167,7 +100,7 @@ export const IntroSplash: React.FC<IntroSplashProps> = ({ onComplete }) => {
           className="mt-8 space-y-3 max-w-lg"
           style={{
             opacity: 0,
-            animation: 'kdFadeUp 1s ease-out 2.9s forwards',
+            animation: 'kdFadeUp 1s ease-out 1.1s forwards',
           }}
         >
           <div className="text-xs sm:text-sm font-black tracking-[0.28em] uppercase text-[#F7941D]">
