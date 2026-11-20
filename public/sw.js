@@ -1,4 +1,4 @@
-const CACHE_NAME = 'kuzeydenizi-erp-v2';
+const CACHE_NAME = 'kuzeydenizi-erp-v3';
 const STATIC_ASSETS = ['/', '/manifest.json', '/images/logo-brand.png', '/images/logo-mark.png', '/icons/favicon-32.png', '/icons/icon-192.png'];
 
 self.addEventListener('install', (event) => {

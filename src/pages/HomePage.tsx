@@ -50,10 +50,10 @@ const HERO_SLIDES: HeroSlide[] = [
     subtitle:
       'Ticari merkezlerden kamu taahhüt projelerine kadar her metrekarede uluslararası kalite standartları ve zamanında anahtar teslim ilkesiyle çalışıyoruz.',
     worksDone: [
-      'Kuzey Yıldızı Ticaret Merkezi',
-      'Zemin İyileştirme & Fore Kazık',
-      'C35 / C40 Yüksek Dayanımlı Beton',
-      'Zamanında Anahtar Teslim',
+      'Ceyhan Ulus Sağlık Ocağı Yapımı',
+      'Yüreğir Diş Hastanesi Tretuar & Onarım',
+      'Geçitli Cumhuriyet Sağlık Ocağı Tadilatı',
+      '52 Adet Kızıldere Deprem Konutları',
     ],
     image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=85',
     primaryBtnLabel: 'Faaliyet Alanlarımız',

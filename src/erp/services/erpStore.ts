@@ -154,7 +154,17 @@ export function hydrateLegacyProjectToErp(raw: any, actorEmail = 'system'): ErpP
     contractingAuthority: raw.contractingAuthority || raw.client || '',
     employer: raw.employer || raw.client || '',
     province: raw.province || 'Adana',
-    district: raw.district || (String(raw.location || '').includes('Pozantı') ? 'Pozantı' : 'Seyhan'),
+    district:
+      raw.district ||
+      (String(raw.location || '').includes('Ceyhan')
+        ? 'Ceyhan'
+        : String(raw.location || '').includes('Yüreğir')
+          ? 'Yüreğir'
+          : String(raw.location || '').includes('Çukurova')
+            ? 'Çukurova'
+            : String(raw.location || '').includes('Pozantı')
+              ? 'Pozantı'
+              : 'Seyhan'),
     location: raw.location || 'Adana',
     siteAddress: raw.siteAddress || raw.location || 'Adana',
     tenderDate: raw.tenderDate || '',
@@ -223,6 +233,17 @@ export function getSeedWarehouses(): WarehouseRecord[] {
   ];
 }
 
+function readDeletedErpProjectIds(): Set<string> {
+  try {
+    const raw = localStorage.getItem(scopedColKey('deleted_projects'));
+    if (!raw) return new Set();
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed) ? new Set(parsed.map(String)) : new Set();
+  } catch {
+    return new Set();
+  }
+}
+
 // Local storage helpers isolated by active session scope ('preview' or 'cloud_<uid>')
 export function readLocalCollection<T>(col: string, fallback: T[]): T[] {
   try {
@@ -232,7 +253,29 @@ export function readLocalCollection<T>(col: string, fallback: T[]): T[] {
       localStorage.setItem(key, JSON.stringify(fallback));
       return fallback;
     }
-    return JSON.parse(raw) as T[];
+    const parsed = JSON.parse(raw) as T[];
+    if (col === 'projects' && fallback.length > 0) {
+      const deleted = readDeletedErpProjectIds();
+      const map = new Map<string, any>();
+      parsed.forEach((item: any) => {
+        if (item?.id) map.set(item.id, item);
+      });
+      let changed = false;
+      fallback.forEach((seed: any) => {
+        if (!seed?.id || deleted.has(seed.id)) return;
+        const cur = map.get(seed.id);
+        if (!cur || String(seed.updatedAt || '') > String(cur.updatedAt || '')) {
+          map.set(seed.id, seed);
+          changed = true;
+        }
+      });
+      if (changed) {
+        const merged = Array.from(map.values()) as T[];
+        localStorage.setItem(key, JSON.stringify(merged));
+        return merged;
+      }
+    }
+    return parsed;
   } catch {
     return fallback;
   }
@@ -528,6 +571,15 @@ export async function deleteErpRecord(
     throw new Error(
       'Kesinleşmiş finansal kayıtlar doğrudan silinemez. İptal veya düzeltme (ters kayıt) işlemi kullanın.'
     );
+  }
+  if (colName === 'projects') {
+    try {
+      const deleted = readDeletedErpProjectIds();
+      deleted.add(id);
+      localStorage.setItem(scopedColKey('deleted_projects'), JSON.stringify(Array.from(deleted)));
+    } catch {
+      // Ignore storage errors
+    }
   }
   const list = readLocalCollection<any>(colName, []);
   writeLocalCollection(
@@ -1260,18 +1312,44 @@ export async function runBackwardCompatibleErpMigration(actorEmail: string): Pro
     const batch = writeBatch(db);
     let hasOps = false;
 
+    const buildSeedCloudProject = (p: ErpProject, legacy?: (typeof SEED_PROJECTS)[number]) => ({
+      ...p,
+      ...(legacy
+        ? {
+            image: legacy.image,
+            galleryImages: legacy.galleryImages,
+            statusBadge: legacy.statusBadge,
+            area: legacy.area,
+            categoryLabel: legacy.categoryLabel,
+            progress: legacy.progress,
+            client: legacy.client,
+            legacyStatus: legacy.status,
+          }
+        : {}),
+    });
+
     if (projSnap.empty) {
-      getSeedErpProjects().forEach((p) => {
-        batch.set(doc(db, 'projects', p.id), p);
+      getSeedErpProjects().forEach((p, idx) => {
+        batch.set(doc(db, 'projects', p.id), buildSeedCloudProject(p, SEED_PROJECTS[idx]));
         hasOps = true;
       });
     } else {
+      const existingProjMap = new Map(projSnap.docs.map((d) => [d.id, d.data()]));
       // Non-destructively upgrade legacy project documents to full ERP fields
       projSnap.docs.forEach((d) => {
         const raw = d.data();
         if (!raw.organizationId || raw.contractAmountKurus === undefined) {
           const upgraded = hydrateLegacyProjectToErp({ ...raw, id: d.id }, actorEmail);
           batch.set(doc(db, 'projects', d.id), upgraded, { merge: true });
+          hasOps = true;
+        }
+      });
+      // Merge newly added/updated official seed projects into Firestore
+      getSeedErpProjects().forEach((p, idx) => {
+        const existing = existingProjMap.get(p.id);
+        const legacy = SEED_PROJECTS[idx];
+        if (!existing || (legacy && String(legacy.updatedAt || '') > String(existing.updatedAt || ''))) {
+          batch.set(doc(db, 'projects', p.id), buildSeedCloudProject(p, legacy), { merge: true });
           hasOps = true;
         }
       });

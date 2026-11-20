@@ -30,10 +30,11 @@ import {
   MailCheckLog,
   MailMessage,
   ProjectItem,
+  ProjectStatus,
 } from '../types';
 
 const STORAGE_KEYS = {
-  PROJECTS: 'cb_projects_v2',
+  PROJECTS: 'cb_projects_v3',
   MESSAGES: 'cb_contact_messages_v2',
   ACCOUNTING: 'cb_accounting_v2',
   MAIL_ACCOUNTS: 'cb_mail_accounts_v2',
@@ -41,6 +42,146 @@ const STORAGE_KEYS = {
   MAIL_LOGS: 'cb_mail_logs_v2',
   SETTINGS: 'cb_dashboard_settings_v2',
 } as const;
+
+const LEGACY_PROJECTS_KEY = 'cb_projects_v2';
+const DELETED_SEED_PROJECTS_KEY = 'cb_deleted_seed_projects_v1';
+
+const SEED_PROJECT_MAP = new Map(SEED_PROJECTS.map((p) => [p.id, p]));
+const SEED_PROJECT_ORDER = new Map(SEED_PROJECTS.map((p, idx) => [p.id, idx]));
+
+const ERP_TO_PUBLIC_STATUS: Record<string, ProjectStatus> = {
+  Hazırlanıyor: 'planlama',
+  'İhale Aşamasında': 'planlama',
+  Kazanıldı: 'planlama',
+  'Devam Ediyor': 'devam-ediyor',
+  Askıda: 'devam-ediyor',
+  'Geçici Kabul': 'test-kabul',
+  'Kesin Kabul': 'teslim-edildi',
+  Tamamlandı: 'teslim-edildi',
+  'Tasfiye Edildi': 'teslim-edildi',
+};
+
+function readDeletedSeedProjectIds(): Set<string> {
+  try {
+    const raw = localStorage.getItem(DELETED_SEED_PROJECTS_KEY);
+    if (!raw) return new Set();
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed) ? new Set(parsed.map(String)) : new Set();
+  } catch {
+    return new Set();
+  }
+}
+
+function recordDeletedSeedProjectId(id: string): void {
+  if (!SEED_PROJECT_MAP.has(id)) return;
+  try {
+    const ids = readDeletedSeedProjectIds();
+    ids.add(id);
+    localStorage.setItem(DELETED_SEED_PROJECTS_KEY, JSON.stringify(Array.from(ids)));
+  } catch {
+    // Ignore storage errors
+  }
+}
+
+export function normalizePublicProject(raw: any): ProjectItem {
+  const seed = SEED_PROJECT_MAP.get(raw?.id);
+  const rawStatus = String(raw?.legacyStatus || raw?.status || seed?.status || 'teslim-edildi');
+  const status: ProjectStatus =
+    ERP_TO_PUBLIC_STATUS[rawStatus] ||
+    (['planlama', 'devam-ediyor', 'test-kabul', 'teslim-edildi'].includes(rawStatus)
+      ? (rawStatus as ProjectStatus)
+      : seed?.status || 'teslim-edildi');
+
+  const gallery: string[] =
+    Array.isArray(raw?.galleryImages) && raw.galleryImages.length > 0
+      ? raw.galleryImages
+      : Array.isArray(raw?.sitePhotos) && raw.sitePhotos.length > 0
+        ? raw.sitePhotos
+        : seed?.galleryImages || [];
+
+  const image =
+    raw?.image || raw?.coverImage || gallery[0] || seed?.image || '/images/adana-adliye-gercek.jpg';
+
+  return {
+    ...(seed || {}),
+    ...raw,
+    id: String(raw?.id || seed?.id || ''),
+    code: String(raw?.code || seed?.code || 'KD'),
+    title: String(raw?.title || seed?.title || ''),
+    shortName: String(raw?.shortName || seed?.shortName || raw?.title || ''),
+    category: (raw?.category || seed?.category || 'kamu') as ProjectItem['category'],
+    categoryLabel: String(raw?.categoryLabel || seed?.categoryLabel || 'Kamu & İnşaat Taahhüt'),
+    status,
+    statusBadge: String(
+      raw?.statusBadge ||
+        seed?.statusBadge ||
+        (status === 'teslim-edildi' ? 'Eksiksiz Teslim Edildi' : raw?.status || 'Devam Ediyor')
+    ),
+    location: String(raw?.location || seed?.location || 'ADANA'),
+    client: String(raw?.client || raw?.employer || raw?.contractingAuthority || seed?.client || ''),
+    area: String(raw?.area || seed?.area || 'Anahtar Teslim Proje'),
+    budget: Number(
+      raw?.budget ?? (raw?.contractAmountKurus ? Math.round(raw.contractAmountKurus / 100) : seed?.budget ?? 0)
+    ),
+    collectedAmount: Number(raw?.collectedAmount ?? seed?.collectedAmount ?? 0),
+    progress: Number(raw?.progress ?? raw?.physicalProgressPct ?? seed?.progress ?? 100),
+    siteManager: String(raw?.siteManager || raw?.siteChief || seed?.siteManager || 'Kuzey Deniz Teknik Ekibi'),
+    startDate: String(raw?.startDate || seed?.startDate || ''),
+    endDate: String(raw?.endDate || seed?.endDate || ''),
+    description: String(raw?.description || seed?.description || ''),
+    highlights:
+      Array.isArray(raw?.highlights) && raw.highlights.length > 0
+        ? raw.highlights
+        : seed?.highlights || [],
+    milestones:
+      Array.isArray(raw?.milestones) && raw.milestones.length > 0
+        ? raw.milestones
+        : seed?.milestones || [],
+    image,
+    galleryImages: gallery.length > 0 ? gallery : [image],
+    publishedOnSite: raw?.publishedOnSite ?? seed?.publishedOnSite ?? true,
+    isFeatured: raw?.isFeatured ?? seed?.isFeatured ?? false,
+    createdAt: String(raw?.createdAt || seed?.createdAt || new Date().toISOString()),
+    updatedAt: String(raw?.updatedAt || seed?.updatedAt || new Date().toISOString()),
+  };
+}
+
+function sortPublicProjects(list: ProjectItem[]): ProjectItem[] {
+  return [...list].sort((a, b) => {
+    const aOrder = SEED_PROJECT_ORDER.get(a.id);
+    const bOrder = SEED_PROJECT_ORDER.get(b.id);
+    if (aOrder !== undefined && bOrder !== undefined) return aOrder - bOrder;
+    if (aOrder === undefined && bOrder !== undefined) return -1;
+    if (aOrder !== undefined && bOrder === undefined) return 1;
+    return String(b.createdAt || '').localeCompare(String(a.createdAt || ''));
+  });
+}
+
+function mergeProjectsWithSeed(rawList: any[]): { items: ProjectItem[]; changed: boolean } {
+  const deleted = readDeletedSeedProjectIds();
+  const map = new Map<string, ProjectItem>();
+  let changed = false;
+
+  for (const item of rawList) {
+    if (!item || !item.id) continue;
+    const norm = normalizePublicProject(item);
+    map.set(norm.id, norm);
+  }
+
+  for (const seed of SEED_PROJECTS) {
+    if (deleted.has(seed.id)) continue;
+    const existing = map.get(seed.id);
+    if (!existing) {
+      map.set(seed.id, seed);
+      changed = true;
+    } else if (String(seed.updatedAt || '') > String(existing.updatedAt || '')) {
+      map.set(seed.id, seed);
+      changed = true;
+    }
+  }
+
+  return { items: sortPublicProjects(Array.from(map.values())), changed };
+}
 
 let activeDataScope = 'preview';
 
@@ -128,7 +269,21 @@ export function subscribeLocalTopic(topic: string, handler: () => void): () => v
 // ---------- PUBLIC & CONTACT OPERATIONS ----------
 
 export function getLocalProjects(): ProjectItem[] {
-  return readLocal<ProjectItem[]>(STORAGE_KEYS.PROJECTS, SEED_PROJECTS);
+  try {
+    localStorage.removeItem(LEGACY_PROJECTS_KEY);
+  } catch {
+    // Ignore storage removal errors
+  }
+  const rawList = readLocal<ProjectItem[]>(STORAGE_KEYS.PROJECTS, SEED_PROJECTS);
+  const { items, changed } = mergeProjectsWithSeed(rawList);
+  if (changed) {
+    try {
+      localStorage.setItem(resolveKey(STORAGE_KEYS.PROJECTS), JSON.stringify(items));
+    } catch {
+      // Ignore quota errors
+    }
+  }
+  return items;
 }
 
 export function subscribePublicProjects(onData: (projects: ProjectItem[]) => void): Unsubscribe {
@@ -142,10 +297,8 @@ export function subscribePublicProjects(onData: (projects: ProjectItem[]) => voi
       q,
       (snap) => {
         if (!snap.empty) {
-          const items = snap.docs.map((d) => ({ ...(d.data() as ProjectItem), id: d.id }));
-          items.sort((a, b) =>
-            String(b.createdAt || '').localeCompare(String(a.createdAt || ''))
-          );
+          const rawItems = snap.docs.map((d) => ({ ...(d.data() as Record<string, any>), id: d.id }));
+          const { items } = mergeProjectsWithSeed(rawItems);
           onData(items.filter((p) => p.publishedOnSite));
         }
       },
@@ -236,13 +389,37 @@ export async function submitContactMessage(
 export async function ensureCloudSeeded(): Promise<boolean> {
   try {
     const snap = await getDocs(collection(db, 'projects'));
-    if (!snap.empty) return false;
-
+    const existingDocs = new Map(snap.docs.map((d) => [d.id, d.data()]));
     const batch = writeBatch(db);
-    SEED_PROJECTS.forEach((p) => batch.set(doc(db, 'projects', p.id), p));
-    SEED_ACCOUNTING.forEach((a) => batch.set(doc(db, 'accounting_entries', a.id), a));
-    SEED_CONTACT_MESSAGES.forEach((m) => batch.set(doc(db, 'contact_messages', m.id), m));
-    batch.set(doc(db, 'dashboard_settings', 'general'), DEFAULT_SETTINGS);
+    let ops = 0;
+
+    if (snap.empty) {
+      SEED_PROJECTS.forEach((p) => {
+        batch.set(doc(db, 'projects', p.id), p);
+        ops++;
+      });
+      SEED_ACCOUNTING.forEach((a) => {
+        batch.set(doc(db, 'accounting_entries', a.id), a);
+        ops++;
+      });
+      SEED_CONTACT_MESSAGES.forEach((m) => {
+        batch.set(doc(db, 'contact_messages', m.id), m);
+        ops++;
+      });
+      batch.set(doc(db, 'dashboard_settings', 'general'), DEFAULT_SETTINGS);
+      ops++;
+    } else {
+      // Merge newly added or updated official seed projects into existing cloud collection
+      SEED_PROJECTS.forEach((p) => {
+        const cur = existingDocs.get(p.id);
+        if (!cur || String(p.updatedAt || '') > String(cur.updatedAt || '')) {
+          batch.set(doc(db, 'projects', p.id), p, { merge: true });
+          ops++;
+        }
+      });
+    }
+
+    if (ops === 0) return false;
     await batch.commit();
     return true;
   } catch (err) {
@@ -277,9 +454,13 @@ export function subscribeCollectionData<T extends { id: string }>(
   }[collectionName];
 
   if (!cloudMode) {
-    onData(readLocal<T[]>(storageMap.key, storageMap.seed as unknown as T[]));
+    const readItems = () =>
+      collectionName === 'projects'
+        ? (getLocalProjects() as unknown as T[])
+        : readLocal<T[]>(storageMap.key, storageMap.seed as unknown as T[]);
+    onData(readItems());
     return subscribeLocalTopic(storageMap.topic, () => {
-      onData(readLocal<T[]>(storageMap.key, storageMap.seed as unknown as T[]));
+      onData(readItems());
     });
   }
 
@@ -362,6 +543,9 @@ export async function removeEntity(
     mail_check_logs: { key: STORAGE_KEYS.MAIL_LOGS, seed: SEED_MAIL_LOGS, topic: 'mail_logs' },
   }[collectionName];
 
+  if (collectionName === 'projects') {
+    recordDeletedSeedProjectId(id);
+  }
   const list = readLocal<{ id: string }[]>(storageMap.key, storageMap.seed);
   writeLocal(
     storageMap.key,
@@ -423,6 +607,12 @@ export async function removeAuthorizedAdmin(email: string): Promise<void> {
 }
 
 export function resetLocalDemoWorkspace(): void {
+  try {
+    localStorage.removeItem(DELETED_SEED_PROJECTS_KEY);
+    localStorage.removeItem(LEGACY_PROJECTS_KEY);
+  } catch {
+    // Ignore storage removal errors
+  }
   writeLocal(STORAGE_KEYS.PROJECTS, SEED_PROJECTS, 'projects');
   writeLocal(STORAGE_KEYS.MESSAGES, SEED_CONTACT_MESSAGES, 'messages');
   writeLocal(STORAGE_KEYS.ACCOUNTING, SEED_ACCOUNTING, 'accounting');

@@ -20,6 +20,7 @@ import {
   writeLocalCollection,
 } from '../services/erpStore';
 import { isSuperAdminEmail } from '../../core/firebase';
+import { getLocalProjects, normalizePublicProject } from '../../services/dataService';
 import { ErpUserAccount } from '../types/erp';
 import { toKurus } from '../utils/money';
 
@@ -152,5 +153,54 @@ describe('RBAC Permissions, Approval Matrix & Legacy Project Migration', () => {
     });
     expect('invoiceId' in cleaned).toBe(false);
     expect('hakedisId' in cleaned).toBe(false);
+  });
+
+  it('invalidates stale cb_projects_v2 cache and merges newly added public seed projects', () => {
+    localStorage.clear();
+    localStorage.setItem(
+      'cb_projects_v2',
+      JSON.stringify([{ id: 'prj-kuzey-panorama', title: 'Stale Old Entry' }])
+    );
+    localStorage.setItem(
+      'cb_projects_v3',
+      JSON.stringify([
+        {
+          id: 'prj-kuzey-panorama',
+          code: 'KD-01',
+          title: 'Kuzey Panorama Konutları',
+          updatedAt: '2025-01-01T00:00:00Z',
+        },
+      ])
+    );
+
+    const projects = getLocalProjects();
+    const ids = projects.map((p) => p.id);
+    expect(localStorage.getItem('cb_projects_v2')).toBeNull();
+    expect(ids).toContain('prj-ceyhan-ulus-saglik-ocagi');
+    expect(ids).toContain('prj-yuregir-dis-hastanesi-tretuar');
+    expect(ids).toContain('prj-gecitli-saglik-ocagi-tadilati');
+    expect(ids).toContain('prj-kizildere-deprem-konutlari');
+    expect(projects[0].id).toBe('prj-ceyhan-ulus-saglik-ocagi');
+  });
+
+  it('normalizes ERP-hydrated project records for public showcase rendering', () => {
+    const erp = hydrateLegacyProjectToErp(
+      {
+        id: 'prj-ceyhan-ulus-saglik-ocagi',
+        code: 'KD-01',
+        title: 'Ceyhan Ulus Sağlık Ocağı Yapımı',
+        client: 'T.C. Sağlık Bakanlığı',
+        location: 'Ulus Mah., Ceyhan / ADANA',
+        status: 'teslim-edildi',
+        progress: 100,
+        image: '/images/projects/ceyhan-ulus-saglik-ocagi/foto-1.jpg',
+        galleryImages: ['/images/projects/ceyhan-ulus-saglik-ocagi/foto-1.jpg'],
+      },
+      'info@kuzeydeniziyapi.com.tr'
+    );
+    const pub = normalizePublicProject(erp);
+    expect(pub.status).toBe('teslim-edildi');
+    expect(pub.image).toBe('/images/projects/ceyhan-ulus-saglik-ocagi/foto-1.jpg');
+    expect(pub.publishedOnSite).toBe(true);
   });
 });
