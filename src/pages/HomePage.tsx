@@ -575,35 +575,51 @@ export const HomePage: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
                 {
-                  title: 'Konut & Rezidans',
-                  desc: 'Sosyal donatı alanları, kapalı otopark, akıllı ev sistemleri ve geniş peyzaja sahip nitelikli yaşam projeleri.',
-                  tag: 'YÜKSEK KONFOR',
-                  icon: 'fa-solid fa-building',
+                  title: 'Kamu Müteahhitliği & Taahhüt',
+                  desc: '4734 Sayılı KİK kapsamında kamu binaları, adliye, hastane, okul, afet ve deprem konutları anahtar teslim taahhütleri.',
+                  tag: '4734 KİK & EKAP UYUMLU',
+                  icon: 'fa-solid fa-landmark',
                   iconBg: 'bg-gradient-to-br from-[#F7941D] to-[#F25C05]',
                   tagColor: 'text-[#F7941D]',
                 },
                 {
-                  title: 'Ticari & Plaza Yapıları',
-                  desc: 'İş dünyasının prestijini yükselten modern ofis blokları, cadde mağazaları, lojistik ve endüstriyel tesisler.',
-                  tag: 'PRESTİJLİ İŞ MERKEZLERİ',
-                  icon: 'fa-solid fa-briefcase',
+                  title: 'Bina & Konut İnşaatları',
+                  desc: 'Rezidans, villa, toplu konut ve yaşam projelerinde C35/C40 betonarme ve radye temel ile yüksek deprem güvenliği.',
+                  tag: 'YÜKSEK KONFOR & GÜVENLİK',
+                  icon: 'fa-solid fa-building',
                   iconBg: 'bg-[#0068C9]',
                   tagColor: 'text-sky-400',
                 },
                 {
-                  title: 'İnşaat Taahhüt',
-                  desc: 'Kamu ve özel sektör üstyapı-altyapı projelerinde teknik şartnamelere tam uyumlu, güçlü makine parkuru ile taahhüt.',
-                  tag: 'ZAMANINDA TESLİM',
-                  icon: 'fa-solid fa-trowel-bricks',
+                  title: 'Endüstriyel Tesisler & Fabrika',
+                  desc: 'OSB fabrika yapıları, ağır sanayi tesisleri, soğuk hava depoları ve hangarlar için entegre çelik karkas çözümleri.',
+                  tag: 'AĞIR SANAYİ MİMARİSİ',
+                  icon: 'fa-solid fa-industry',
                   iconBg: 'bg-gradient-to-br from-[#F7941D] to-[#F25C05]',
                   tagColor: 'text-[#F7941D]',
                 },
                 {
-                  title: 'Kentsel Dönüşüm',
-                  desc: 'Riskli yapıların yenilenmesi ve arsa sahiplerine şeffaf, güvenilir kat karşılığı paylaşım modelleriyle çözümler.',
+                  title: 'Altyapı & Boru Hatları',
+                  desc: 'Otoyol, demiryolu, köprü, tünel, içme suyu, doğalgaz ve petrol boru hatlarında lazer hassasiyetli altyapı mühendisliği.',
+                  tag: 'KESİNTİSİZ ALTYAPI',
+                  icon: 'fa-solid fa-road',
+                  iconBg: 'bg-[#0068C9]',
+                  tagColor: 'text-sky-400',
+                },
+                {
+                  title: 'Saha Betonları & Zemin',
+                  desc: 'Lazer screed nivo ile helikopter perdahlı endüstriyel zeminler, ağır yük otopark betonları ve apron imalatları.',
+                  tag: 'TOZUMAZ KUVARS ZEMİN',
+                  icon: 'fa-solid fa-layer-group',
+                  iconBg: 'bg-gradient-to-br from-[#F7941D] to-[#F25C05]',
+                  tagColor: 'text-[#F7941D]',
+                },
+                {
+                  title: 'Kentsel Dönüşüm & Güçlendirme',
+                  desc: 'Riskli yapıların yenilenmesi, karbon elyaf ve çelik mantolama ile güçlendirme ve şeffaf kat karşılığı arsa modelleri.',
                   tag: 'GÜVENLİ DÖNÜŞÜM',
                   icon: 'fa-solid fa-arrows-rotate',
                   iconBg: 'bg-[#0068C9]',
@@ -632,6 +648,17 @@ export const HomePage: React.FC = () => {
                   </div>
                 </Link>
               ))}
+            </div>
+
+            {/* View All 15 Services Banner */}
+            <div className="mt-8 text-center">
+              <Link
+                to="/hizmetler"
+                className="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-[#F7941D] to-[#F25C05] hover:brightness-110 text-white font-extrabold text-sm uppercase tracking-wider shadow-xl transition-all"
+              >
+                <span>Tüm 15 Hizmet Disiplinini ve 200+ İmalat Kalemini İnceleyin</span>
+                <i className="fa-solid fa-arrow-right" />
+              </Link>
             </div>
           </div>
 
