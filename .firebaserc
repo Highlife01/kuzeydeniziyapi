@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "karacateknik-b202f"
+  },
+  "targets": {
+    "karacateknik-b202f": {
+      "hosting": {
+        "kuzeydeniziyapi": [
+          "kuzeydeniziyapi"
+        ]
+      }
+    }
+  }
+}

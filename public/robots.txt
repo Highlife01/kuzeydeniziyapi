@@ -1,0 +1,104 @@
+# Kuzey Denizi İnşaat Sanayi ve Ticaret A.Ş. Robots Directives (https://www.kuzeydenizi.com.tr)
+User-agent: *
+Allow: /
+Disallow: /dashboard
+Disallow: /dashboard/
+Disallow: /panel
+Disallow: /admin
+Disallow: /yonetim
+Disallow: /api
+Disallow: /api/
+
+User-agent: Googlebot
+Allow: /
+Disallow: /dashboard
+Disallow: /dashboard/
+Disallow: /panel
+Disallow: /admin
+Disallow: /yonetim
+Disallow: /api
+Disallow: /api/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /dashboard
+Disallow: /dashboard/
+Disallow: /panel
+Disallow: /admin
+Disallow: /yonetim
+Disallow: /api
+Disallow: /api/
+
+User-agent: GPTBot
+Allow: /
+Disallow: /dashboard
+Disallow: /dashboard/
+Disallow: /panel
+Disallow: /admin
+Disallow: /yonetim
+Disallow: /api
+Disallow: /api/
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /dashboard
+Disallow: /dashboard/
+Disallow: /panel
+Disallow: /admin
+Disallow: /yonetim
+Disallow: /api
+Disallow: /api/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /dashboard
+Disallow: /dashboard/
+Disallow: /panel
+Disallow: /admin
+Disallow: /yonetim
+Disallow: /api
+Disallow: /api/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /dashboard
+Disallow: /dashboard/
+Disallow: /panel
+Disallow: /admin
+Disallow: /yonetim
+Disallow: /api
+Disallow: /api/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /dashboard
+Disallow: /dashboard/
+Disallow: /panel
+Disallow: /admin
+Disallow: /yonetim
+Disallow: /api
+Disallow: /api/
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /dashboard
+Disallow: /dashboard/
+Disallow: /panel
+Disallow: /admin
+Disallow: /yonetim
+Disallow: /api
+Disallow: /api/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /dashboard
+Disallow: /dashboard/
+Disallow: /panel
+Disallow: /admin
+Disallow: /yonetim
+Disallow: /api
+Disallow: /api/
+
+Sitemap: https://www.kuzeydenizi.com.tr/sitemap.xml
+# LLMs & GEO Context: https://www.kuzeydenizi.com.tr/llms.txt
+# Extended Reference: https://www.kuzeydenizi.com.tr/llms-full.txt

@@ -1,0 +1,343 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function userEmail() {
+      return isSignedIn() && request.auth.token.email != null
+        ? request.auth.token.email.lower()
+        : "";
+    }
+
+    function isSuperAdmin() {
+      return isSignedIn() && (
+        request.auth.token.superAdmin == true ||
+        userEmail() == "cebrailkara@gmail.com" ||
+        userEmail() == "yalinizlargrup@gmail.com" ||
+        userEmail() == "ilkeryaliniz@gmail.com" ||
+        userEmail() == "info@kuzeydeniziyapi.com.tr"
+      );
+    }
+
+    function userDocExists() {
+      return isSignedIn() && userEmail() != "" &&
+        exists(/databases/$(database)/documents/users/$(userEmail()));
+    }
+
+    function userDoc() {
+      return get(/databases/$(database)/documents/users/$(userEmail())).data;
+    }
+
+    function isErpUser() {
+      return isSuperAdmin() || (
+        userDocExists() &&
+        userDoc().active == true
+      ) || (
+        isSignedIn() && userEmail() != "" &&
+        exists(/databases/$(database)/documents/authorized_admins/$(userEmail()))
+      );
+    }
+
+    function roleId() {
+      return isSuperAdmin()
+        ? "sirket_sahibi"
+        : (userDocExists() && userDoc().roleId is string
+            ? userDoc().roleId
+            : "salt_okunur");
+    }
+
+    function isAdminManager() {
+      return isSuperAdmin() || (isErpUser() && roleId() in ["sirket_sahibi", "genel_mudur"]);
+    }
+
+    function isFinanceRole() {
+      return isSuperAdmin() || (isErpUser() && roleId() in ["sirket_sahibi", "genel_mudur", "mali_isler", "muhasebe"]);
+    }
+
+    function isApproverRole() {
+      return isSuperAdmin() || (isErpUser() && roleId() in ["sirket_sahibi", "genel_mudur", "mali_isler", "proje_muduru"]);
+    }
+
+    function hasAllProjects() {
+      return isSuperAdmin() || (
+        isErpUser() &&
+        roleId() in ["sirket_sahibi", "genel_mudur", "mali_isler", "muhasebe", "satin_alma", "depo_sorumlusu", "salt_okunur"]
+      );
+    }
+
+    function canAccessProj(projId) {
+      return hasAllProjects() || (
+        isErpUser() &&
+        projId is string &&
+        projId != "" &&
+        userDocExists() &&
+        userDoc().assignedProjectIds is list &&
+        projId in userDoc().assignedProjectIds
+      );
+    }
+
+    function canMutateErp() {
+      return isErpUser() && roleId() != "salt_okunur";
+    }
+
+    function canDeleteUnfinalized() {
+      return isSuperAdmin() && !(resource.data.locked == true);
+    }
+
+    // Identity & Role Isolation
+    match /authorized_admins/{email} {
+      allow read: if isAdminManager() || userEmail() == email.lower();
+      allow write: if isSuperAdmin();
+    }
+
+    match /users/{email} {
+      allow read: if isAdminManager() || userEmail() == email.lower();
+      allow write: if isSuperAdmin();
+    }
+
+    match /roles/{roleDoc} {
+      allow read: if isErpUser();
+      allow write: if isSuperAdmin();
+    }
+
+    // Showcase projects: published projects are public; internal projects are isolated by role/assignment
+    match /projects/{projectId} {
+      allow read: if (resource.data.publishedOnSite == true) || canAccessProj(projectId);
+      allow create: if canMutateErp() && hasAllProjects();
+      allow update: if canMutateErp() && roleId() != "saha_personeli" && canAccessProj(projectId);
+      allow delete: if isSuperAdmin();
+    }
+
+    // Public contact form submissions (create public; CRM read/update isolated to management & finance roles)
+    match /contact_messages/{msgId} {
+      allow create: if request.resource.data.keys().hasAll(['name', 'phone', 'email', 'service', 'message', 'createdAt'])
+                    && request.resource.data.name is string
+                    && request.resource.data.name.size() > 1
+                    && request.resource.data.name.size() <= 160
+                    && request.resource.data.phone is string
+                    && request.resource.data.phone.size() >= 6
+                    && request.resource.data.phone.size() <= 40
+                    && request.resource.data.email is string
+                    && request.resource.data.email.size() <= 160
+                    && request.resource.data.message is string
+                    && request.resource.data.message.size() >= 3
+                    && request.resource.data.message.size() <= 5000;
+      allow read, update: if isFinanceRole();
+      allow delete: if isSuperAdmin();
+    }
+
+    // Financial records: role + project isolated, locked entries protected against deletion
+    match /invoices/{docId} {
+      allow read: if isFinanceRole() || (
+        isErpUser() &&
+        roleId() in ["satin_alma", "proje_muduru", "santiye_sefi", "saha_personeli"] &&
+        canAccessProj(resource.data.projectId)
+      );
+      allow create: if canMutateErp() && canAccessProj(request.resource.data.projectId);
+      allow update: if canMutateErp() && roleId() != "saha_personeli"
+        && canAccessProj(resource.data.projectId)
+        && canAccessProj(request.resource.data.projectId);
+      allow delete: if canDeleteUnfinalized();
+    }
+
+    match /expenses/{docId} {
+      allow read: if isFinanceRole() || (
+        isErpUser() && roleId() == "proje_muduru" && canAccessProj(resource.data.projectId)
+      );
+      allow create: if canMutateErp() && canAccessProj(request.resource.data.projectId);
+      allow update: if isFinanceRole() || (
+        canMutateErp() && roleId() == "proje_muduru"
+        && canAccessProj(resource.data.projectId)
+        && canAccessProj(request.resource.data.projectId)
+      );
+      allow delete: if canDeleteUnfinalized();
+    }
+
+    match /payments/{docId} {
+      allow read: if isFinanceRole() || (
+        isErpUser() && roleId() == "proje_muduru" && canAccessProj(resource.data.projectId)
+      );
+      allow create: if isFinanceRole() || (canMutateErp() && canAccessProj(request.resource.data.projectId));
+      allow update: if isFinanceRole() || (
+        isApproverRole() && canAccessProj(resource.data.projectId)
+      );
+      allow delete: if canDeleteUnfinalized();
+    }
+
+    match /progressPayments/{docId} {
+      allow read: if isFinanceRole() || (
+        isErpUser() && roleId() == "proje_muduru" && canAccessProj(resource.data.projectId)
+      );
+      allow create, update: if isFinanceRole() || (
+        canMutateErp() && roleId() == "proje_muduru" && canAccessProj(request.resource.data.projectId)
+      );
+      allow delete: if canDeleteUnfinalized();
+    }
+
+    // Executive banking & checks: strictly isolated to management & finance roles
+    match /bankAccounts/{docId} {
+      allow read, create, update: if isFinanceRole();
+      allow delete: if isSuperAdmin();
+    }
+
+    match /checks/{docId} {
+      allow read, create, update: if isFinanceRole();
+      allow delete: if isSuperAdmin();
+    }
+
+    match /transactions/{docId} {
+      allow read, create, update: if isFinanceRole();
+      allow delete: if isSuperAdmin();
+    }
+
+    match /accounting_entries/{docId} {
+      allow read, create, update: if isFinanceRole();
+      allow delete: if isSuperAdmin();
+    }
+
+    match /guarantees/{docId} {
+      allow read: if isFinanceRole() || (
+        isErpUser() && roleId() == "proje_muduru" && canAccessProj(resource.data.projectId)
+      );
+      allow create, update: if isFinanceRole();
+      allow delete: if isSuperAdmin();
+    }
+
+    // Approval workflows: requesters read their own; approvers read & decide their scope
+    match /approvals/{docId} {
+      allow read: if isFinanceRole()
+        || (isErpUser() && roleId() == "proje_muduru" && canAccessProj(resource.data.projectId))
+        || (isErpUser() && resource.data.requestedBy == userEmail());
+      allow create: if canMutateErp();
+      allow update: if isApproverRole() && canAccessProj(resource.data.projectId);
+      allow delete: if isSuperAdmin();
+    }
+
+    // HR & Payroll privacy isolation
+    match /employees/{docId} {
+      allow read: if isFinanceRole() || (
+        isErpUser() &&
+        roleId() in ["proje_muduru", "santiye_sefi", "saha_personeli"] &&
+        canAccessProj(resource.data.projectId)
+      );
+      allow create: if canMutateErp() && canAccessProj(request.resource.data.projectId);
+      allow update: if canMutateErp() && roleId() != "saha_personeli"
+        && canAccessProj(resource.data.projectId)
+        && canAccessProj(request.resource.data.projectId);
+      allow delete: if isSuperAdmin();
+    }
+
+    match /timesheets/{docId} {
+      allow read: if isFinanceRole() || (
+        isErpUser() &&
+        roleId() in ["proje_muduru", "santiye_sefi", "saha_personeli"] &&
+        canAccessProj(resource.data.projectId)
+      );
+      allow create: if canMutateErp() && canAccessProj(request.resource.data.projectId);
+      allow update: if canMutateErp() && roleId() != "saha_personeli"
+        && canAccessProj(resource.data.projectId)
+        && canAccessProj(request.resource.data.projectId);
+      allow delete: if isSuperAdmin();
+    }
+
+    // Immutable audit logs: append-only, readable only by top admin management
+    match /auditLogs/{logId} {
+      allow read: if isAdminManager();
+      allow create: if isErpUser();
+      allow update, delete: if false;
+    }
+
+    // Project-scoped operational collections
+    match /{col}/{docId} {
+      allow read: if isErpUser() && col in [
+        'budgets', 'workItems', 'purchases', 'subcontractors',
+        'projectTasks', 'siteLogs', 'documents', 'stockMovements'
+      ] && canAccessProj(resource.data.projectId);
+      allow create: if canMutateErp() && col in [
+        'budgets', 'workItems', 'purchases', 'subcontractors',
+        'projectTasks', 'siteLogs', 'documents', 'stockMovements'
+      ] && canAccessProj(request.resource.data.projectId);
+      allow update: if canMutateErp() && roleId() != "saha_personeli" && col in [
+        'budgets', 'workItems', 'purchases', 'subcontractors',
+        'projectTasks', 'siteLogs', 'documents', 'stockMovements'
+      ] && canAccessProj(resource.data.projectId)
+        && canAccessProj(request.resource.data.projectId);
+      allow delete: if isSuperAdmin() && col in [
+        'budgets', 'workItems', 'purchases', 'subcontractors',
+        'projectTasks', 'siteLogs', 'documents', 'stockMovements'
+      ];
+    }
+
+    // Tenders & suppliers isolated to relevant procurement/management roles
+    match /tenders/{docId} {
+      allow read: if isErpUser() && roleId() in ["sirket_sahibi", "genel_mudur", "mali_isler", "proje_muduru", "salt_okunur"];
+      allow create, update: if isErpUser() && roleId() in ["sirket_sahibi", "genel_mudur", "mali_isler", "proje_muduru"];
+      allow delete: if isSuperAdmin();
+    }
+
+    match /suppliers/{docId} {
+      allow read: if isFinanceRole() || (isErpUser() && roleId() in ["satin_alma", "proje_muduru"]);
+      allow create, update: if canMutateErp() && (isFinanceRole() || roleId() in ["satin_alma", "proje_muduru"]);
+      allow delete: if isSuperAdmin();
+    }
+
+    match /supplierQuotes/{docId} {
+      allow read: if isFinanceRole() || (isErpUser() && roleId() in ["satin_alma", "proje_muduru"]);
+      allow create, update: if canMutateErp() && (isFinanceRole() || roleId() in ["satin_alma", "proje_muduru"]);
+      allow delete: if isSuperAdmin();
+    }
+
+    // Warehouse & equipment inventory
+    match /{col}/{docId} {
+      allow read: if isErpUser() && col in ['warehouses', 'stockItems', 'equipment'];
+      allow create, update: if canMutateErp() && roleId() != "saha_personeli"
+        && col in ['warehouses', 'stockItems', 'equipment'];
+      allow delete: if isSuperAdmin() && col in ['warehouses', 'stockItems', 'equipment'];
+    }
+
+    // System config & expense taxonomy
+    match /settings/{docId} {
+      allow read: if isErpUser();
+      allow create, update: if isAdminManager();
+      allow delete: if isSuperAdmin();
+    }
+
+    match /dashboard_settings/{docId} {
+      allow read: if isErpUser();
+      allow create, update: if isAdminManager();
+      allow delete: if isSuperAdmin();
+    }
+
+    match /organizations/{docId} {
+      allow read: if isErpUser();
+      allow create, update: if isAdminManager();
+      allow delete: if false;
+    }
+
+    match /{col}/{docId} {
+      allow read: if isErpUser() && col in [
+        'contracts', 'purchaseItems', 'invoiceItems', 'invoiceAllocations',
+        'notifications', 'expenseCategories'
+      ];
+      allow create, update: if canMutateErp() && col in [
+        'contracts', 'purchaseItems', 'invoiceItems', 'invoiceAllocations',
+        'notifications', 'expenseCategories'
+      ];
+      allow delete: if isSuperAdmin() && col in [
+        'contracts', 'purchaseItems', 'expenseCategories'
+      ];
+    }
+
+    // Legacy mock mail collections isolated strictly to super admins (SafirMail runs server-side)
+    match /{col}/{docId} {
+      allow read, write: if isSuperAdmin() && col in ['mail_messages', 'mail_accounts', 'mail_check_logs'];
+    }
+
+    // SafirMail server-managed collections (mailAccounts, mailSecrets, userMailAccess, etc.) denied to clients
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

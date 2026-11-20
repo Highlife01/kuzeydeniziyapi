@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="tr" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Canonical Domain Redirect (apex -> www on production domain, preserves *.web.app during setup) -->
+    <script>
+      (function () {
+        var h = window.location.hostname;
+        if (!h || h === 'localhost' || h === '127.0.0.1' || h.indexOf('web.app') !== -1 || h.indexOf('firebaseapp.com') !== -1) {
+          return;
+        }
+        var targetHost = 'www.kuzeydeniziyapi.com.tr';
+        if (h === 'kuzeydeniziyapi.com.tr') {
+          window.location.replace(
+            'https://' +
+              targetHost +
+              window.location.pathname +
+              window.location.search +
+              window.location.hash
+          );
+        }
+      })();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kuzey Denizi İnşaat | Güvenle Yükselen Modern Yapılar</title>
+    <meta name="description" content="Kuzey Denizi İnşaat; deprem güvenliği yüksek modern konut projeleri, ticari plazalar, kamu taahhütleri ve endüstriyel tesisler. İletişim & WhatsApp: +90 533 677 91 09" />
+    <meta name="keywords" content="kuzey denizi inşaat, kuzey denizi yapı, adana inşaat firmaları, modern konut projeleri, kamu taahhüt, deprem güçlendirme, mimarlık ve mühendislik" />
+    <meta name="author" content="Kuzey Denizi İnşaat Sanayi ve Ticaret A.Ş." />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="theme-color" content="#030712" />
+    <meta name="language" content="Turkish" />
+    <meta http-equiv="content-language" content="tr-TR" />
+    <meta name="geo.region" content="TR-01" />
+    <meta name="geo.placename" content="Seyhan, Adana, Türkiye" />
+    <meta name="geo.position" content="36.9855;35.2530" />
+    <meta name="ICBM" content="36.9855, 35.2530" />
+
+    <link rel="canonical" href="https://www.kuzeydeniziyapi.com.tr/" />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://www.kuzeydeniziyapi.com.tr/sitemap.xml" />
+    <link rel="alternate" type="text/plain" title="LLMs Context" href="https://www.kuzeydeniziyapi.com.tr/llms.txt" />
+    <link rel="alternate" type="text/plain" title="LLMs Full Documentation" href="https://www.kuzeydeniziyapi.com.tr/llms-full.txt" />
+    <link rel="alternate" type="application/ld+json" href="https://www.kuzeydeniziyapi.com.tr/entity.jsonld" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Kuzey Denizi İnşaat Sanayi ve Ticaret A.Ş." />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:title" content="Kuzey Denizi İnşaat | Adana Çatı ve Yangın Güvenliği" />
+    <meta property="og:description" content="2016'dan beri Adana'da kamu taahhüt, çatı yenileme ve hastane yangın güvenliği. Referanslar: Adana Adliyesi ve Pozantı Devlet Hastanesi. Tel: 0533 677 91 09" />
+    <meta property="og:url" content="https://www.kuzeydeniziyapi.com.tr/" />
+    <meta property="og:image" content="https://www.kuzeydeniziyapi.com.tr/images/og/og-ana-sayfa.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Kuzey Denizi İnşaat — Adana Adliyesi çatı yenileme referans projesi" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:domain" content="www.kuzeydeniziyapi.com.tr" />
+    <meta name="twitter:title" content="Kuzey Denizi İnşaat | Adana Çatı ve Yangın Güvenliği" />
+    <meta name="twitter:description" content="2016'dan beri Adana'da kamu taahhüt, çatı yenileme ve hastane yangın güvenliği. Referanslar: Adana Adliyesi ve Pozantı Devlet Hastanesi. Tel: 0533 677 91 09" />
+    <meta name="twitter:image" content="https://www.kuzeydeniziyapi.com.tr/images/og/og-ana-sayfa.jpg" />
+
+    <link rel="preload" as="image" href="/images/adana-adliye-gercek.jpg" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script id="seo-jsonld" type="application/ld+json">{}</script>
+  </head>
+  <body class="bg-[#030712] text-white font-sans antialiased selection:bg-blue-600 selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

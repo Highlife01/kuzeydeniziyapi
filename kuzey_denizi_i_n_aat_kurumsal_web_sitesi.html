@@ -1,0 +1,1368 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuzey Denizi İnşaat | Güvenle Yükselen Modern Yapılar</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            navy: '#042A53',      // Logodaki ana koyu lacivert
+                            dark: '#021B36',      // Derin gece laciverti (footer/hero)
+                            blue: '#0068C9',      // Logodaki canlı kuzey mavisi
+                            sky: '#E6F1FB',       // Açık mavi arka plan vurgusu
+                            orange: '#F25C05',    // Logodaki canlı turuncu
+                            amber: '#F7941D',     // Logodaki sıcak kehribar turuncusu
+                            orangeLight: '#FFF4EC'
+                        }
+                    },
+                    boxShadow: {
+                        'premium': '0 20px 50px -12px rgba(4, 42, 83, 0.14)',
+                        'orange-glow': '0 12px 28px -6px rgba(242, 92, 5, 0.4)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Özel Mimari Desenler ve Geçişler */
+        .blueprint-bg {
+            background-image: 
+                linear-gradient(to right, rgba(4, 42, 83, 0.04) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(4, 42, 83, 0.04) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .blueprint-dark-bg {
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+            background-size: 48px 48px;
+        }
+
+        .hero-slide {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.9s ease-in-out, visibility 0.9s ease-in-out;
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .hero-slide.active .slide-bg {
+            transform: scale(1.06);
+            transition: transform 8s ease-out;
+        }
+
+        .slide-bg {
+            transform: scale(1);
+            transition: transform 1s ease-out;
+        }
+
+        .brand-gradient-orange {
+            background: linear-gradient(135deg, #F7941D 0%, #F25C05 100%);
+        }
+
+        .brand-gradient-navy {
+            background: linear-gradient(135deg, #042A53 0%, #0068C9 100%);
+        }
+
+        /* Özel Kaydırma Çubuğu */
+        ::-webkit-scrollbar {
+            width: 9px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #021B36;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #0068C9, #F25C05);
+            border-radius: 99px;
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-700 bg-slate-50 antialiased selection:bg-brand-orange selection:text-white overflow-x-hidden">
+
+    <!-- ÜST KURUMSAL BİLGİ BARI -->
+    <div class="bg-brand-dark text-slate-300 text-xs sm:text-sm border-b border-white/10 hidden md:block">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-11 flex items-center justify-between">
+            <div class="flex items-center space-x-6">
+                <a href="tel:+903224500000" class="flex items-center gap-2 hover:text-brand-amber transition-colors">
+                    <i class="fa-solid fa-phone-volume text-brand-amber"></i>
+                    <span>+90 (322) 450 00 00</span>
+                </a>
+                <span class="text-white/20">|</span>
+                <a href="mailto:info@kuzeydeniziinsaat.com.tr" class="flex items-center gap-2 hover:text-brand-amber transition-colors">
+                    <i class="fa-solid fa-envelope text-brand-blue"></i>
+                    <span>info@kuzeydeniziinsaat.com.tr</span>
+                </a>
+                <span class="text-white/20">|</span>
+                <div class="flex items-center gap-2 text-slate-400">
+                    <i class="fa-regular fa-clock text-brand-amber"></i>
+                    <span>Pzt - Cmt: 08:30 - 18:30</span>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4">
+                <span class="text-xs uppercase tracking-wider text-slate-400 font-medium">Bizi Takip Edin:</span>
+                <a href="#iletisim" aria-label="Instagram" class="w-7 h-7 rounded-full bg-white/5 hover:bg-brand-orange text-white flex items-center justify-center transition-all">
+                    <i class="fa-brands fa-instagram text-xs"></i>
+                </a>
+                <a href="#iletisim" aria-label="LinkedIn" class="w-7 h-7 rounded-full bg-white/5 hover:bg-brand-blue text-white flex items-center justify-center transition-all">
+                    <i class="fa-brands fa-linkedin-in text-xs"></i>
+                </a>
+                <a href="#iletisim" aria-label="YouTube" class="w-7 h-7 rounded-full bg-white/5 hover:bg-brand-orange text-white flex items-center justify-center transition-all">
+                    <i class="fa-brands fa-youtube text-xs"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ANA NAVİGASYON / HEADER -->
+    <header id="mainHeader" class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20 sm:h-24">
+                
+                <!-- KUZEY DENİZİ İNŞAAT VEKTÖREL LOGO (Yüklenen Logonun Birebir SVG Karşılığı) -->
+                <a href="#anasayfa" class="flex items-center gap-3 group focus:outline-none">
+                    <svg class="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0 transition-transform duration-500 group-hover:scale-105" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Sol Üst Mavi Kanat -->
+                        <path d="M8 64 L76 8 C64 34 59 46 56 54 L8 64 Z" fill="url(#blueGrad)"/>
+                        <!-- Sağ Üst Koyu Lacivert Kanat -->
+                        <path d="M79 8 L72 44 C72 49 76 52 112 58 L60 55 L79 8 Z" fill="#042A53"/>
+                        <path d="M79 8 L60 55 L73 46 Z" fill="#0A3F78"/>
+                        <!-- Sol Alt Kehribar/Sarı-Turuncu Kanat -->
+                        <path d="M9 67 L55 59 L40 112 C45 80 43 72 9 67 Z" fill="url(#amberGrad)"/>
+                        <!-- Sağ Alt Canlı Turuncu Kanat -->
+                        <path d="M59 59 L111 59 C83 70 69 80 43 113 L59 59 Z" fill="url(#orangeGrad)"/>
+                        <defs>
+                            <linearGradient id="blueGrad" x1="8" y1="64" x2="76" y2="8" gradientUnits="userSpaceOnUse">
+                                <stop offset="0%" stop-color="#0077E6"/>
+                                <stop offset="100%" stop-color="#0055B3"/>
+                            </linearGradient>
+                            <linearGradient id="amberGrad" x1="9" y1="67" x2="55" y2="112" gradientUnits="userSpaceOnUse">
+                                <stop offset="0%" stop-color="#FBB03B"/>
+                                <stop offset="100%" stop-color="#F7941D"/>
+                            </linearGradient>
+                            <linearGradient id="orangeGrad" x1="59" y1="59" x2="43" y2="113" gradientUnits="userSpaceOnUse">
+                                <stop offset="0%" stop-color="#FF5500"/>
+                                <stop offset="100%" stop-color="#E04800"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <div class="flex flex-col">
+                        <span class="font-display font-extrabold text-xl sm:text-2xl tracking-tight text-brand-navy leading-none">
+                            Kuzey Denizi
+                        </span>
+                        <div class="flex items-center gap-2 mt-1.5">
+                            <span class="h-[2px] w-5 sm:w-7 bg-gradient-to-r from-transparent to-brand-amber rounded-full"></span>
+                            <span class="font-display font-semibold text-[10px] sm:text-xs tracking-[0.36em] text-brand-navy uppercase leading-none">
+                                İNŞAAT
+                            </span>
+                            <span class="h-[2px] w-5 sm:w-7 bg-gradient-to-l from-transparent to-brand-orange rounded-full"></span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Masaüstü Menü -->
+                <nav class="hidden lg:flex items-center space-x-1 xl:space-x-2">
+                    <a href="#anasayfa" class="px-3.5 py-2 rounded-xl text-sm font-semibold text-brand-navy hover:text-brand-orange hover:bg-brand-orangeLight/60 transition-all">Ana Sayfa</a>
+                    <a href="#kurumsal" class="px-3.5 py-2 rounded-xl text-sm font-semibold text-slate-700 hover:text-brand-orange hover:bg-brand-orangeLight/60 transition-all">Kurumsal</a>
+                    <a href="#projeler" class="px-3.5 py-2 rounded-xl text-sm font-semibold text-slate-700 hover:text-brand-orange hover:bg-brand-orangeLight/60 transition-all flex items-center gap-1.5">
+                        Projelerimiz
+                        <span class="px-1.5 py-0.5 text-[10px] font-bold bg-brand-sky text-brand-blue rounded-md">YENİ</span>
+                    </a>
+                    <a href="#hizmetler" class="px-3.5 py-2 rounded-xl text-sm font-semibold text-slate-700 hover:text-brand-orange hover:bg-brand-orangeLight/60 transition-all">Faaliyet Alanları</a>
+                    <a href="#kalite" class="px-3.5 py-2 rounded-xl text-sm font-semibold text-slate-700 hover:text-brand-orange hover:bg-brand-orangeLight/60 transition-all">Yapı Güvencesi</a>
+                    <a href="#iletisim" class="px-3.5 py-2 rounded-xl text-sm font-semibold text-slate-700 hover:text-brand-orange hover:bg-brand-orangeLight/60 transition-all">İletişim</a>
+                </nav>
+
+                <!-- Sağ Aksiyon Butonları -->
+                <div class="hidden lg:flex items-center gap-3">
+                    <button onclick="openCallbackModal()" class="px-4 py-2.5 rounded-xl border border-brand-navy/15 text-brand-navy hover:border-brand-blue hover:text-brand-blue font-semibold text-sm transition-all flex items-center gap-2">
+                        <i class="fa-solid fa-headset text-brand-blue"></i>
+                        <span>Sizi Arayalım</span>
+                    </button>
+                    <a href="#projeler" class="brand-gradient-orange text-white px-5 py-2.5 rounded-xl font-semibold text-sm shadow-orange-glow hover:brightness-110 transition-all flex items-center gap-2">
+                        <span>Projeleri İncele</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Mobil Menü Butonu -->
+                <button id="mobileMenuBtn" aria-label="Menüyü Aç" class="lg:hidden p-3 rounded-xl bg-slate-100 text-brand-navy hover:bg-brand-sky transition-colors">
+                    <i id="mobileMenuIcon" class="fa-solid fa-bars-staggered text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobil Açılır Menü -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-white border-t border-slate-100 shadow-2xl">
+            <div class="px-4 py-5 space-y-2">
+                <a href="#anasayfa" class="mobile-link block px-4 py-3 rounded-xl font-semibold text-brand-navy bg-brand-sky/50">Ana Sayfa</a>
+                <a href="#kurumsal" class="mobile-link block px-4 py-3 rounded-xl font-semibold text-slate-700 hover:bg-slate-50">Kurumsal</a>
+                <a href="#projeler" class="mobile-link block px-4 py-3 rounded-xl font-semibold text-slate-700 hover:bg-slate-50">Projelerimiz</a>
+                <a href="#hizmetler" class="mobile-link block px-4 py-3 rounded-xl font-semibold text-slate-700 hover:bg-slate-50">Faaliyet Alanları</a>
+                <a href="#kalite" class="mobile-link block px-4 py-3 rounded-xl font-semibold text-slate-700 hover:bg-slate-50">Yapı Güvencesi</a>
+                <a href="#iletisim" class="mobile-link block px-4 py-3 rounded-xl font-semibold text-slate-700 hover:bg-slate-50">İletişim</a>
+                <div class="pt-3 grid grid-cols-1 sm:grid-cols-2 gap-3 border-t border-slate-100">
+                    <button onclick="openCallbackModal()" class="w-full py-3 rounded-xl border border-brand-navy/20 text-brand-navy font-semibold text-sm flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-phone text-brand-blue"></i> Sizi Arayalım
+                    </button>
+                    <a href="#iletisim" class="mobile-link w-full py-3 rounded-xl brand-gradient-orange text-white font-semibold text-sm flex items-center justify-center gap-2 shadow-orange-glow">
+                        Teklif & Bilgi Al <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SLIDER ALANI -->
+    <section id="anasayfa" class="relative h-[620px] sm:h-[680px] lg:h-[760px] bg-brand-dark overflow-hidden">
+        <!-- Slide 1 -->
+        <div class="hero-slide active absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1920&q=85" 
+                 onerror="this.src='https://placehold.co/1920x1080/042A53/FFFFFF?text=Kuzey+Denizi+Insaat'"
+                 alt="Modern Konut Projeleri" 
+                 class="slide-bg w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-dark/95 via-brand-navy/80 to-brand-dark/35"></div>
+            <div class="absolute inset-0 flex items-center">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                    <div class="max-w-2xl space-y-6">
+                        <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/15">
+                            <span class="w-2.5 h-2.5 rounded-full bg-brand-amber animate-pulse"></span>
+                            <span class="text-xs sm:text-sm font-semibold tracking-wider uppercase text-brand-amber">Lansmana Özel Avantajlar</span>
+                        </div>
+                        <h1 class="font-display font-extrabold text-3xl sm:text-5xl lg:text-6xl text-white leading-[1.12]">
+                            Geleceğin Yaşam Alanlarını <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-amber to-brand-orange">Güvenle</span> İnşa Ediyoruz
+                        </h1>
+                        <p class="text-slate-200 text-base sm:text-lg leading-relaxed max-w-xl">
+                            Kuzey Denizi İnşaat mühendislik vizyonuyla; yüksek deprem güvenliği, modern mimari estetik ve yüksek yatırım değerini bir araya getiren prestijli projeler üretiyoruz.
+                        </p>
+                        <div class="flex flex-wrap items-center gap-4 pt-2">
+                            <a href="#projeler" class="brand-gradient-orange text-white px-7 py-4 rounded-2xl font-bold text-sm sm:text-base shadow-orange-glow hover:scale-[1.02] transition-all flex items-center gap-3">
+                                <span>Devam Eden Projeler</span>
+                                <i class="fa-solid fa-building-circle-arrow-right"></i>
+                            </a>
+                            <a href="#kurumsal" class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/25 px-7 py-4 rounded-2xl font-semibold text-sm sm:text-base transition-all flex items-center gap-3">
+                                <i class="fa-solid fa-compass text-brand-amber"></i>
+                                <span>Kurumsal Kimliğimiz</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="hero-slide absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=85" 
+                 onerror="this.src='https://placehold.co/1920x1080/0068C9/FFFFFF?text=Ticari+ve+Plaza+Projeleri'"
+                 alt="Ticari Yapılar ve Mühendislik" 
+                 class="slide-bg w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-dark/95 via-brand-navy/80 to-brand-dark/35"></div>
+            <div class="absolute inset-0 flex items-center">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                    <div class="max-w-2xl space-y-6">
+                        <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/15">
+                            <i class="fa-solid fa-helmet-safety text-brand-amber text-xs"></i>
+                            <span class="text-xs sm:text-sm font-semibold tracking-wider uppercase text-sky-300">Üstyapı & Taahhüt Uzmanlığı</span>
+                        </div>
+                        <h2 class="font-display font-extrabold text-3xl sm:text-5xl lg:text-6xl text-white leading-[1.12]">
+                             Güçlü Mühendislik, <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-brand-amber">Sarsılmaz</span> Temeller
+                        </h2>
+                        <p class="text-slate-200 text-base sm:text-lg leading-relaxed max-w-xl">
+                            Ticari merkezlerden kamu taahhüt projelerine kadar her metrekarede uluslararası kalite standartları ve zamanında anahtar teslim ilkesiyle çalışıyoruz.
+                        </p>
+                        <div class="flex flex-wrap items-center gap-4 pt-2">
+                            <a href="#hizmetler" class="brand-gradient-orange text-white px-7 py-4 rounded-2xl font-bold text-sm sm:text-base shadow-orange-glow hover:scale-[1.02] transition-all flex items-center gap-3">
+                                <span>Faaliyet Alanlarımız</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                            <button onclick="openCallbackModal()" class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/25 px-7 py-4 rounded-2xl font-semibold text-sm sm:text-base transition-all flex items-center gap-3">
+                                <i class="fa-solid fa-file-signature text-brand-amber"></i>
+                                <span>Proje Teklifi Alın</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="hero-slide absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=85" 
+                 onerror="this.src='https://placehold.co/1920x1080/021B36/FFFFFF?text=Seckin+Yasam+Projeleri'"
+                 alt="Modern Villa ve Rezidans Yaşamı" 
+                 class="slide-bg w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-dark/95 via-brand-navy/80 to-brand-dark/40"></div>
+            <div class="absolute inset-0 flex items-center">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                    <div class="max-w-2xl space-y-6">
+                        <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/15">
+                            <i class="fa-solid fa-leaf text-brand-amber text-xs"></i>
+                            <span class="text-xs sm:text-sm font-semibold tracking-wider uppercase text-brand-amber">Sürdürülebilir & Akıllı Evler</span>
+                        </div>
+                        <h2 class="font-display font-extrabold text-3xl sm:text-5xl lg:text-6xl text-white leading-[1.12]">
+                            Aileniz İçin <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-amber to-brand-orange">Huzurlu</span> ve Seçkin Mekanlar
+                        </h2>
+                        <p class="text-slate-200 text-base sm:text-lg leading-relaxed max-w-xl">
+                            Geniş peyzaj alanları, akıllı ev otomasyonu ve birinci sınıf malzeme işçiliğiyle Kuzey Panorama ve Kuzey Marin projelerimizde yeni bir yaşam başlıyor.
+                        </p>
+                        <div class="flex flex-wrap items-center gap-4 pt-2">
+                            <a href="#projeler" class="brand-gradient-orange text-white px-7 py-4 rounded-2xl font-bold text-sm sm:text-base shadow-orange-glow hover:scale-[1.02] transition-all flex items-center gap-3">
+                                <span>Örnek Daireleri Keşfet</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                            <a href="#iletisim" class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/25 px-7 py-4 rounded-2xl font-semibold text-sm sm:text-base transition-all flex items-center gap-3">
+                                <i class="fa-solid fa-location-dot text-brand-amber"></i>
+                                <span>Satış Ofisi Yol Tarifi</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slider Kontrolleri -->
+        <div class="absolute bottom-8 left-0 right-0 z-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+                <!-- Nokta Göstergeleri -->
+                <div class="flex items-center gap-3">
+                    <button onclick="goToSlide(0)" class="slide-dot h-2.5 w-10 rounded-full bg-brand-orange transition-all duration-300" aria-label="Slayt 1"></button>
+                    <button onclick="goToSlide(1)" class="slide-dot h-2.5 w-3 rounded-full bg-white/40 hover:bg-white/70 transition-all duration-300" aria-label="Slayt 2"></button>
+                    <button onclick="goToSlide(2)" class="slide-dot h-2.5 w-3 rounded-full bg-white/40 hover:bg-white/70 transition-all duration-300" aria-label="Slayt 3"></button>
+                </div>
+
+                <!-- Ok Butonları -->
+                <div class="flex items-center gap-3">
+                    <button onclick="prevSlide()" aria-label="Önceki Slayt" class="w-12 h-12 rounded-2xl bg-white/10 hover:bg-brand-orange backdrop-blur-md border border-white/20 text-white flex items-center justify-center transition-all">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button onclick="nextSlide()" aria-label="Sonraki Slayt" class="w-12 h-12 rounded-2xl bg-white/10 hover:bg-brand-orange backdrop-blur-md border border-white/20 text-white flex items-center justify-center transition-all">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RAKAMLARLA KUZEY DENİZİ İNŞAAT (İSTATİSTİK ŞERİDİ) -->
+    <section class="relative z-30 -mt-10 sm:-mt-14 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="bg-white rounded-3xl shadow-premium border border-slate-100 p-6 sm:p-10 grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 relative overflow-hidden">
+            <!-- Üst ince renk şeridi -->
+            <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-brand-navy via-brand-blue to-brand-orange"></div>
+
+            <div class="flex items-center gap-4">
+                <div class="w-14 h-14 rounded-2xl bg-brand-sky text-brand-blue flex items-center justify-center text-2xl flex-shrink-0">
+                    <i class="fa-solid fa-compass-drafting"></i>
+                </div>
+                <div>
+                    <div class="font-display font-extrabold text-2xl sm:text-4xl text-brand-navy">18+</div>
+                    <div class="text-xs sm:text-sm font-medium text-slate-500">Yıllık Sektör Tecrübesi</div>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <div class="w-14 h-14 rounded-2xl bg-brand-orangeLight text-brand-orange flex items-center justify-center text-2xl flex-shrink-0">
+                    <i class="fa-solid fa-city"></i>
+                </div>
+                <div>
+                    <div class="font-display font-extrabold text-2xl sm:text-4xl text-brand-navy">42</div>
+                    <div class="text-xs sm:text-sm font-medium text-slate-500">Tamamlanan Prestijli Proje</div>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <div class="w-14 h-14 rounded-2xl bg-brand-sky text-brand-navy flex items-center justify-center text-2xl flex-shrink-0">
+                    <i class="fa-solid fa-key"></i>
+                </div>
+                <div>
+                    <div class="font-display font-extrabold text-2xl sm:text-4xl text-brand-navy">2.450+</div>
+                    <div class="text-xs sm:text-sm font-medium text-slate-500">Teslim Edilen Bağımsız Bölüm</div>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <div class="w-14 h-14 rounded-2xl bg-brand-orangeLight text-brand-amber flex items-center justify-center text-2xl flex-shrink-0">
+                    <i class="fa-solid fa-shield-heart"></i>
+                </div>
+                <div>
+                    <div class="font-display font-extrabold text-2xl sm:text-4xl text-brand-navy">%100</div>
+                    <div class="text-xs sm:text-sm font-medium text-slate-500">Zamanında Teslim Başarısı</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KURUMSAL / HAKKIMIZDA BÖLÜMÜ -->
+    <section id="kurumsal" class="py-20 sm:py-28 blueprint-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+                
+                <!-- Sol Görsel Kompozisyonu -->
+                <div class="lg:col-span-6 relative">
+                    <div class="relative rounded-3xl overflow-hidden shadow-premium border-4 border-white">
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1000&q=85" 
+                             onerror="this.src='https://placehold.co/800x600/042A53/FFFFFF?text=Muhendislik+ve+Kalite'"
+                             alt="Kuzey Denizi İnşaat Mühendislik Ekibi" 
+                             class="w-full h-[380px] sm:h-[480px] object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/70 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-6 left-6 right-6 flex items-center justify-between text-white">
+                            <div>
+                                <p class="text-xs uppercase tracking-widest text-brand-amber font-bold">Kalite Standartlarımız</p>
+                                <p class="font-display font-bold text-lg">TSE & ISO 9001:2015 Belgeli Üretim</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Yüzen Kurumsal Rozet -->
+                    <div class="hidden sm:flex items-center gap-4 bg-brand-navy text-white p-5 rounded-2xl shadow-2xl absolute -bottom-6 -right-6 max-w-xs border-b-4 border-brand-orange">
+                        <div class="w-12 h-12 rounded-xl brand-gradient-orange flex items-center justify-center text-xl flex-shrink-0">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-display font-bold text-sm">Pusulamız Güven</h4>
+                            <p class="text-xs text-slate-300 mt-0.5">Son deprem yönetmeliğine %100 uyumlu yüksek mühendislik çözümleri.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sağ İçerik & Sekmeler -->
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-sky text-brand-blue font-bold text-xs uppercase tracking-wider">
+                        <span class="w-2 h-2 rounded-full bg-brand-orange"></span>
+                        Kurumsal Hakkımızda
+                    </div>
+
+                    <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-brand-navy leading-tight">
+                        Estetik Mimari ve <span class="text-brand-blue">Mühendislik Disiplinini</span> Buluşturuyoruz
+                    </h2>
+
+                    <p class="text-slate-600 leading-relaxed">
+                        <strong>Kuzey Denizi İnşaat</strong> olarak, kuruluşumuzdan bu yana konut, ticari merkez, kentsel dönüşüm ve altyapı/üstyapı taahhüt projelerinde şehrin silüetine değer katan kalıcı eserler üretiyoruz. Logomuzdaki kuzey yıldızı pusulası; doğruluğu, mühendislik hassasiyetini ve geleceğe yön veren yenilikçi vizyonumuzu simgeler.
+                    </p>
+
+                    <!-- Etkileşimli Vizyon / Misyon / Değerler Sekmeleri -->
+                    <div class="bg-white rounded-2xl p-2 shadow-sm border border-slate-200/80">
+                        <div class="grid grid-cols-3 gap-2 mb-4">
+                            <button onclick="switchAboutTab('vizyon')" id="tabBtn-vizyon" class="about-tab-btn py-2.5 px-3 rounded-xl font-bold text-xs sm:text-sm bg-brand-navy text-white transition-all">
+                                Vizyonumuz
+                            </button>
+                            <button onclick="switchAboutTab('misyon')" id="tabBtn-misyon" class="about-tab-btn py-2.5 px-3 rounded-xl font-bold text-xs sm:text-sm text-slate-600 hover:bg-slate-100 transition-all">
+                                Misyonumuz
+                            </button>
+                            <button onclick="switchAboutTab('kalite')" id="tabBtn-kalite" class="about-tab-btn py-2.5 px-3 rounded-xl font-bold text-xs sm:text-sm text-slate-600 hover:bg-slate-100 transition-all">
+                                Kalite Politikamız
+                            </button>
+                        </div>
+
+                        <div id="tabContent-vizyon" class="about-tab-content px-4 pb-3 text-sm text-slate-600 leading-relaxed">
+                            Türkiye'nin yapı ve taahhüt sektöründe yenilikçi inşaat teknolojilerini en üst seviyede kullanarak; çevreye duyarlı, enerji verimliliği yüksek ve nesiller boyu güvenle yaşanacak simge projelere imza atmak.
+                        </div>
+                        <div id="tabContent-misyon" class="about-tab-content hidden px-4 pb-3 text-sm text-slate-600 leading-relaxed">
+                            İnsan hayatını ve yapı güvenliğini her şeyin üzerinde tutarak; şeffaf proje yönetimi, yüksek malzeme kalitesi ve zamanında teslim prensibiyle yatırımcılarımıza yüksek katma değer sunmak.
+                        </div>
+                        <div id="tabContent-kalite" class="about-tab-content hidden px-4 pb-3 text-sm text-slate-600 leading-relaxed">
+                            Zemin etüdünden mimari tasarıma, C35/C40 sınıfı betonarme uygulamalardan satış sonrası teknik desteğe kadar tüm süreçlerde sıfır hata ve maksimum iş sağlığı güvenliği ile üretim gerçekleştirmek.
+                        </div>
+                    </div>
+
+                    <!-- Madde İşaretleri -->
+                    <div class="grid sm:grid-cols-2 gap-4 pt-2">
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-8 rounded-lg bg-brand-orangeLight text-brand-orange flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            <span class="text-sm font-semibold text-brand-navy">Zemin Etüdü & Radye Temel</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-8 rounded-lg bg-brand-sky text-brand-blue flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            <span class="text-sm font-semibold text-brand-navy">A Sınıfı Enerji Kimlik Belgesi</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-8 rounded-lg bg-brand-sky text-brand-blue flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            <span class="text-sm font-semibold text-brand-navy">1. Sınıf İç Mimari & İşçilik</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-8 rounded-lg bg-brand-orangeLight text-brand-orange flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            <span class="text-sm font-semibold text-brand-navy">Yüksek Yatırım Geri Dönüşü</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJELERİMİZ BÖLÜMÜ (FİLTRELENEBİLİR PORTFÖY) -->
+    <section id="projeler" class="py-20 sm:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Başlık ve Filtre Butonları -->
+            <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-14">
+                <div class="space-y-3 max-w-2xl">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-orangeLight text-brand-orange font-bold text-xs uppercase tracking-wider">
+                        <i class="fa-solid fa-compass"></i> Seçkin Portföyümüz
+                    </div>
+                    <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-brand-navy">
+                        İmzamızı Taşıyan <span class="text-brand-orange">Prestijli Projeler</span>
+                    </h2>
+                    <p class="text-slate-600 text-sm sm:text-base">
+                        Devam eden, tamamlanan ve çok yakında lansmana çıkacak konut, rezidans ve ticari projelerimizi detaylı inceleyin.
+                    </p>
+                </div>
+
+                <!-- Kategori Filtreleri -->
+                <div class="flex flex-wrap items-center gap-2 bg-slate-100 p-1.5 rounded-2xl self-start lg:self-auto">
+                    <button onclick="filterProjects('all')" data-filter="all" class="project-filter-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-brand-navy text-white shadow-sm transition-all">
+                        Tümü
+                    </button>
+                    <button onclick="filterProjects('devam')" data-filter="devam" class="project-filter-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold text-slate-600 hover:text-brand-navy transition-all">
+                        Devam Edenler
+                    </button>
+                    <button onclick="filterProjects('tamamlanan')" data-filter="tamamlanan" class="project-filter-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold text-slate-600 hover:text-brand-navy transition-all">
+                        Tamamlananlar
+                    </button>
+                    <button onclick="filterProjects('planlanan')" data-filter="planlanan" class="project-filter-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold text-slate-600 hover:text-brand-navy transition-all">
+                        Gelecek Projeler
+                    </button>
+                </div>
+            </div>
+
+            <!-- Proje Kartları Grid (JS ile Dinamik Render) -->
+            <div id="projectsGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- JavaScript tarafından doldurulur -->
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FAALİYET ALANLARIMIZ / HİZMETLERİMİZ -->
+    <section id="hizmetler" class="py-20 sm:py-28 bg-brand-dark text-white relative overflow-hidden blueprint-dark-bg">
+        <!-- Dekoratif Arka Plan Işıltıları -->
+        <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-brand-blue/20 blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-24 -left-24 w-96 h-96 rounded-full bg-brand-orange/15 blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-brand-amber font-bold text-xs uppercase tracking-wider border border-white/10">
+                    Faaliyet Alanlarımız
+                </div>
+                <h2 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl">
+                    Bütüncül Mühendislik ve <span class="text-brand-amber">İnşaat Çözümleri</span>
+                </h2>
+                <p class="text-slate-300 text-sm sm:text-base">
+                    Arsa geliştirmeden mimari projelendirmeye, anahtar teslim konut üretiminden büyük ölçekli kamu ve özel sektör taahhüt işlerine kadar geniş uzmanlık.
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Hizmet 1 -->
+                <div class="group bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-white/10 hover:border-brand-amber/60 rounded-3xl p-7 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl brand-gradient-orange text-white flex items-center justify-center text-2xl mb-6 shadow-orange-glow group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-building"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-xl text-white mb-3">Konut & Rezidans</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            Sosyal donatı alanları, kapalı otopark, akıllı ev sistemleri ve geniş peyzaja sahip nitelikli yaşam projeleri.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs font-bold text-brand-amber">
+                        <span>YÜKSEK KONFOR</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
+                </div>
+
+                <!-- Hizmet 2 -->
+                <div class="group bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-white/10 hover:border-brand-blue/80 rounded-3xl p-7 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl brand-gradient-navy text-white flex items-center justify-center text-2xl mb-6 border border-white/15 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-xl text-white mb-3">Ticari & Plaza Yapıları</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            İş dünyasının prestijini yükselten modern ofis blokları, cadde mağazaları, lojistik ve endüstriyel tesisler.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs font-bold text-sky-400">
+                        <span>PRESTİJLİ İŞ MERKEZLERİ</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
+                </div>
+
+                <!-- Hizmet 3 -->
+                <div class="group bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-white/10 hover:border-brand-amber/60 rounded-3xl p-7 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl brand-gradient-orange text-white flex items-center justify-center text-2xl mb-6 shadow-orange-glow group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-trowel-bricks"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-xl text-white mb-3">İnşaat Taahhüt</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            Kamu ve özel sektör üstyapı-altyapı projelerinde teknik şartnamelere tam uyumlu, güçlü makine parkuru ile taahhüt.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs font-bold text-brand-amber">
+                        <span>ZAMANINDA TESLİM</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
+                </div>
+
+                <!-- Hizmet 4 -->
+                <div class="group bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-white/10 hover:border-brand-blue/80 rounded-3xl p-7 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl brand-gradient-navy text-white flex items-center justify-center text-2xl mb-6 border border-white/15 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-arrows-rotate"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-xl text-white mb-3">Kentsel Dönüşüm & Kat Karşılığı</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            Riskli yapıların yenilenmesi ve arsa sahiplerine şeffaf, güvenilir paylaşım modelleriyle değer kazandıran çözümler.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs font-bold text-sky-400">
+                        <span>GÜVENLİ DÖNÜŞÜM</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- YAPI GÜVENCESİ & TEKNOLOJİ BÖLÜMÜ -->
+    <section id="kalite" class="py-20 sm:py-28 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-br from-brand-navy via-[#06376B] to-brand-dark rounded-3xl p-8 sm:p-12 lg:p-16 text-white shadow-premium relative overflow-hidden">
+                <!-- Dekoratif Pusula Yıldızı Filigranı -->
+                <svg class="absolute -right-16 -bottom-16 w-80 h-80 opacity-10 pointer-events-none" viewBox="0 0 120 120" fill="none">
+                    <path d="M8 64 L76 8 L60 55 L112 58 L43 113 L55 59 Z" fill="#FFFFFF"/>
+                </svg>
+
+                <div class="grid lg:grid-cols-12 gap-10 items-center relative z-10">
+                    <div class="lg:col-span-5 space-y-5">
+                        <span class="inline-block px-3.5 py-1.5 rounded-full bg-brand-orange text-white text-xs font-bold uppercase tracking-wider">
+                            Kuzey Denizi Yapı Standartları
+                        </span>
+                        <h2 class="font-display font-extrabold text-3xl sm:text-4xl leading-tight">
+                            Depreme Dayanıklı, Uzun Ömürlü Mühendislik
+                        </h2>
+                        <p class="text-slate-200 text-sm sm:text-base leading-relaxed">
+                            Görünmeyen detaylara en az görünen estetik kadar önem veriyoruz. Tüm şantiyelerimiz yapı denetim kuruluşları ve uzman saha mühendislerimiz tarafından 7/24 denetlenmektedir.
+                        </p>
+                        <div class="pt-2">
+                            <a href="#iletisim" class="inline-flex items-center gap-3 brand-gradient-orange px-6 py-3.5 rounded-2xl font-bold text-sm shadow-orange-glow hover:brightness-110 transition-all">
+                                <span>Teknik Şartname & Bilgi Al</span>
+                                <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-7 grid sm:grid-cols-2 gap-5">
+                        <div class="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-6">
+                            <div class="flex items-center gap-3 mb-3">
+                                <i class="fa-solid fa-layer-group text-brand-amber text-xl"></i>
+                                <h4 class="font-display font-bold text-lg">Zemin İyileştirme & Fore Kazık</h4>
+                            </div>
+                            <p class="text-xs sm:text-sm text-slate-200 leading-relaxed">
+                                Jeofizik ve jeoteknik etüt raporlarına göre gerekli zemin iyileştirmeleri ve radye jeneral temel sistemleri eksiksiz uygulanır.
+                            </p>
+                        </div>
+
+                        <div class="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-6">
+                            <div class="flex items-center gap-3 mb-3">
+                                <i class="fa-solid fa-cubes text-sky-400 text-xl"></i>
+                                <h4 class="font-display font-bold text-lg">C35 / C40 Yüksek Dayanımlı Beton</h4>
+                            </div>
+                            <p class="text-xs sm:text-sm text-slate-200 leading-relaxed">
+                                Laboratuvar testlerinden geçmiş yüksek mukavemetli beton ve B420C nervürlü yapı çeliği ile maksimum taşıyıcı güvenlik.
+                            </p>
+                        </div>
+
+                        <div class="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-6">
+                            <div class="flex items-center gap-3 mb-3">
+                                <i class="fa-solid fa-temperature-arrow-down text-sky-400 text-xl"></i>
+                                <h4 class="font-display font-bold text-lg">Isı, Ses ve Su Yalıtımı</h4>
+                            </div>
+                            <p class="text-xs sm:text-sm text-slate-200 leading-relaxed">
+                                Temelden çatıya bohçalama su yalıtımı, taşyünü dış cephe mantolama ve katlar arası akustik ses izolasyonu.
+                            </p>
+                        </div>
+
+                        <div class="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-6">
+                            <div class="flex items-center gap-3 mb-3">
+                                <i class="fa-solid fa-house-signal text-brand-amber text-xl"></i>
+                                <h4 class="font-display font-bold text-lg">Akıllı Ev & Elektrikli Şarj</h4>
+                            </div>
+                            <p class="text-xs sm:text-sm text-slate-200 leading-relaxed">
+                                Uzaktan iklimlendirme, güvenlik kontrolü ve kapalı otoparklarda elektrikli araç şarj istasyonu altyapısı.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- İLETİŞİM & ARSA / PROJE TEKLİF FORMU -->
+    <section id="iletisim" class="py-20 sm:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- Sol İletişim Bilgileri -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div class="space-y-3">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-sky text-brand-blue font-bold text-xs uppercase tracking-wider">
+                            İletişim & Satış Ofisi
+                        </div>
+                        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-brand-navy">
+                            Yeni Yaşamınıza <span class="text-brand-orange">Birlikte Yön Verelim</span>
+                        </h2>
+                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                            Projelerimiz hakkında detaylı katalog almak, ödeme planlarını öğrenmek veya kat karşılığı arsa tekliflerinizi değerlendirmek için bizimle iletişime geçebilirsiniz.
+                        </p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-100">
+                            <div class="w-12 h-12 rounded-xl bg-brand-navy text-brand-amber flex items-center justify-center text-lg flex-shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-display font-bold text-brand-navy">Merkez Ofis & Showroom</h4>
+                                <p class="text-sm text-slate-600 mt-1">Güzelyalı Mah. Turgut Özal Bulvarı Kuzey Plaza Kat: 4 No: 112 Çukurova / Türkiye</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-100">
+                            <div class="w-12 h-12 rounded-xl bg-brand-blue text-white flex items-center justify-center text-lg flex-shrink-0">
+                                <i class="fa-solid fa-phone-volume"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-display font-bold text-brand-navy">Müşteri İletişim Merkezi</h4>
+                                <p class="text-sm text-slate-600 mt-1">+90 (322) 450 00 00 &bull; +90 (532) 000 00 00</p>
+                                <p class="text-xs text-brand-orange font-semibold mt-0.5">Haftanın 6 Günü Satış Ofisimiz Açıktır</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-100">
+                            <div class="w-12 h-12 rounded-xl brand-gradient-orange text-white flex items-center justify-center text-lg flex-shrink-0">
+                                <i class="fa-solid fa-envelope-open-text"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-display font-bold text-brand-navy">Kurumsal E-Posta</h4>
+                                <p class="text-sm text-slate-600 mt-1">info@kuzeydeniziinsaat.com.tr</p>
+                                <p class="text-xs text-slate-500 mt-0.5">ihale@kuzeydeniziinsaat.com.tr</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sağ İletişim Formu -->
+                <div class="lg:col-span-7 bg-slate-50 rounded-3xl p-6 sm:p-10 border border-slate-200/80 shadow-premium relative overflow-hidden">
+                    <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-brand-blue via-brand-navy to-brand-orange"></div>
+                    
+                    <h3 class="font-display font-bold text-2xl text-brand-navy mb-2">Bilgi & Randevu Formu</h3>
+                    <p class="text-slate-500 text-sm mb-6">Formu doldurun, proje danışmanlarımız en kısa sürede size dönüş yapsın.</p>
+
+                    <form id="contactForm" class="space-y-5">
+                        <div class="grid sm:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-brand-navy mb-2">Adınız Soyadınız *</label>
+                                <input type="text" id="formName" required placeholder="Örn: Ahmet Yılmaz" 
+                                       class="w-full px-4 py-3.5 rounded-xl bg-white border border-slate-200 focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 outline-none text-sm transition-all">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-brand-navy mb-2">Telefon Numaranız *</label>
+                                <input type="tel" id="formPhone" required placeholder="05XX XXX XX XX" 
+                                       class="w-full px-4 py-3.5 rounded-xl bg-white border border-slate-200 focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 outline-none text-sm transition-all">
+                            </div>
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-brand-navy mb-2">E-Posta Adresiniz</label>
+                                <input type="email" id="formEmail" placeholder="ornek@eposta.com" 
+                                       class="w-full px-4 py-3.5 rounded-xl bg-white border border-slate-200 focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 outline-none text-sm transition-all">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-brand-navy mb-2">İlgilendiğiniz Konu / Proje</label>
+                                <select id="formSubject" class="w-full px-4 py-3.5 rounded-xl bg-white border border-slate-200 focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 outline-none text-sm transition-all">
+                                    <option value="Kuzey Panorama Konutları">Kuzey Panorama Konutları (Devam Eden)</option>
+                                    <option value="Poyraz Marin Rezidans">Poyraz Marin Rezidans (Devam Eden)</option>
+                                    <option value="Kuzey Yıldızı Ticaret Merkezi">Kuzey Yıldızı Ticaret Merkezi</option>
+                                    <option value="Kat Karşılığı Arsa Teklifi">Kat Karşılığı Arsa / Kentsel Dönüşüm</option>
+                                    <option value="Taahhüt & İhale İşbirliği">Taahhüt & Kurumsal İşbirliği</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-brand-navy mb-2">Mesajınız</label>
+                            <textarea id="formMessage" rows="4" placeholder="Daire tipleri, ödeme planı veya projeniz hakkında notunuzu yazabilirsiniz..." 
+                                      class="w-full px-4 py-3.5 rounded-xl bg-white border border-slate-200 focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 outline-none text-sm transition-all resize-none"></textarea>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <input type="checkbox" id="kvkk" required class="mt-1 w-4 h-4 accent-brand-orange rounded">
+                            <label for="kvkk" class="text-xs text-slate-500 leading-relaxed">
+                                KVKK Aydınlatma Metni kapsamında iletişim bilgilerimin Kuzey Denizi İnşaat tarafından bilgilendirme amacıyla işlenmesini kabul ediyorum.
+                            </label>
+                        </div>
+
+                        <button type="submit" class="w-full sm:w-auto brand-gradient-orange text-white px-8 py-4 rounded-2xl font-bold text-sm shadow-orange-glow hover:brightness-110 transition-all flex items-center justify-center gap-3">
+                            <span>Talebi Gönder</span>
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- KURUMSAL FOOTER -->
+    <footer class="bg-brand-dark text-slate-300 pt-16 pb-8 border-t-4 border-brand-orange">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+                
+                <!-- Koyu Zemin Uyumlu KUZEY DENİZİ İNŞAAT Logosu & Özet -->
+                <div class="lg:col-span-4 space-y-5">
+                    <a href="#anasayfa" class="inline-flex items-center gap-3">
+                        <svg class="w-13 h-13 flex-shrink-0" width="52" height="52" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 64 L76 8 C64 34 59 46 56 54 L8 64 Z" fill="#1E88E5"/>
+                            <path d="M79 8 L72 44 C72 49 76 52 112 58 L60 55 L79 8 Z" fill="#64B5F6"/>
+                            <path d="M9 67 L55 59 L40 112 C45 80 43 72 9 67 Z" fill="#F7941D"/>
+                            <path d="M59 59 L111 59 C83 70 69 80 43 113 L59 59 Z" fill="#F25C05"/>
+                        </svg>
+                        <div class="flex flex-col">
+                            <span class="font-display font-extrabold text-2xl tracking-tight text-white leading-none">
+                                Kuzey Denizi
+                            </span>
+                            <div class="flex items-center gap-2 mt-1.5">
+                                <span class="h-[2px] w-6 bg-gradient-to-r from-transparent to-brand-amber rounded-full"></span>
+                                <span class="font-display font-semibold text-[11px] tracking-[0.36em] text-slate-200 uppercase leading-none">
+                                    İNŞAAT
+                                </span>
+                                <span class="h-[2px] w-6 bg-gradient-to-l from-transparent to-brand-orange rounded-full"></span>
+                            </div>
+                        </div>
+                    </a>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Güçlü mühendislik altyapısı, modern mimari tasarım anlayışı ve yüksek yapı kalitesiyle geleceğin güvenli yaşam ve iş alanlarını inşa ediyoruz.
+                    </p>
+                    <div class="flex items-center gap-3 pt-1">
+                        <a href="#iletisim" aria-label="Instagram" class="w-10 h-10 rounded-xl bg-white/5 hover:bg-brand-orange text-white flex items-center justify-center transition-all">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#iletisim" aria-label="LinkedIn" class="w-10 h-10 rounded-xl bg-white/5 hover:bg-brand-blue text-white flex items-center justify-center transition-all">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="#iletisim" aria-label="Facebook" class="w-10 h-10 rounded-xl bg-white/5 hover:bg-brand-blue text-white flex items-center justify-center transition-all">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#iletisim" aria-label="YouTube" class="w-10 h-10 rounded-xl bg-white/5 hover:bg-brand-orange text-white flex items-center justify-center transition-all">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hızlı Menü -->
+                <div class="lg:col-span-2 space-y-4">
+                    <h4 class="font-display font-bold text-white text-base">Kurumsal</h4>
+                    <ul class="space-y-2.5 text-sm text-slate-400">
+                        <li><a href="#anasayfa" class="hover:text-brand-amber transition-colors">Ana Sayfa</a></li>
+                        <li><a href="#kurumsal" class="hover:text-brand-amber transition-colors">Hakkımızda</a></li>
+                        <li><a href="#kalite" class="hover:text-brand-amber transition-colors">Kalite & İSG Politikası</a></li>
+                        <li><a href="#hizmetler" class="hover:text-brand-amber transition-colors">Faaliyet Alanları</a></li>
+                        <li><a href="#iletisim" class="hover:text-brand-amber transition-colors">İnsan Kaynakları</a></li>
+                    </ul>
+                </div>
+
+                <!-- Projelerimiz -->
+                <div class="lg:col-span-3 space-y-4">
+                    <h4 class="font-display font-bold text-white text-base">Öne Çıkan Projeler</h4>
+                    <ul class="space-y-2.5 text-sm text-slate-400">
+                        <li><a href="#projeler" onclick="filterProjects('devam')" class="hover:text-brand-amber transition-colors">Kuzey Panorama Konutları</a></li>
+                        <li><a href="#projeler" onclick="filterProjects('devam')" class="hover:text-brand-amber transition-colors">Poyraz Marin Rezidans</a></li>
+                        <li><a href="#projeler" onclick="filterProjects('tamamlanan')" class="hover:text-brand-amber transition-colors">Kuzey Yıldızı İş Merkezi</a></li>
+                        <li><a href="#projeler" onclick="filterProjects('tamamlanan')" class="hover:text-brand-amber transition-colors">Mavi Ufuk Villaları</a></li>
+                        <li><a href="#projeler" onclick="filterProjects('planlanan')" class="hover:text-brand-amber transition-colors">Kuzey Vadi Karma Proje</a></li>
+                    </ul>
+                </div>
+
+                <!-- E-Bülten / E-Katalog -->
+                <div class="lg:col-span-3 space-y-4">
+                    <h4 class="font-display font-bold text-white text-base">Lansman Habercisi</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Yeni projelerimizin lansman fiyatlarından ve kurumsal duyurulardan ilk siz haberdar olun.
+                    </p>
+                    <form id="newsletterForm" class="space-y-2.5">
+                        <input type="email" required placeholder="E-posta adresiniz" 
+                               class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/15 text-white placeholder-slate-400 text-sm focus:border-brand-amber outline-none">
+                        <button type="submit" class="w-full py-3 rounded-xl brand-gradient-orange text-white font-bold text-xs uppercase tracking-wider hover:brightness-110 transition-all">
+                            Bültene Kayıt Ol
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+                <p>&copy; 2026 <strong>Kuzey Denizi İnşaat Sanayi ve Ticaret A.Ş.</strong> Tüm hakları saklıdır.</p>
+                <div class="flex items-center gap-5">
+                    <a href="#iletisim" class="hover:text-white transition-colors">KVKK Aydınlatma Metni</a>
+                    <a href="#iletisim" class="hover:text-white transition-colors">Çerez Politikası</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- PROJE DETAY MODALI -->
+    <div id="projectModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-brand-dark/80 backdrop-blur-sm">
+        <div class="bg-white rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative animate-fadeIn">
+            <button onclick="closeProjectModal()" aria-label="Kapat" class="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-brand-dark/70 hover:bg-brand-orange text-white flex items-center justify-center transition-colors">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <div id="projectModalBody">
+                <!-- JS tarafından doldurulur -->
+            </div>
+        </div>
+    </div>
+
+    <!-- HIZLI SİZİ ARAYALIM MODALI -->
+    <div id="callbackModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-brand-dark/80 backdrop-blur-sm">
+        <div class="bg-white rounded-3xl max-w-md w-full p-7 sm:p-8 shadow-2xl relative border-t-4 border-brand-orange">
+            <button onclick="closeCallbackModal()" aria-label="Kapat" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="w-12 h-12 rounded-2xl bg-brand-sky text-brand-blue flex items-center justify-center text-xl mb-4">
+                <i class="fa-solid fa-phone-volume"></i>
+            </div>
+            <h3 class="font-display font-bold text-2xl text-brand-navy">Sizi Arayalım</h3>
+            <p class="text-sm text-slate-500 mt-1 mb-6">Numaranızı bırakın, satış danışmanlarımız 15 dakika içinde sizi arasın.</p>
+            <form id="callbackForm" class="space-y-4">
+                <input type="text" required placeholder="Adınız Soyadınız" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brand-blue outline-none text-sm">
+                <input type="tel" required placeholder="Telefon Numaranız (05XX...)" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brand-blue outline-none text-sm">
+                <button type="submit" class="w-full py-3.5 rounded-xl brand-gradient-orange text-white font-bold text-sm shadow-orange-glow">
+                    Arama Talebi Oluştur
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- BİLDİRİM MESAJ KUTUSU (TOAST - Alert yerine) -->
+    <div id="toastBox" class="fixed bottom-6 right-6 z-50 hidden max-w-sm bg-brand-navy text-white px-5 py-4 rounded-2xl shadow-2xl border-l-4 border-brand-amber items-center gap-3.5">
+        <i class="fa-solid fa-circle-check text-brand-amber text-xl flex-shrink-0"></i>
+        <p id="toastText" class="text-sm font-medium"></p>
+    </div>
+
+    <!-- JAVASCRIPT ETKİLEŞİMLERİ -->
+    <script>
+        // --- 1. PROJE VERİLERİ ---
+        const projectsData = [
+            {
+                id: 1,
+                title: "Kuzey Panorama Konutları",
+                category: "devam",
+                statusLabel: "Devam Eden Proje",
+                statusColor: "bg-brand-orange text-white",
+                location: "Çukurova / Yeni Yerleşim Bölgesi",
+                types: "3+1 ve 4+1 Geniş Aile Daireleri",
+                area: "24.500 m² İnşaat Alanı",
+                delivery: "Aralık 2027",
+                progress: 68,
+                image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=900&q=80",
+                description: "Panoramik şehir manzarası, %75 peyzaj alanı, açık/kapalı yüzme havuzu, çocuk oyun vadisi ve her daireye 2 araçlık kapalı otopark imkanıyla bölgenin en prestijli yaşam projesi.",
+                features: ["Akıllı Ev Sistemi", "Yerden Isıtma", "C40 Beton & Radye Temel", "7/24 Özel Güvenlik"]
+            },
+            {
+                id: 2,
+                title: "Poyraz Marin Rezidans",
+                category: "devam",
+                statusLabel: "Satışları Devam Ediyor",
+                statusColor: "bg-brand-orange text-white",
+                location: "Güzelyalı Bulvar Aksı",
+                types: "2+1 Loft, 3+1 Rezidans & Cadde Mağaza",
+                area: "18.200 m² Karma Proje",
+                delivery: "Haziran 2027",
+                progress: 82,
+                image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=80",
+                description: "Modern cephe mimarisi, geniş teras balkonları ve alt katında seçkin markalara ev sahipliği yapan cadde mağazalarıyla hem yaşam hem de yüksek kira getirili yatırım fırsatı.",
+                features: ["Elektrikli Araç Şarjı", "Fitness & Sauna", "Güneş Enerji Panelleri", "Lobi & Concierge"]
+            },
+            {
+                id: 3,
+                title: "Kuzey Yıldızı Ticaret Merkezi",
+                category: "tamamlanan",
+                statusLabel: "Tamamlandı - Yaşam Başladı",
+                statusColor: "bg-brand-blue text-white",
+                location: "Merkez İş Aksı",
+                types: "48 Ofis + 14 Kurumsal Mağaza",
+                area: "16.800 m² Ticari Alan",
+                delivery: "Teslim Edildi",
+                progress: 100,
+                image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80",
+                description: "A+ ofis standartlarında tasarlanan Kuzey Yıldızı Ticaret Merkezi; yüksek tavanlı modüler ofis katları, konferans salonu ve kurumsal prestijiyle iş dünyasının yeni merkezi oldu.",
+                features: ["A+ Ofis Teknolojisi", "Yüksek Hızlı Asansörler", "Jeneratör (%100 Besleme)", "VIP Otopark"]
+            },
+            {
+                id: 4,
+                title: "Mavi Ufuk Müstakil Villaları",
+                category: "tamamlanan",
+                statusLabel: "Tamamlandı",
+                statusColor: "bg-brand-blue text-white",
+                location: "Göl & Doğa Manzaralı Etap",
+                types: "5+1 Müstakil Havuzlu 16 Villa",
+                area: "14.000 m² Arsa Alanı",
+                delivery: "Teslim Edildi",
+                progress: 100,
+                image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=900&q=80",
+                description: "Doğayla iç içe, her biri müstakil yüzme havuzlu ve özel bahçeli 16 seçkin villadan oluşan Mavi Ufuk projemiz %100 dolulukla sahiplerine teslim edilmiştir.",
+                features: ["Müstakil Havuz", "Özel Kış Bahçesi", "Şömine & Galeri Boşluğu", "Akıllı İklimlendirme"]
+            },
+            {
+                id: 5,
+                title: "Kuzey Park Evleri",
+                category: "tamamlanan",
+                statusLabel: "Tamamlandı",
+                statusColor: "bg-brand-blue text-white",
+                location: " Kurttepe / Kuzey Aksı",
+                types: "3+1 Aile Konutları (120 Daire)",
+                area: "21.000 m² İnşaat Alanı",
+                delivery: "Teslim Edildi",
+                progress: 100,
+                image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=900&q=80",
+                description: "Ferah daire planları, yürüyüş parkurları ve yüksek yapı kalitesiyle 120 ailenin güvenle yaşadığı örnek konut projemiz.",
+                features: ["Kapalı Otopark", "Basketbol & Tenis Kortu", "Isı ve Ses Yalıtımı", "7/24 Kamera Sistemi"]
+            },
+            {
+                id: 6,
+                title: "Kuzey Vadi Karma Yaşam",
+                category: "planlanan",
+                statusLabel: "Çok Yakında Lansmanda",
+                statusColor: "bg-brand-navy text-brand-amber",
+                location: "Yeni Gelişim Koridoru",
+                types: "1+1, 2+1, 3+1 ve 4+1 Ekolojik Konutlar",
+                area: "36.000 m² Dev Karma Proje",
+                delivery: "Lansman: 2027 İlk Çeyrek",
+                progress: 15,
+                image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80",
+                description: "Sürdürülebilir yeşil bina sertifikası hedefiyle projelendirilen Kuzey Vadi için ön talep kayıtlarımız başlamıştır. Lansman öncesi avantajlı listede yerinizi alın.",
+                features: ["Ön Talep Avantajı", "Yağmur Suyu Geri Kazanımı", "Biyolojik Gölet", "Sosyal Kulüp Binası"]
+            }
+        ];
+
+        // --- 2. PROJELERİ LİSTELEME VE FİLTRELEME ---
+        function renderProjects(filter = 'all') {
+            const grid = document.getElementById('projectsGrid');
+            const filtered = filter === 'all' 
+                ? projectsData 
+                : projectsData.filter(p => p.category === filter);
+
+            grid.innerHTML = filtered.map(project => `
+                <article class="group bg-white rounded-3xl border border-slate-200/80 overflow-hidden shadow-sm hover:shadow-premium transition-all duration-300 flex flex-col">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="${project.image}" 
+                             onerror="this.src='https://placehold.co/800x500/042A53/FFFFFF?text=${encodeURIComponent(project.title)}'"
+                             alt="${project.title}" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent"></div>
+                        
+                        <span class="absolute top-4 left-4 px-3.5 py-1.5 rounded-full text-xs font-bold shadow-md ${project.statusColor}">
+                            ${project.statusLabel}
+                        </span>
+
+                        <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-white text-xs">
+                            <span class="flex items-center gap-1.5 font-medium">
+                                <i class="fa-solid fa-location-dot text-brand-amber"></i> ${project.location}
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-5">
+                        <div>
+                            <h3 class="font-display font-bold text-xl text-brand-navy group-hover:text-brand-blue transition-colors">
+                                ${project.title}
+                            </h3>
+                            <p class="text-slate-500 text-sm mt-2 line-clamp-2 leading-relaxed">
+                                ${project.description}
+                            </p>
+
+                            <div class="mt-4 pt-4 border-t border-slate-100 space-y-2 text-xs text-slate-600">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-slate-400">Ünite Tipleri:</span>
+                                    <span class="font-semibold text-brand-navy">${project.types}</span>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-slate-400">Teslim Durumu:</span>
+                                    <span class="font-semibold text-brand-orange">${project.delivery}</span>
+                                </div>
+                            </div>
+
+                            <!-- İlerleme Çubuğu -->
+                            <div class="mt-4">
+                                <div class="flex justify-between text-[11px] font-bold mb-1">
+                                    <span class="text-slate-500">İnşaat İlerlemesi</span>
+                                    <span class="text-brand-navy">%${project.progress}</span>
+                                </div>
+                                <div class="w-full h-2 rounded-full bg-slate-100 overflow-hidden">
+                                    <div class="h-full rounded-full bg-gradient-to-r from-brand-blue to-brand-orange" style="width: ${project.progress}%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button onclick="openProjectModal(${project.id})" class="w-full py-3.5 rounded-2xl bg-slate-100 group-hover:bg-brand-navy text-brand-navy group-hover:text-white font-bold text-sm transition-all flex items-center justify-center gap-2">
+                            <span>Proje Detaylarını İncele</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+                </article>
+            `).join('');
+        }
+
+        function filterProjects(category) {
+            document.querySelectorAll('.project-filter-btn').forEach(btn => {
+                if (btn.dataset.filter === category) {
+                    btn.className = 'project-filter-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-brand-navy text-white shadow-sm transition-all';
+                } else {
+                    btn.className = 'project-filter-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold text-slate-600 hover:text-brand-navy transition-all';
+                }
+            });
+            renderProjects(category);
+        }
+
+        // --- 3. PROJE DETAY MODALI ---
+        function openProjectModal(projectId) {
+            const p = projectsData.find(item => item.id === projectId);
+            if (!p) return;
+
+            const modal = document.getElementById('projectModal');
+            const body = document.getElementById('projectModalBody');
+
+            body.innerHTML = `
+                <div class="relative h-64 sm:h-80">
+                    <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/30 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 right-6 text-white">
+                        <span class="inline-block px-3 py-1 rounded-full text-xs font-bold mb-2 ${p.statusColor}">${p.statusLabel}</span>
+                        <h3 class="font-display font-extrabold text-2xl sm:text-3xl">${p.title}</h3>
+                        <p class="text-slate-200 text-sm mt-1"><i class="fa-solid fa-location-dot text-brand-amber mr-1"></i> ${p.location}</p>
+                    </div>
+                </div>
+                <div class="p-6 sm:p-8 space-y-6">
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed">${p.description}</p>
+                    
+                    <div class="grid sm:grid-cols-3 gap-4 bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                        <div>
+                            <span class="text-xs text-slate-400 block">Proje Alanı</span>
+                            <span class="font-display font-bold text-sm text-brand-navy">${p.area}</span>
+                        </div>
+                        <div>
+                            <span class="text-xs text-slate-400 block">Ünite Seçenekleri</span>
+                            <span class="font-display font-bold text-sm text-brand-navy">${p.types}</span>
+                        </div>
+                        <div>
+                            <span class="text-xs text-slate-400 block">Teslim Takvimi</span>
+                            <span class="font-display font-bold text-sm text-brand-orange">${p.delivery}</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="font-display font-bold text-brand-navy text-sm uppercase tracking-wider mb-3">Öne Çıkan Donatılar</h4>
+                        <div class="grid grid-cols-2 gap-3">
+                            ${p.features.map(f => `
+                                <div class="flex items-center gap-2 text-sm text-slate-700">
+                                    <i class="fa-solid fa-circle-check text-brand-orange"></i>
+                                    <span>${f}</span>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+
+                    <div class="pt-4 border-t border-slate-100 flex flex-col sm:flex-row gap-3 justify-end">
+                        <button onclick="closeProjectModal()" class="px-6 py-3 rounded-xl border border-slate-200 text-slate-600 font-semibold text-sm hover:bg-slate-50">
+                            Kapat
+                        </button>
+                        <button onclick="selectProjectForInquiry('${p.title}')" class="brand-gradient-orange text-white px-7 py-3 rounded-xl font-bold text-sm shadow-orange-glow">
+                            Bu Proje İçin Fiyat & Katalog İste
+                        </button>
+                    </div>
+                </div>
+            `;
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeProjectModal() {
+            const modal = document.getElementById('projectModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        function selectProjectForInquiry(projectTitle) {
+            closeProjectModal();
+            const selectEl = document.getElementById('formSubject');
+            for (let i = 0; i < selectEl.options.length; i++) {
+                if (selectEl.options[i].text.includes(projectTitle)) {
+                    selectEl.selectedIndex = i;
+                    break;
+                }
+            }
+            document.getElementById('iletisim').scrollIntoView({ behavior: 'smooth' });
+            document.getElementById('formName').focus();
+        }
+
+        // --- 4. KURUMSAL SEKMELER ---
+        function switchAboutTab(tabId) {
+            ['vizyon', 'misyon', 'kalite'].forEach(id => {
+                const btn = document.getElementById('tabBtn-' + id);
+                const content = document.getElementById('tabContent-' + id);
+                if (id === tabId) {
+                    btn.className = 'about-tab-btn py-2.5 px-3 rounded-xl font-bold text-xs sm:text-sm bg-brand-navy text-white transition-all';
+                    content.classList.remove('hidden');
+                } else {
+                    btn.className = 'about-tab-btn py-2.5 px-3 rounded-xl font-bold text-xs sm:text-sm text-slate-600 hover:bg-slate-100 transition-all';
+                    content.classList.add('hidden');
+                }
+            });
+        }
+
+        // --- 5. HERO SLIDER KONTROLÜ ---
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.hero-slide');
+        const dots = document.querySelectorAll('.slide-dot');
+        let slideInterval;
+
+        function showSlide(index) {
+            currentSlide = (index + slides.length) % slides.length;
+            slides.forEach((s, i) => {
+                s.classList.toggle('active', i === currentSlide);
+            });
+            dots.forEach((d, i) => {
+                if (i === currentSlide) {
+                    d.className = 'slide-dot h-2.5 w-10 rounded-full bg-brand-orange transition-all duration-300';
+                } else {
+                    d.className = 'slide-dot h-2.5 w-3 rounded-full bg-white/40 hover:bg-white/70 transition-all duration-300';
+                }
+            });
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+            resetSlideTimer();
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+            resetSlideTimer();
+        }
+
+        function goToSlide(index) {
+            showSlide(index);
+            resetSlideTimer();
+        }
+
+        function resetSlideTimer() {
+            clearInterval(slideInterval);
+            slideInterval = setInterval(() => showSlide(currentSlide + 1), 6500);
+        }
+
+        // --- 6. MOBİL MENÜ & MODALLAR & BİLDİRİMLER ---
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileMenuIcon = document.getElementById('mobileMenuIcon');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.toggle('hidden');
+            mobileMenuIcon.className = isHidden ? 'fa-solid fa-bars-staggered text-xl' : 'fa-solid fa-xmark text-xl';
+        });
+
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuIcon.className = 'fa-solid fa-bars-staggered text-xl';
+            });
+        });
+
+        function openCallbackModal() {
+            const m = document.getElementById('callbackModal');
+            m.classList.remove('hidden');
+            m.classList.add('flex');
+        }
+
+        function closeCallbackModal() {
+            const m = document.getElementById('callbackModal');
+            m.classList.add('hidden');
+            m.classList.remove('flex');
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toastBox');
+            document.getElementById('toastText').textContent = message;
+            toast.classList.remove('hidden');
+            toast.classList.add('flex');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+                toast.classList.remove('flex');
+            }, 4500);
+        }
+
+        // Form Gönderimleri
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('formName').value;
+            showToast(`Teşekkürler Sayın ${name}, talebiniz Kuzey Denizi İnşaat proje ekibimize başarıyla iletildi.`);
+            this.reset();
+        });
+
+        document.getElementById('callbackForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            closeCallbackModal();
+            showToast('Arama talebiniz alındı. Danışmanlarımız en kısa sürede sizi arayacaktır.');
+            this.reset();
+        });
+
+        document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            showToast('E-bülten kaydınız tamamlandı. Yeni proje lansmanlarından ilk siz haberdar olacaksınız.');
+            this.reset();
+        });
+
+        // Dışarı tıklayınca modalları kapatma
+        window.addEventListener('click', (e) => {
+            if (e.target.id === 'projectModal') closeProjectModal();
+            if (e.target.id === 'callbackModal') closeCallbackModal();
+        });
+
+        // Sayfa Yüklendiğinde Başlat
+        window.addEventListener('DOMContentLoaded', () => {
+            renderProjects('all');
+            resetSlideTimer();
+        });
+    </script>
+</body>
+</html>

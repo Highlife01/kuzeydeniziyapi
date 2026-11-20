@@ -1,0 +1,90 @@
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "Organization",
+    "LocalBusiness",
+    "GeneralContractor"
+  ],
+  "@id": "https://www.kuzeydeniziyapi.com.tr/#organization",
+  "name": "Kuzey Denizi İnşaat Sanayi ve Ticaret A.Ş.",
+  "alternateName": "Kuzey Denizi İnşaat",
+  "url": "https://www.kuzeydeniziyapi.com.tr/",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://www.kuzeydeniziyapi.com.tr/icons/icon-512.png",
+    "width": 512,
+    "height": 512
+  },
+  "image": "https://www.kuzeydeniziyapi.com.tr/images/og/og-ana-sayfa.jpg",
+  "telephone": "+905336779109",
+  "email": "info@kuzeydeniziyapi.com.tr",
+  "foundingDate": "2016-02-25",
+  "taxID": "2640323020",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Yeşiloba Mah. 46088 Sk. No: 18 B",
+    "addressLocality": "Seyhan",
+    "addressRegion": "Adana",
+    "postalCode": "01100",
+    "addressCountry": "TR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "36.9855",
+    "longitude": "35.2530"
+  },
+  "hasMap": "https://www.google.com/maps/search/?api=1&query=Ye%C5%9Filoba%20Mah.%2046088%20Sk.%20No%3A%2018%20B%2C%20Seyhan%2C%20Adana",
+  "areaServed": [
+    {
+      "@type": "Place",
+      "name": "Adana"
+    },
+    {
+      "@type": "Place",
+      "name": "Seyhan"
+    },
+    {
+      "@type": "Place",
+      "name": "Yüreğir"
+    },
+    {
+      "@type": "Place",
+      "name": "Pozantı"
+    },
+    {
+      "@type": "Place",
+      "name": "Ceyhan"
+    },
+    {
+      "@type": "Place",
+      "name": "Sarıçam"
+    },
+    {
+      "@type": "Place",
+      "name": "Mersin"
+    },
+    {
+      "@type": "Place",
+      "name": "Tarsus"
+    },
+    {
+      "@type": "Place",
+      "name": "Çukurova"
+    }
+  ],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "08:30",
+      "closes": "18:00"
+    }
+  ]
+}

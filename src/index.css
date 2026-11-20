@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #030712;
+    color: #ffffff;
+  }
+}
+
+/* Hero Slider Ken Burns & Reveal Animations (matching reference design) */
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1.5s cubic-bezier(0.4, 0, 0.2, 1), visibility 1.5s;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 10;
+}
+
+.hero-slide img {
+  transform: scale(1.08);
+  transition: transform 12s ease-out;
+}
+
+.hero-slide.active img {
+  transform: scale(1);
+}
+
+.hero-content {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out 0.35s, transform 1s ease-out 0.35s;
+}
+
+.hero-slide.active .hero-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Signature Glass, Glow & Logo Effects */
+.glass-panel {
+  background: rgba(11, 19, 41, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.glow-hover {
+  transition: box-shadow 0.35s ease, border-color 0.35s ease, transform 0.35s ease;
+}
+
+.glow-hover:hover {
+  box-shadow: 0 0 45px -5px rgba(37, 99, 235, 0.6);
+  border-color: #3b82f6 !important;
+}
+
+.logo-glow {
+  box-shadow: 0 0 30px 2px rgba(59, 130, 246, 0.65), 0 0 12px 1px rgba(255, 255, 255, 0.3);
+}
+
+.text-glow {
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9), 0 0 20px rgba(59, 130, 246, 0.4);
+}
+
+.dot-pattern {
+  background-image: radial-gradient(#3b82f6 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+}
+
+/* Custom Dark Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #02050e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3b82f6;
+}
+
+/* ERP Workspace Light Theme Support (does not override SafirMail theme container) */
+.erp-workspace[data-erp-theme="light"] {
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+.erp-workspace[data-erp-theme="light"] aside,
+.erp-workspace[data-erp-theme="light"] header,
+.erp-workspace[data-erp-theme="light"] nav.lg\:hidden {
+  background-color: #ffffff;
+  color: #0f172a;
+  border-color: #cbd5e1;
+}
+.erp-workspace[data-erp-theme="light"] main .bg-\[\#0b1329\],
+.erp-workspace[data-erp-theme="light"] .bg-\[\#0b1329\].border-2 {
+  background-color: #ffffff;
+  color: #0f172a;
+  border-color: #cbd5e1;
+}
+.erp-workspace[data-erp-theme="light"] main .bg-\[\#070d1e\],
+.erp-workspace[data-erp-theme="light"] .bg-\[\#070d1e\] {
+  background-color: #f8fafc;
+  color: #0f172a;
+  border-color: #cbd5e1;
+}
+.erp-workspace[data-erp-theme="light"] main .bg-\[\#0f172a\],
+.erp-workspace[data-erp-theme="light"] .bg-\[\#0f172a\],
+.erp-workspace[data-erp-theme="light"] main input,
+.erp-workspace[data-erp-theme="light"] main select,
+.erp-workspace[data-erp-theme="light"] main textarea {
+  background-color: #ffffff;
+  color: #0f172a;
+  border-color: #94a3b8;
+}
+.erp-workspace[data-erp-theme="light"] main .text-white:not(.bg-blue-600):not(.bg-emerald-600):not(.bg-red-600):not(.bg-rose-600):not(.bg-sky-600):not(.bg-amber-600),
+.erp-workspace[data-erp-theme="light"] header .text-white,
+.erp-workspace[data-erp-theme="light"] aside .text-white:not(.bg-blue-600),
+.erp-workspace[data-erp-theme="light"] main .text-slate-100,
+.erp-workspace[data-erp-theme="light"] main .text-slate-200 {
+  color: #0f172a;
+}
+.erp-workspace[data-erp-theme="light"] header select,
+.erp-workspace[data-erp-theme="light"] header button.bg-\[\#0b1329\],
+.erp-workspace[data-erp-theme="light"] aside button.bg-slate-900,
+.erp-workspace[data-erp-theme="light"] aside a.bg-\[\#0b1329\] {
+  background-color: #f8fafc;
+  color: #0f172a;
+  border-color: #cbd5e1;
+}
+.erp-workspace[data-erp-theme="light"] main .text-slate-300,
+.erp-workspace[data-erp-theme="light"] aside .text-slate-300,
+.erp-workspace[data-erp-theme="light"] main .text-slate-400 {
+  color: #475569;
+}
+.erp-workspace[data-erp-theme="light"] main .bg-blue-600,
+.erp-workspace[data-erp-theme="light"] main .bg-blue-600 *,
+.erp-workspace[data-erp-theme="light"] main .bg-emerald-600,
+.erp-workspace[data-erp-theme="light"] main .bg-emerald-600 *,
+.erp-workspace[data-erp-theme="light"] main .bg-red-600,
+.erp-workspace[data-erp-theme="light"] main .bg-rose-600,
+.erp-workspace[data-erp-theme="light"] main .bg-sky-600,
+.erp-workspace[data-erp-theme="light"] main .bg-amber-600,
+.erp-workspace[data-erp-theme="light"] aside .bg-blue-600 {
+  color: #ffffff;
+}
+.erp-workspace[data-erp-theme="light"] main .border-slate-700,
+.erp-workspace[data-erp-theme="light"] main .border-slate-800,
+.erp-workspace[data-erp-theme="light"] main .divide-slate-800 > * + * {
+  border-color: #e2e8f0;
+}
