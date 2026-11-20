@@ -12,6 +12,7 @@ const SUPER_ADMIN_EMAILS = new Set([
   'hayrullahcingoz81@gmail.com',
   'yalinizlargrup@gmail.com',
   'ilkeryaliniz@gmail.com',
+  'info@kuzeydenizinsaat.com.tr',
   'info@kuzeydeniziyapi.com.tr',
   'info@cukurovabartu.com.tr',
 ]);

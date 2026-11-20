@@ -14,7 +14,7 @@ export const DEFAULT_SETTINGS: DashboardSettings = {
   taxOffice: 'Ziyapaşa Vergi Dairesi Müd.',
   taxNumber: '6010491372',
   phone: '+90 533 677 91 09',
-  email: 'info@kuzeydeniziyapi.com.tr',
+  email: 'info@kuzeydenizinsaat.com.tr',
   address: 'Güzelyalı Mah. 81178 Sk. Yalı 2 Apt No: 6 İç Kapı No: 02, Çukurova / ADANA',
   mailWebhookUrl: '',
   autoSyncContactToMail: true,
@@ -476,11 +476,11 @@ export const SEED_CONTACT_MESSAGES: ContactMessage[] = [];
 export const SEED_MAIL_ACCOUNTS: MailAccount[] = [
   {
     id: 'mail-acc-info',
-    email: 'info@kuzeydeniziyapi.com.tr',
+    email: 'info@kuzeydenizinsaat.com.tr',
     displayName: 'Kuzey Deniz Kurumsal E-Posta',
     department: 'Genel Merkez & İletişim',
-    imapHost: 'mail.kuzeydeniziyapi.com.tr:993',
-    smtpHost: 'mail.kuzeydeniziyapi.com.tr:465',
+    imapHost: 'mail.kuzeydenizinsaat.com.tr:993',
+    smtpHost: 'mail.kuzeydenizinsaat.com.tr:465',
     quotaUsedMb: 0,
     quotaLimitMb: 10240,
     status: 'aktif',

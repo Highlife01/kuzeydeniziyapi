@@ -107,7 +107,7 @@ export const IntroSplash: React.FC<IntroSplashProps> = ({ onComplete }) => {
             Güvenle Yükselen Modern Yapılar
           </div>
           <p className="text-xs sm:text-sm text-sky-100/80 font-medium">
-            www.kuzeydeniziyapi.com.tr • Mühendislik, Konut &amp; Taahhüt
+            www.kuzeydenizinsaat.com.tr • Mühendislik, Konut &amp; Taahhüt
           </p>
         </div>
 

@@ -1,4 +1,4 @@
-# Kuzeydeniz İnşaat Taahhüt Sanayi ve Ticaret Limited Şirketi Robots Directives (https://www.kuzeydeniziyapi.com.tr)
+# Kuzeydeniz İnşaat Taahhüt Sanayi ve Ticaret Limited Şirketi Robots Directives (https://www.kuzeydenizinsaat.com.tr)
 User-agent: *
 Allow: /
 Disallow: /dashboard
@@ -99,6 +99,6 @@ Disallow: /yonetim
 Disallow: /api
 Disallow: /api/
 
-Sitemap: https://www.kuzeydeniziyapi.com.tr/sitemap.xml
-# LLMs & GEO Context: https://www.kuzeydeniziyapi.com.tr/llms.txt
-# Extended Reference: https://www.kuzeydeniziyapi.com.tr/llms-full.txt
+Sitemap: https://www.kuzeydenizinsaat.com.tr/sitemap.xml
+# LLMs & GEO Context: https://www.kuzeydenizinsaat.com.tr/llms.txt
+# Extended Reference: https://www.kuzeydenizinsaat.com.tr/llms-full.txt

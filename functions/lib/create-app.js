@@ -45,6 +45,12 @@ const {
 } = require('./scheduled-mail');
 
 const ALLOWED_ORIGINS = new Set([
+  'https://www.kuzeydenizinsaat.com.tr',
+  'https://kuzeydenizinsaat.com.tr',
+  'https://www.kuzeydeniziyapi.com.tr',
+  'https://kuzeydeniziyapi.com.tr',
+  'https://kuzeyyildiziyapi.web.app',
+  'https://kuzeyyildiziyapi.firebaseapp.com',
   'https://www.cukurovabartu.com.tr',
   'https://cukurovabartu.com.tr',
   'https://cukurovabartu.web.app',
@@ -240,6 +246,7 @@ function createApp() {
           'hayrullahcingoz81@gmail.com',
           'yalinizlargrup@gmail.com',
           'ilkeryaliniz@gmail.com',
+          'info@kuzeydenizinsaat.com.tr',
           'info@kuzeydeniziyapi.com.tr',
           'info@cukurovabartu.com.tr',
         ]);
@@ -840,6 +847,7 @@ function createApp() {
       'hayrullahcingoz81@gmail.com',
       'yalinizlargrup@gmail.com',
       'ilkeryaliniz@gmail.com',
+      'info@kuzeydenizinsaat.com.tr',
       'info@kuzeydeniziyapi.com.tr',
       'info@cukurovabartu.com.tr',
     ]);

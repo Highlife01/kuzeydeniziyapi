@@ -43,7 +43,7 @@ const HERO_SLIDES: HeroSlide[] = [
     secondaryBtnTo: '/projeler',
   },
   {
-    badgeText: 'Üstyapı & Taahhüt Uzmanlığı • www.kuzeydeniziyapi.com.tr',
+    badgeText: 'Üstyapı & Taahhüt Uzmanlığı • www.kuzeydenizinsaat.com.tr',
     titleBefore: 'Güçlü Mühendislik, ',
     titleHighlight: 'Sarsılmaz',
     titleAfter: ' Temeller',
@@ -804,12 +804,12 @@ export const HomePage: React.FC = () => {
                   <div>
                     <h4 className="font-bold text-[#042A53]">Kurumsal E-Posta &amp; Web</h4>
                     <a
-                      href="mailto:info@kuzeydeniziyapi.com.tr"
+                      href="mailto:info@kuzeydenizinsaat.com.tr"
                       className="text-sm font-semibold text-slate-700 hover:text-[#0068C9] block mt-1"
                     >
-                      info@kuzeydeniziyapi.com.tr
+                      info@kuzeydenizinsaat.com.tr
                     </a>
-                    <p className="text-xs text-slate-500 mt-0.5">www.kuzeydeniziyapi.com.tr</p>
+                    <p className="text-xs text-slate-500 mt-0.5">www.kuzeydenizinsaat.com.tr</p>
                   </div>
                 </div>
               </div>

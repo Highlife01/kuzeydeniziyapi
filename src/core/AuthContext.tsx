@@ -118,7 +118,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         setDataServiceLocalScope('preview');
         setMode('unauthenticated');
         setAuthError(
-          `Bu hesap (${email}) yönetim paneli için yetkilendirilmemiş. Yetkili sistem yöneticisi (info@kuzeydeniziyapi.com.tr) tarafından eklenmesi gerekir veya Önizleme Modu'nu kullanabilirsiniz.`
+          `Bu hesap (${email}) yönetim paneli için yetkilendirilmemiş. Yetkili sistem yöneticisi (info@kuzeydenizinsaat.com.tr) tarafından eklenmesi gerekir veya Önizleme Modu'nu kullanabilirsiniz.`
         );
         await signOut(auth).catch(() => {});
       }

@@ -157,7 +157,7 @@ export const ContactFormCard: React.FC<ContactFormCardProps> = ({
             required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="ornek@kuzeydeniziyapi.com.tr"
+            placeholder="ornek@kuzeydenizinsaat.com.tr"
             className={inputCls}
           />
         </div>

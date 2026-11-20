@@ -9,54 +9,59 @@
         if (!h || h === 'localhost' || h === '127.0.0.1' || h.indexOf('web.app') !== -1 || h.indexOf('firebaseapp.com') !== -1) {
           return;
         }
-        var targetHost = 'www.kuzeydeniziyapi.com.tr';
-        if (h === 'kuzeydeniziyapi.com.tr') {
-          window.location.replace(
-            'https://' +
-              targetHost +
-              window.location.pathname +
-              window.location.search +
-              window.location.hash
-          );
+        var targetHost = 'www.kuzeydenizinsaat.com.tr';
+        if (h === 'kuzeydenizinsaat.com.tr' || h === 'kuzeydeniziyapi.com.tr' || h === 'www.kuzeydeniziyapi.com.tr') {
+          try {
+            if (!sessionStorage.getItem('kd_canon_redirected')) {
+              sessionStorage.setItem('kd_canon_redirected', '1');
+              window.location.replace(
+                'https://' +
+                  targetHost +
+                  window.location.pathname +
+                  window.location.search +
+                  window.location.hash
+              );
+            }
+          } catch (e) {}
         }
       })();
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kuzey Deniz İnşaat | Güvenle Yükselen Modern Yapılar</title>
-    <meta name="description" content="Kuzey Deniz İnşaat; deprem güvenliği yüksek modern konut projeleri, ticari plazalar, kamu taahhütleri ve endüstriyel tesisler. İletişim & WhatsApp: +90 533 677 91 09" />
-    <meta name="keywords" content="kuzey deniz inşaat, kuzeydeniz inşaat, kuzey deniz yapı, adana inşaat firmaları, modern konut projeleri, kamu taahhüt, deprem güçlendirme, mimarlık ve mühendislik" />
+    <meta name="description" content="Kuzey Deniz İnşaat; Adana, Çukurova, Yüreğir ve Ceyhan genelinde kamu müteahhitliği, deprem konutları, hastane ve sağlık tesisi yapımı, modern konut ve endüstriyel tesis projeleri. Tel & WhatsApp: +90 533 677 91 09" />
+    <meta name="keywords" content="kuzey deniz inşaat, kuzeydenizinsaat, kuzeydeniz inşaat adana, kamu müteahhitliği adana, deprem konutları yapımı, sağlık ocağı hastane taahhüt, konut projeleri, kentsel dönüşüm, çukurova müteahhit" />
     <meta name="author" content="Kuzeydeniz İnşaat Taahhüt Sanayi ve Ticaret Limited Şirketi" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="theme-color" content="#030712" />
     <meta name="language" content="Turkish" />
     <meta http-equiv="content-language" content="tr-TR" />
     <meta name="geo.region" content="TR-01" />
-    <meta name="geo.placename" content="Seyhan, Adana, Türkiye" />
-    <meta name="geo.position" content="36.9855;35.2530" />
-    <meta name="ICBM" content="36.9855, 35.2530" />
+    <meta name="geo.placename" content="Çukurova, Adana, Türkiye" />
+    <meta name="geo.position" content="37.0420;35.2830" />
+    <meta name="ICBM" content="37.0420, 35.2830" />
 
-    <link rel="canonical" href="https://www.kuzeydeniziyapi.com.tr/" />
-    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://www.kuzeydeniziyapi.com.tr/sitemap.xml" />
-    <link rel="alternate" type="text/plain" title="LLMs Context" href="https://www.kuzeydeniziyapi.com.tr/llms.txt" />
-    <link rel="alternate" type="text/plain" title="LLMs Full Documentation" href="https://www.kuzeydeniziyapi.com.tr/llms-full.txt" />
-    <link rel="alternate" type="application/ld+json" href="https://www.kuzeydeniziyapi.com.tr/entity.jsonld" />
+    <link rel="canonical" href="https://www.kuzeydenizinsaat.com.tr/" />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://www.kuzeydenizinsaat.com.tr/sitemap.xml" />
+    <link rel="alternate" type="text/plain" title="LLMs Context" href="https://www.kuzeydenizinsaat.com.tr/llms.txt" />
+    <link rel="alternate" type="text/plain" title="LLMs Full Documentation" href="https://www.kuzeydenizinsaat.com.tr/llms-full.txt" />
+    <link rel="alternate" type="application/ld+json" href="https://www.kuzeydenizinsaat.com.tr/entity.jsonld" />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Kuzeydeniz İnşaat Taahhüt Sanayi ve Ticaret Limited Şirketi" />
     <meta property="og:locale" content="tr_TR" />
     <meta property="og:title" content="Kuzey Deniz İnşaat | Güvenle Yükselen Modern Yapılar" />
-    <meta property="og:description" content="Kuzey Deniz İnşaat; yüksek deprem güvenliği, modern konut projeleri, ticari plazalar, inşaat taahhüt ve kentsel dönüşüm. Tel & WhatsApp: +90 533 677 91 09" />
-    <meta property="og:url" content="https://www.kuzeydeniziyapi.com.tr/" />
-    <meta property="og:image" content="https://www.kuzeydeniziyapi.com.tr/images/logo.png" />
+    <meta property="og:description" content="Kuzey Deniz İnşaat; kamu müteahhitliği, deprem konutları, sağlık tesisi yapımı, yüksek deprem güvenliği, modern konut projeleri ve ticari plazalar. Tel & WhatsApp: +90 533 677 91 09" />
+    <meta property="og:url" content="https://www.kuzeydenizinsaat.com.tr/" />
+    <meta property="og:image" content="https://www.kuzeydenizinsaat.com.tr/images/logo.png" />
     <meta property="og:image:width" content="1024" />
     <meta property="og:image:height" content="768" />
     <meta property="og:image:alt" content="Kuzey Deniz İnşaat — Güvenle Yükselen Modern Yapılar" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:domain" content="www.kuzeydeniziyapi.com.tr" />
+    <meta name="twitter:domain" content="www.kuzeydenizinsaat.com.tr" />
     <meta name="twitter:title" content="Kuzey Deniz İnşaat | Güvenle Yükselen Modern Yapılar" />
-    <meta name="twitter:description" content="Kuzey Deniz İnşaat; yüksek deprem güvenliği, modern konut projeleri, ticari plazalar ve inşaat taahhüt. Tel: +90 533 677 91 09" />
-    <meta name="twitter:image" content="https://www.kuzeydeniziyapi.com.tr/images/logo.png" />
+    <meta name="twitter:description" content="Kuzey Deniz İnşaat; yüksek deprem güvenliği, kamu müteahhitliği, modern konut projeleri ve inşaat taahhüt. Tel: +90 533 677 91 09" />
+    <meta name="twitter:image" content="https://www.kuzeydenizinsaat.com.tr/images/logo.png" />
 
     <link rel="preload" as="image" href="/images/logo-brand.png" />
     <link rel="manifest" href="/manifest.json" />

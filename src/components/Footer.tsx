@@ -149,21 +149,21 @@ export const Footer: React.FC = () => {
               <p className="flex items-center gap-3">
                 <i className="fa-solid fa-envelope text-[#0068C9]" />
                 <a
-                  href="mailto:info@kuzeydeniziyapi.com.tr"
+                  href="mailto:info@kuzeydenizinsaat.com.tr"
                   className="hover:text-white transition"
                 >
-                  info@kuzeydeniziyapi.com.tr
+                  info@kuzeydenizinsaat.com.tr
                 </a>
               </p>
               <p className="flex items-center gap-3">
                 <i className="fa-solid fa-globe text-[#0068C9]" />
                 <a
-                  href="https://www.kuzeydeniziyapi.com.tr"
+                  href="https://www.kuzeydenizinsaat.com.tr"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition"
                 >
-                  www.kuzeydeniziyapi.com.tr
+                  www.kuzeydenizinsaat.com.tr
                 </a>
               </p>
             </div>

@@ -3,7 +3,7 @@ import React from 'react';
 export const WhatsAppButton: React.FC = () => {
   const phone = '905336779109';
   const message = encodeURIComponent(
-    'Merhaba, Kuzey Deniz İnşaat (www.kuzeydeniziyapi.com.tr) hakkında bilgi ve teklif almak istiyorum.'
+    'Merhaba, Kuzey Deniz İnşaat (www.kuzeydenizinsaat.com.tr) hakkında bilgi ve teklif almak istiyorum.'
   );
   const whatsappUrl = `https://wa.me/${phone}?text=${message}`;
 

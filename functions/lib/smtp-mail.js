@@ -195,7 +195,7 @@ async function deliver(account, input) {
   const baseHtml = wrapHtmlDocument(html);
   let finalHtml = baseHtml;
   if (input.trackingId && baseHtml) {
-    const trackingPixelUrl = `https://www.cukurovabartu.com.tr/api/track/open/${encodeURIComponent(input.trackingId)}.png`;
+    const trackingPixelUrl = `https://www.kuzeydenizinsaat.com.tr/api/track/open/${encodeURIComponent(input.trackingId)}.png`;
     const trackingPixelTag = `<img src="${trackingPixelUrl}" width="1" height="1" alt="" />`;
     if (finalHtml.includes('</body>')) {
       finalHtml = finalHtml.replace('</body>', `${trackingPixelTag}</body>`);

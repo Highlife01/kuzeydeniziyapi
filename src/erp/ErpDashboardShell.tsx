@@ -187,7 +187,7 @@ export const ErpDashboardShell: React.FC = () => {
   const [crmMessages, setCrmMessages] = useState<ContactMessage[]>([]);
 
   const cloudMode = mode === 'cloud-admin';
-  const actorEmail = user?.email?.toLowerCase().trim() || 'onizleme@kuzeydeniziyapi.com.tr';
+  const actorEmail = user?.email?.toLowerCase().trim() || 'onizleme@kuzeydenizinsaat.com.tr';
 
   const liveUserDoc = useMemo(
     () => erpUsers.find((u) => u.email.toLowerCase() === actorEmail),

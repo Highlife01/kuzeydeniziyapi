@@ -17,7 +17,7 @@ const DIST_DIR = path.join(ROOT_DIR, 'dist');
 const catalog = JSON.parse(fs.readFileSync(CATALOG_PATH, 'utf8'));
 const { site, routes, faqs } = catalog;
 
-const CANONICAL_DOMAIN = 'https://www.kuzeydeniziyapi.com.tr';
+const CANONICAL_DOMAIN = site?.url || 'https://www.kuzeydenizinsaat.com.tr';
 const INDEXNOW_KEY = 'cb84f1d92e5a4b7c8f103d2e6a9c4b71';
 const TODAY_ISO = new Date().toISOString().split('T')[0];
 
@@ -155,9 +155,11 @@ function generateLlmsTxt() {
     .map((r) => `- [${r.navLabel}](${buildAbsoluteUrl(r.path)}): ${r.description}`)
     .join('\n');
 
+  const serviceAreasText = (site.geo?.serviceAreas || ['Adana', 'Çukurova', 'Türkiye']).join(', ');
+
   return `# ${site.legalName}
 
-> ${site.tagline}. Adana ve Çukurova bölgesinde kamu taahhüt, çatı yenileme, hastane yangın güvenliği sistemleri ve endüstriyel çelik yapı çözümleri.
+> ${site.tagline}. 15 ana mühendislik ve kamu müteahhitliği disiplininde (${serviceAreasText}) hizmet veren kurumsal inşaat ve taahhüt firması.
 
 ## Temel Kurumsal Bilgiler
 - **Resmi Ticaret Unvanı:** ${site.legalName}
@@ -165,12 +167,16 @@ function generateLlmsTxt() {
 - **Kuruluş Tarihi:** 04/01/2017
 - **Vergi Dairesi / VKN:** ${site.taxOffice} — ${site.taxNumber}
 - **Merkez Adres:** ${site.address} (Posta Kodu: ${site.postalCode})
+- **Coğrafi Konum (GEO):** ${site.geo?.placename || 'Çukurova, Adana, Türkiye'} (${site.geo?.lat}, ${site.geo?.lng})
+- **Hizmet Bölgeleri:** ${serviceAreasText}
 - **Tek Telefon & WhatsApp:** ${site.phoneDisplay} (${site.whatsappUrl})
 - **E-Posta:** ${site.email}
 
 ## Öne Çıkan Tamamlanan Referans Projeler
-- **Adana Adliyesi Çatı Yenileme:** Çatı kaplama yenileme, ısı-su yalıtım katmanları ve yağmur drenaj altyapısı.
-- **Pozantı 80. Yıl Devlet Hastanesi Yangın Güvenliği Standartlarının Güçlendirilmesine Yönelik Tadilat ve Bakım Çalışmaları:** Yangın güvenliği standartlarına uygun mekanik ve tesisat tadilatları, söndürme ve algılama sistemlerinin bakımı.
+- **Ceyhan Ulus Sağlık Ocağı Yapımı (Ceyhan / ADANA):** T.C. Sağlık Bakanlığı / Adana İl Sağlık Müdürlüğü için 1.850 m² anahtar teslim aile sağlığı merkezi ve sağlık ocağı kompleksi.
+- **Yüreğir Diş Hastanesi Tretuar ve Onarım Yapımı (Yüreğir / ADANA):** Yüreğir Ağız ve Diş Sağlığı Hastanesi 4.200 m² saha tretuar kaplama, ambulans yolu, drenaj ve çevre onarım işleri.
+- **Yüreğir Geçitli Cumhuriyet Sağlık Ocağı Tadilatı (Yüreğir / ADANA):** Aile sağlığı merkezi ve sağlık ocağı binasının kapsamlı iç-dış tadilat, tesisat ve modernizasyon projesi.
+- **52 Adet Kızıldere Deprem Konutları İnşaatı (Kızıldere / ADANA):** Radye temel, C35 betonarme ve TBDY 2018 standartlarıyla 52 adet bağımsız afet ve deprem konutunun anahtar teslimi.
 
 ## Sayfalar
 ${pageLinks}

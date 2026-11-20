@@ -5,25 +5,25 @@
     "LocalBusiness",
     "GeneralContractor"
   ],
-  "@id": "https://www.kuzeydeniziyapi.com.tr/#organization",
+  "@id": "https://www.kuzeydenizinsaat.com.tr/#organization",
   "name": "Kuzeydeniz İnşaat Taahhüt Sanayi ve Ticaret Limited Şirketi",
   "alternateName": "Kuzey Deniz İnşaat",
-  "url": "https://www.kuzeydeniziyapi.com.tr/",
+  "url": "https://www.kuzeydenizinsaat.com.tr/",
   "logo": {
     "@type": "ImageObject",
-    "url": "https://www.kuzeydeniziyapi.com.tr/images/logo.png",
-    "width": 512,
-    "height": 512
+    "url": "https://www.kuzeydenizinsaat.com.tr/images/logo.png",
+    "width": 1024,
+    "height": 768
   },
-  "image": "https://www.kuzeydeniziyapi.com.tr/images/logo.png",
+  "image": "https://www.kuzeydenizinsaat.com.tr/images/logo.png",
   "telephone": "+905336779109",
-  "email": "info@kuzeydeniziyapi.com.tr",
+  "email": "info@kuzeydenizinsaat.com.tr",
   "foundingDate": "2017-01-04",
   "taxID": "6010491372",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Güzelyalı Mah. 81178 Sk. Yalı 2 Apt No: 6 İç Kapı No: 02",
-    "addressLocality": "Seyhan",
+    "addressLocality": "Çukurova",
     "addressRegion": "Adana",
     "postalCode": "01170",
     "addressCountry": "TR"
@@ -53,7 +53,15 @@
     },
     {
       "@type": "Place",
+      "name": "Ceyhan"
+    },
+    {
+      "@type": "Place",
       "name": "Sarıçam"
+    },
+    {
+      "@type": "Place",
+      "name": "Kozan"
     },
     {
       "@type": "Place",
@@ -62,6 +70,22 @@
     {
       "@type": "Place",
       "name": "Tarsus"
+    },
+    {
+      "@type": "Place",
+      "name": "Osmaniye"
+    },
+    {
+      "@type": "Place",
+      "name": "Hatay"
+    },
+    {
+      "@type": "Place",
+      "name": "Gaziantep"
+    },
+    {
+      "@type": "Place",
+      "name": "Türkiye"
     }
   ],
   "openingHoursSpecification": [
@@ -78,5 +102,9 @@
       "opens": "08:30",
       "closes": "18:00"
     }
+  ],
+  "sameAs": [
+    "https://www.kuzeydenizinsaat.com.tr",
+    "https://kuzeydenizinsaat.com.tr"
   ]
 }

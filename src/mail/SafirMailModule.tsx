@@ -54,7 +54,7 @@ export const SafirMailModule: React.FC<SafirMailModuleProps> = ({
   const [session, setSession] = useState<SessionState | null>(null);
   const [error, setError] = useState('');
   const [dnsOpen, setDnsOpen] = useState(false);
-  const [dnsDomain, setDnsDomain] = useState('kuzeydeniziyapi.com.tr');
+  const [dnsDomain, setDnsDomain] = useState('kuzeydenizinsaat.com.tr');
   const [dnsLoading, setDnsLoading] = useState(false);
   const [dnsResult, setDnsResult] = useState<MailCheckLog | null>(null);
 
@@ -134,7 +134,7 @@ export const SafirMailModule: React.FC<SafirMailModuleProps> = ({
           <p className="text-sm text-amber-100 leading-relaxed">
             Canlı IMAP/SMTP posta sunucularına bağlanmak ve AES-256-GCM ile şifrelenmiş posta hesaplarınıza erişmek için
             Önizleme Modu&apos;ndan çıkıp yetkili kurumsal/Google hesabınızla (
-            <span className="font-mono text-white">info@kuzeydeniziyapi.com.tr</span> veya yetkili süper admin hesabı) giriş yapın.
+            <span className="font-mono text-white">info@kuzeydenizinsaat.com.tr</span> veya yetkili süper admin hesabı) giriş yapın.
           </p>
           {onLogout && (
             <button
@@ -185,7 +185,7 @@ export const SafirMailModule: React.FC<SafirMailModuleProps> = ({
               type="text"
               value={dnsDomain}
               onChange={(e) => setDnsDomain(e.target.value)}
-              placeholder="kuzeydeniziyapi.com.tr"
+              placeholder="kuzeydenizinsaat.com.tr"
               className="flex-1 min-w-[200px] px-3 py-2 rounded-lg bg-[#0f172a] border border-slate-600 text-white"
             />
             <button

@@ -77,6 +77,8 @@ describe('RBAC Permissions, Approval Matrix & Legacy Project Migration', () => {
     expect(isSuperAdminEmail('HAYRULLAHCINGOZ81@GMAIL.COM')).toBe(true);
     expect(isSuperAdminEmail('YalinizlarGrup@gmail.com')).toBe(true);
     expect(isSuperAdminEmail('ILKERYALINIZ@gmail.com')).toBe(true);
+    expect(isSuperAdminEmail('info@kuzeydenizinsaat.com.tr')).toBe(true);
+    expect(isSuperAdminEmail('INFO@KUZEYDENIZINSAAT.COM.TR')).toBe(true);
     expect(isSuperAdminEmail('info@kuzeydeniziyapi.com.tr')).toBe(true);
     expect(isSuperAdminEmail('yetkisiz@example.com')).toBe(false);
   });

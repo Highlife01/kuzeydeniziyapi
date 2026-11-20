@@ -54,17 +54,17 @@ export const Navbar: React.FC<NavbarProps> = ({ isHome = false }) => {
               +90 533 677 91 09
             </a>
             <a
-              href="mailto:info@kuzeydeniziyapi.com.tr"
+              href="mailto:info@kuzeydenizinsaat.com.tr"
               className="flex items-center gap-2 hover:text-white transition whitespace-nowrap"
             >
               <i className="fa-solid fa-envelope text-[#0068C9]" />
-              info@kuzeydeniziyapi.com.tr
+              info@kuzeydenizinsaat.com.tr
             </a>
           </div>
           <div className="flex items-center gap-4 shrink-0">
             <span className="hidden xl:inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#042A53] border border-[#0068C9]/50 text-sky-200 font-bold whitespace-nowrap">
               <i className="fa-solid fa-shield-halved text-[#F7941D]" />
-              www.kuzeydeniziyapi.com.tr
+              www.kuzeydenizinsaat.com.tr
             </span>
             <span className="hidden xl:inline-block h-3.5 w-px bg-slate-700" />
             <span className="flex items-center gap-1.5 text-slate-300 whitespace-nowrap">

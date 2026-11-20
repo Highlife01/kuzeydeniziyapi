@@ -5389,9 +5389,9 @@ export default function Mailbox(props: Props) {
               </fieldset>
               {addPreset === 'custom' ? (
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 110px', gap: 8 }}>
-                  <label>IMAP Sunucusu<input value={customImapHost} onChange={(e) => setCustomImapHost(e.target.value)} placeholder="mail.kuzeydeniziyapi.com.tr" required disabled={busy} /></label>
+                  <label>IMAP Sunucusu<input value={customImapHost} onChange={(e) => setCustomImapHost(e.target.value)} placeholder="mail.kuzeydenizinsaat.com.tr" required disabled={busy} /></label>
                   <label>IMAP Port<input value={customImapPort} onChange={(e) => setCustomImapPort(e.target.value)} placeholder="993" required disabled={busy} /></label>
-                  <label>SMTP Sunucusu<input value={customSmtpHost} onChange={(e) => setCustomSmtpHost(e.target.value)} placeholder="mail.kuzeydeniziyapi.com.tr" required disabled={busy} /></label>
+                  <label>SMTP Sunucusu<input value={customSmtpHost} onChange={(e) => setCustomSmtpHost(e.target.value)} placeholder="mail.kuzeydenizinsaat.com.tr" required disabled={busy} /></label>
                   <label>SMTP Port<input value={customSmtpPort} onChange={(e) => setCustomSmtpPort(e.target.value)} placeholder="465" required disabled={busy} /></label>
                 </div>
               ) : null}

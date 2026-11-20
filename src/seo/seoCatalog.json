@@ -2,13 +2,13 @@
   "site": {
     "name": "Kuzey Deniz İnşaat",
     "legalName": "Kuzeydeniz İnşaat Taahhüt Sanayi ve Ticaret Limited Şirketi",
-    "tagline": "Güvenle Yükselen Modern Yapılar — Konut, Rezidans, Ticari Plaza & Taahhüt",
-    "domain": "www.kuzeydeniziyapi.com.tr",
-    "url": "https://www.kuzeydeniziyapi.com.tr",
+    "tagline": "Güvenle Yükselen Modern Yapılar — Kamu Müteahhitliği, Konut, Rezidans & Taahhüt",
+    "domain": "www.kuzeydenizinsaat.com.tr",
+    "url": "https://www.kuzeydenizinsaat.com.tr",
     "phoneDisplay": "+90 533 677 91 09",
     "phoneHref": "+905336779109",
     "whatsappUrl": "https://wa.me/905336779109",
-    "email": "info@kuzeydeniziyapi.com.tr",
+    "email": "info@kuzeydenizinsaat.com.tr",
     "address": "Güzelyalı Mah. 81178 Sk. Yalı 2 Apt No: 6 İç Kapı No: 02, Çukurova / ADANA",
     "streetAddress": "Güzelyalı Mah. 81178 Sk. Yalı 2 Apt No: 6 İç Kapı No: 02",
     "postalCode": "01170",
@@ -16,16 +16,34 @@
     "taxNumber": "6010491372",
     "foundingDate": "2017-01-04",
     "locale": "tr_TR",
-    "logo": "https://www.kuzeydeniziyapi.com.tr/images/logo.png",
-    "ogImage": "https://www.kuzeydeniziyapi.com.tr/images/logo.png",
+    "logo": "https://www.kuzeydenizinsaat.com.tr/images/logo.png",
+    "ogImage": "https://www.kuzeydenizinsaat.com.tr/images/logo.png",
     "ogImageAlt": "Kuzey Deniz İnşaat — Güvenle Yükselen Modern Yapılar",
     "hasMap": "https://maps.google.com/?q=G%C3%BCzelyal%C4%B1+Mah.+81178+Sk.+Yal%C4%B1+2+Apt+No+6+%C3%87ukurova+Adana",
+    "sameAs": [
+      "https://www.kuzeydenizinsaat.com.tr",
+      "https://kuzeydenizinsaat.com.tr"
+    ],
     "geo": {
       "region": "TR-01",
       "placename": "Çukurova, Adana, Türkiye",
       "lat": "37.0420",
       "lng": "35.2830",
-      "serviceAreas": ["Adana", "Çukurova", "Seyhan", "Yüreğir", "Sarıçam", "Mersin", "Tarsus"]
+      "serviceAreas": [
+        "Adana",
+        "Çukurova",
+        "Seyhan",
+        "Yüreğir",
+        "Ceyhan",
+        "Sarıçam",
+        "Kozan",
+        "Mersin",
+        "Tarsus",
+        "Osmaniye",
+        "Hatay",
+        "Gaziantep",
+        "Türkiye"
+      ]
     }
   },
   "routes": [
@@ -34,32 +52,35 @@
       "path": "/",
       "navLabel": "Ana Sayfa",
       "title": "Kuzey Deniz İnşaat | Güvenle Yükselen Modern Yapılar",
-      "description": "Kuzey Deniz İnşaat; yüksek deprem güvenliği, modern konut projeleri, ticari plazalar, inşaat taahhüt ve kentsel dönüşüm. Tel & WhatsApp: +90 533 677 91 09",
-      "keywords": "kuzey deniz inşaat, kuzeydeniz inşaat, kuzey deniz yapı, adana inşaat firmaları, modern konut projeleri, ticari plaza, kentsel dönüşüm, deprem güçlendirme",
-      "ogImage": "https://www.kuzeydeniziyapi.com.tr/images/logo.png",
+      "description": "Kuzey Deniz İnşaat; Adana, Çukurova, Yüreğir ve Ceyhan genelinde kamu müteahhitliği, deprem konutları, sağlık tesisi yapımı, modern konut projeleri ve ticari plazalar. Tel & WhatsApp: +90 533 677 91 09",
+      "keywords": "kuzey deniz inşaat, kuzeydenizinsaat, kamu müteahhitliği adana, deprem konutları, sağlık ocağı yapımı, adana inşaat firmaları, modern konut projeleri, ticari plaza, kentsel dönüşüm",
+      "ogImage": "https://www.kuzeydenizinsaat.com.tr/images/logo.png",
       "ogImageAlt": "Kuzey Deniz İnşaat — Güvenle Yükselen Modern Yapılar",
-      "heroBadge": "Kuzey Deniz İnşaat • www.kuzeydeniziyapi.com.tr",
+      "heroBadge": "Kuzey Deniz İnşaat • www.kuzeydenizinsaat.com.tr",
       "h1": "Geleceğin Yaşam Alanlarını Güvenle İnşa Ediyoruz",
-      "leadSummary": "Kuzey Deniz İnşaat mühendislik vizyonuyla; yüksek deprem güvenliği, modern mimari estetik ve yüksek yatırım değerini bir araya getiren prestijli konut, rezidans, ticari merkez ve taahhüt projeleri üretiyoruz.",
+      "leadSummary": "Kuzey Deniz İnşaat mühendislik vizyonuyla; kamu müteahhitliği, sağlık tesisleri, deprem konutları, yüksek deprem güvenlikli modern konutlar, rezidans ve ticari merkez projeleri üretiyoruz.",
       "changefreq": "weekly",
       "priority": "1.0",
       "images": [
         { "loc": "/images/logo.png", "title": "Kuzey Deniz İnşaat Logo", "caption": "Kuzey Deniz İnşaat kurumsal logosu" }
       ],
       "highlights": [
+        "Ceyhan Ulus Sağlık Ocağı, Yüreğir Diş Hastanesi Tretuar, Geçitli Sağlık Ocağı ve 52 Kızıldere Deprem Konutu eksiksiz teslim",
         "Kuzey Panorama Konutları ve Poyraz Marin Rezidans projeleri",
-        "TBDY 2018 Deprem Yönetmeliği uyumu, C35/C40 yüksek dayanımlı beton & fore kazık",
-        "Konut, Ticari Plaza, İnşaat Taahhüt ve Kentsel Dönüşüm çözümleri",
+        "TBDY 2018 Deprem Yönetmeliği & 4734 Sayılı Kamu İhale Kanunu uyumu",
         "Doğrudan İletişim & WhatsApp Hattı: +90 533 677 91 09"
       ],
       "sections": [
         {
           "heading": "Öne Çıkan Projelerimiz",
-          "summary": "Devam eden, tamamlanan ve lansmana hazırlanan seçkin projelerimiz.",
+          "summary": "Adana ve Çukurova genelinde eksiksiz teslim edilen kamu projelerimiz ile devam eden prestijli konut ve ticaret yatırımlarımız.",
           "bullets": [
+            "Ceyhan Ulus Sağlık Ocağı Yapımı (Ceyhan / ADANA — Teslim Edildi)",
+            "Yüreğir Diş Hastanesi Tretuar ve Onarım Yapımı (Yüreğir / ADANA — Teslim Edildi)",
+            "Yüreğir Geçitli Cumhuriyet Sağlık Ocağı Tadilatı (Yüreğir / ADANA — Teslim Edildi)",
+            "52 Adet Kızıldere Deprem Konutları İnşaatı (Kızıldere / ADANA — Teslim Edildi)",
             "Kuzey Panorama Konutları (Çukurova / ADANA)",
-            "Poyraz Marin Rezidans (Güzelyalı / ADANA)",
-            "Kuzey Yıldızı Ticaret Merkezi (Seyhan / ADANA)"
+            "Poyraz Marin Rezidans (Güzelyalı / ADANA)"
           ]
         }
       ]
@@ -69,19 +90,19 @@
       "path": "/kurumsal",
       "navLabel": "Kurumsal",
       "title": "Kurumsal Profil | Kuzey Deniz İnşaat",
-      "description": "Kuzey Deniz İnşaat kurumsal profili, vizyonu, misyonu, depreme dayanıklı mühendislik ve kalite standartları.",
-      "keywords": "kuzey deniz inşaat kurumsal, adana inşaat mühendislik şirketi, deprem güvenli yapı, radye temel",
-      "ogImage": "https://www.kuzeydeniziyapi.com.tr/images/logo.png",
+      "description": "Kuzey Deniz İnşaat kurumsal profili, vizyonu, misyonu, kamu müteahhitliği, depreme dayanıklı mühendislik ve kalite standartları.",
+      "keywords": "kuzey deniz inşaat kurumsal, kuzeydenizinsaat.com.tr, adana inşaat mühendislik şirketi, kamu taahhüt, deprem güvenli yapı, radye temel",
+      "ogImage": "https://www.kuzeydenizinsaat.com.tr/images/logo.png",
       "ogImageAlt": "Kuzey Deniz İnşaat kurumsal profil",
       "heroBadge": "Kurumsal Profil • Pusulamız Güven",
       "h1": "Kuzeydeniz İnşaat Taahhüt Sanayi ve Ticaret Limited Şirketi",
-      "leadSummary": "18 yılı aşkın sektör tecrübesiyle konut, ticari plaza, kentsel dönüşüm ve inşaat taahhüt alanlarında 42 prestijli projeyi zamanında teslim etmiş kurumsal mühendislik firması.",
+      "leadSummary": "2017 kuruluşlu kurumsal mühendislik ve taahhüt firması olarak kamu müteahhitliği, sağlık tesisleri, deprem konutları, konut, ticari plaza ve kentsel dönüşüm projelerini zamanında ve eksiksiz teslim ediyoruz.",
       "changefreq": "monthly",
       "priority": "0.85",
       "highlights": [
         "Resmi Unvan: Kuzeydeniz İnşaat Taahhüt Sanayi ve Ticaret Limited Şirketi",
         "Adres: Güzelyalı Mah. 81178 Sk. Yalı 2 Apt No: 6 İç Kapı No: 02, Çukurova / ADANA",
-        "Web: www.kuzeydeniziyapi.com.tr • E-Posta: info@kuzeydeniziyapi.com.tr",
+        "Web: www.kuzeydenizinsaat.com.tr • E-Posta: info@kuzeydenizinsaat.com.tr",
         "WhatsApp & Telefon: +90 533 677 91 09"
       ],
       "sections": [
@@ -103,7 +124,7 @@
       "title": "15 Mühendislik Disiplini & Kamu Müteahhitliği | Kuzey Deniz İnşaat",
       "description": "4734 Sayılı KİK kamu müteahhitliği, bina ve konut, endüstriyel fabrika, altyapı, enerji santralleri, saha betonu ve kentsel dönüşüm dahil 15 ana mühendislik hizmeti.",
       "keywords": "kamu müteahhitliği, 4734 kamu ihale taahhüt, adliye hastane okul inşaatı, deprem konutları müteahhit, konut rezidans, fabrika inşaatı, altyapı boru hatları, saha betonu, kentsel dönüşüm",
-      "ogImage": "https://www.kuzeydeniziyapi.com.tr/images/logo.png",
+      "ogImage": "https://www.kuzeydenizinsaat.com.tr/images/logo.png",
       "ogImageAlt": "Kuzey Deniz İnşaat 15 mühendislik disiplini ve kamu müteahhitliği",
       "heroBadge": "15 Mühendislik Disiplini & Kamu Müteahhitliği",
       "h1": "Anahtar Teslim İnşaat, Kamu Taahhüt & Altyapı Çözümleri",
@@ -144,31 +165,33 @@
       "path": "/projeler",
       "navLabel": "Projelerimiz",
       "title": "Projelerimiz | Kuzey Deniz İnşaat",
-      "description": "Kuzey Panorama Konutları, Poyraz Marin Rezidans, Kuzey Yıldızı Ticaret Merkezi, Mavi Ufuk Villaları ve diğer prestijli projelerimiz.",
-      "keywords": "kuzey panorama konutları, poyraz marin rezidans, kuzey yıldızı ticaret merkezi, mavi ufuk villaları, kuzey park evleri",
-      "ogImage": "https://www.kuzeydeniziyapi.com.tr/images/logo.png",
+      "description": "Ceyhan Ulus Sağlık Ocağı, Yüreğir Diş Hastanesi Tretuar, Geçitli Cumhuriyet Sağlık Ocağı, 52 Adet Kızıldere Deprem Konutları ve diğer prestijli projelerimiz.",
+      "keywords": "ceyhan ulus sağlık ocağı, yüreğir diş hastanesi tretuar, geçitli sağlık ocağı tadilatı, kızıldere deprem konutları, kuzey panorama konutları, poyraz marin rezidans",
+      "ogImage": "https://www.kuzeydenizinsaat.com.tr/images/logo.png",
       "ogImageAlt": "Kuzey Deniz İnşaat projeleri",
       "heroBadge": "Seçkin Portföyümüz • Devam Eden & Tamamlananlar",
       "h1": "İmzamızı Taşıyan Prestijli Projeler",
-      "leadSummary": "Devam eden, tamamlanan ve çok yakında lansmana çıkacak konut, rezidans ve ticari projelerimizi detaylı inceleyin.",
+      "leadSummary": "Adana, Ceyhan, Yüreğir ve Çukurova genelinde eksiksiz teslim edilen kamu binaları, sağlık tesisleri, deprem konutları ve devam eden yaşam projelerimizi detaylı inceleyin.",
       "changefreq": "weekly",
       "priority": "0.9",
       "highlights": [
-        "KD-01: Kuzey Panorama Konutları (Devam Ediyor)",
-        "KD-02: Poyraz Marin Rezidans (Satışları Devam Ediyor)",
-        "KD-03: Kuzey Yıldızı Ticaret Merkezi (Tamamlandı)"
+        "KD-01: Ceyhan Ulus Sağlık Ocağı Yapımı (Eksiksiz Teslim Edildi)",
+        "KD-02: Yüreğir Diş Hastanesi Tretuar ve Onarım Yapımı (Eksiksiz Teslim Edildi)",
+        "KD-03: Yüreğir Geçitli Cumhuriyet Sağlık Ocağı Tadilatı (Eksiksiz Teslim Edildi)",
+        "KD-04: 52 Adet Kızıldere Deprem Konutları İnşaatı (Eksiksiz Teslim Edildi)"
       ],
       "sections": [
         {
           "heading": "Proje Portföyümüz",
-          "summary": "Adana ve Çukurova genelinde hayata geçirdiğimiz konut, villa ve plaza projeleri.",
+          "summary": "Adana, Ceyhan, Yüreğir, Seyhan ve Çukurova genelinde hayata geçirdiğimiz kamu, sağlık, konut ve ticaret projeleri.",
           "bullets": [
+            "Ceyhan Ulus Sağlık Ocağı Yapımı",
+            "Yüreğir Diş Hastanesi Tretuar ve Onarım Yapımı",
+            "Yüreğir Geçitli Cumhuriyet Sağlık Ocağı Tadilatı",
+            "52 Adet Kızıldere Deprem Konutları İnşaatı",
             "Kuzey Panorama Konutları",
             "Poyraz Marin Rezidans",
-            "Kuzey Yıldızı Ticaret Merkezi",
-            "Mavi Ufuk Müstakil Villaları",
-            "Kuzey Park Evleri",
-            "Kuzey Vadi Karma Yaşam"
+            "Kuzey Yıldızı Ticaret Merkezi"
           ]
         }
       ]
@@ -178,19 +201,19 @@
       "path": "/iletisim",
       "navLabel": "İletişim",
       "title": "İletişim ve Teklif Talebi | Kuzey Deniz İnşaat",
-      "description": "Kuzey Deniz İnşaat iletişim ve teklif formu. Web: www.kuzeydeniziyapi.com.tr • E-Posta: info@kuzeydeniziyapi.com.tr • WhatsApp: +90 533 677 91 09",
-      "keywords": "kuzey deniz inşaat iletişim, teklif formu, arsa teklifi, kat karşılığı adana, +90 533 677 91 09",
-      "ogImage": "https://www.kuzeydeniziyapi.com.tr/images/logo.png",
+      "description": "Kuzey Deniz İnşaat iletişim ve teklif formu. Web: www.kuzeydenizinsaat.com.tr • E-Posta: info@kuzeydenizinsaat.com.tr • WhatsApp: +90 533 677 91 09",
+      "keywords": "kuzey deniz inşaat iletişim, kuzeydenizinsaat iletişim, teklif formu, arsa teklifi, kat karşılığı adana, +90 533 677 91 09",
+      "ogImage": "https://www.kuzeydenizinsaat.com.tr/images/logo.png",
       "ogImageAlt": "Kuzey Deniz İnşaat iletişim",
       "heroBadge": "İletişim & Satış Ofisi",
       "h1": "Yeni Yaşamınıza Birlikte Yön Verelim",
-      "leadSummary": "Projelerimiz hakkında detaylı katalog almak, ödeme planlarını öğrenmek veya kat karşılığı arsa ve taahhüt tekliflerinizi iletmek için +90 533 677 91 09 numaralı telefondan / WhatsApp'tan ulaşabilir veya iletişim formunu doldurabilirsiniz.",
+      "leadSummary": "Projelerimiz hakkında detaylı katalog almak, ödeme planlarını öğrenmek veya kat karşılığı arsa ve kamu/özel taahhüt tekliflerinizi iletmek için +90 533 677 91 09 numaralı telefondan / WhatsApp'tan ulaşabilir veya iletişim formunu doldurabilirsiniz.",
       "changefreq": "monthly",
       "priority": "0.85",
       "highlights": [
         "Telefon & WhatsApp: +90 533 677 91 09",
-        "Kurumsal E-Posta: info@kuzeydeniziyapi.com.tr",
-        "Web Sitesi: www.kuzeydeniziyapi.com.tr",
+        "Kurumsal E-Posta: info@kuzeydenizinsaat.com.tr",
+        "Web Sitesi: www.kuzeydenizinsaat.com.tr",
         "Adres: Güzelyalı Mah. 81178 Sk. Yalı 2 Apt No: 6 İç Kapı No: 02, Çukurova / ADANA"
       ],
       "sections": [
@@ -200,7 +223,7 @@
           "bullets": [
             "Çevrimiçi Teklif & Bilgi Formu",
             "WhatsApp Canlı Destek (+90 533 677 91 09)",
-            "Kurumsal E-Posta: info@kuzeydeniziyapi.com.tr"
+            "Kurumsal E-Posta: info@kuzeydenizinsaat.com.tr"
           ]
         }
       ]
@@ -214,7 +237,7 @@
       "title": "Ceyhan Ulus Sağlık Ocağı Yapımı | Kuzey Deniz İnşaat",
       "description": "Adana Ceyhan Ulus Mahallesi anahtar teslim sağlık ocağı ve aile sağlığı merkezi yapım işi. C30/C35 betonarme karkas, medikal altyapı ve çevre düzenlemesiyle eksiksiz teslim edildi.",
       "keywords": "ceyhan ulus sağlık ocağı, adana sağlık tesisi yapımı, kamu sağlık müteahhitliği, kuzey deniz inşaat referansları",
-      "ogImage": "https://www.kuzeydeniziyapi.com.tr/images/projects/ceyhan-ulus-saglik-ocagi/foto-1.jpg",
+      "ogImage": "https://www.kuzeydenizinsaat.com.tr/images/projects/ceyhan-ulus-saglik-ocagi/foto-1.jpg",
       "ogImageAlt": "Ceyhan Ulus Sağlık Ocağı Yapımı — Kuzey Deniz İnşaat",
       "image": "/images/projects/ceyhan-ulus-saglik-ocagi/foto-1.jpg",
       "heroBadge": "Kamu Sağlık Tesisi & Hizmet Binası",
@@ -240,7 +263,7 @@
       "title": "Yüreğir Diş Hastanesi Tretuar ve Onarım Yapımı | Kuzey Deniz İnşaat",
       "description": "Yüreğir Ağız ve Diş Sağlığı Hastanesi tretuar kaplamaları, ambulans yolu güçlendirmesi, drenaj hatları ve bina onarım işleri eksiksiz teslim edilmiştir.",
       "keywords": "yüreğir diş hastanesi tretuar, hastane çevre onarımı, adana tretuar müteahhit, kamu altyapı taahhüt",
-      "ogImage": "https://www.kuzeydeniziyapi.com.tr/images/projects/yuregir-dis-hastanesi-tretuar/foto-1.jpg",
+      "ogImage": "https://www.kuzeydenizinsaat.com.tr/images/projects/yuregir-dis-hastanesi-tretuar/foto-1.jpg",
       "ogImageAlt": "Yüreğir Diş Hastanesi Tretuar ve Onarım — Kuzey Deniz İnşaat",
       "image": "/images/projects/yuregir-dis-hastanesi-tretuar/foto-1.jpg",
       "heroBadge": "Hastane Altyapı, Tretuar & Onarım",
@@ -266,7 +289,7 @@
       "title": "Yüreğir Geçitli Cumhuriyet Sağlık Ocağı Tadilatı | Kuzey Deniz İnşaat",
       "description": "Adana Yüreğir Geçitli Cumhuriyet Mahallesi Aile Sağlığı Merkezi ve Sağlık Ocağı hizmet binasının iç/dış cephe, tesisat ve muayene odası modernizasyon işleri eksiksiz teslim edilmiştir.",
       "keywords": "geçitli sağlık ocağı tadilatı, yüreğir sağlık tesisi onarım, adana kamu tadilat müteahhiti, kuzey deniz inşaat referansları",
-      "ogImage": "https://www.kuzeydeniziyapi.com.tr/images/projects/gecitli-saglik-ocagi-tadilati/foto-1.jpg",
+      "ogImage": "https://www.kuzeydenizinsaat.com.tr/images/projects/gecitli-saglik-ocagi-tadilati/foto-1.jpg",
       "ogImageAlt": "Yüreğir Geçitli Sağlık Ocağı Tadilatı — Kuzey Deniz İnşaat",
       "image": "/images/projects/gecitli-saglik-ocagi-tadilati/foto-1.jpg",
       "heroBadge": "Kamu Sağlık Tesisi & Bina Tadilatı",
@@ -292,7 +315,7 @@
       "title": "52 Adet Kızıldere Deprem Konutları İnşaatı | Kuzey Deniz İnşaat",
       "description": "Adana Kızıldere mevkiinde afetzedeler için projelendirilen 52 adet deprem konutunun radye temel, C35 betonarme ve anahtar teslim ince işçilikle eksiksiz teslimi.",
       "keywords": "kızıldere deprem konutları, 52 adet deprem evi adana, afet konutu müteahhit, toki afad taahhüt",
-      "ogImage": "https://www.kuzeydeniziyapi.com.tr/images/projects/kizildere-deprem-konutlari/foto-1.jpg",
+      "ogImage": "https://www.kuzeydenizinsaat.com.tr/images/projects/kizildere-deprem-konutlari/foto-1.jpg",
       "ogImageAlt": "52 Adet Kızıldere Deprem Konutları — Kuzey Deniz İnşaat",
       "image": "/images/projects/kizildere-deprem-konutlari/foto-1.jpg",
       "heroBadge": "Afet ve Deprem Konutları",
@@ -313,11 +336,15 @@
   "faqs": [
     {
       "q": "Kuzey Deniz İnşaat hangi alanlarda hizmet vermektedir?",
-      "a": "Konut ve rezidans projeleri, ticari iş merkezleri ve plazalar, kamu ve özel sektör inşaat taahhüt işleri ile kentsel dönüşüm ve kat karşılığı arsa geliştirme alanlarında hizmet sunmaktadır."
+      "a": "4734 Sayılı Kamu İhale Kanunu kapsamındaki kamu müteahhitliği, sağlık tesisleri ve deprem konutları başta olmak üzere konut ve rezidanslar, endüstriyel fabrikalar, altyapı, saha betonu, enerji santralleri ve kentsel dönüşüm dahil 15 ana mühendislik disiplininde hizmet sunmaktadır."
+    },
+    {
+      "q": "Kuzey Deniz İnşaat hangi bölgelerde faaliyet göstermektedir?",
+      "a": "Adana (Çukurova, Seyhan, Yüreğir, Ceyhan, Sarıçam, Kozan) merkezli olmak üzere Mersin, Tarsus, Osmaniye, Hatay, Gaziantep ve Türkiye genelinde kamu ve özel sektör projeleri yürütmektedir."
     },
     {
       "q": "Kuzey Deniz İnşaat ile nasıl iletişime geçebiliriz?",
-      "a": "+90 533 677 91 09 numaralı telefon ve WhatsApp hattımızdan, info@kuzeydeniziyapi.com.tr e-posta adresimizden veya www.kuzeydeniziyapi.com.tr/iletisim sayfasındaki çevrimiçi formdan doğrudan ulaşabilirsiniz."
+      "a": "+90 533 677 91 09 numaralı telefon ve WhatsApp hattımızdan, info@kuzeydenizinsaat.com.tr e-posta adresimizden veya www.kuzeydenizinsaat.com.tr/iletisim sayfasındaki çevrimiçi formdan doğrudan ulaşabilirsiniz."
     }
   ]
 }

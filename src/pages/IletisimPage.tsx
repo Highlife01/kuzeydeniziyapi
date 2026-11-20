@@ -53,15 +53,15 @@ export const IletisimPage: React.FC = () => {
           </a>
 
           <a
-            href="mailto:info@kuzeydeniziyapi.com.tr"
+            href="mailto:info@kuzeydenizinsaat.com.tr"
             className="p-7 rounded-3xl bg-slate-50 border border-slate-200 hover:border-[#F25C05] transition space-y-3 shadow-sm"
           >
             <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#F7941D] to-[#F25C05] text-white flex items-center justify-center text-xl shadow-sm">
               <i className="fa-solid fa-envelope" />
             </div>
             <h3 className="text-lg font-black text-[#042A53]">Kurumsal E-Posta</h3>
-            <p className="text-sm font-bold text-[#042A53]">info@kuzeydeniziyapi.com.tr</p>
-            <p className="text-xs text-slate-500">www.kuzeydeniziyapi.com.tr</p>
+            <p className="text-sm font-bold text-[#042A53]">info@kuzeydenizinsaat.com.tr</p>
+            <p className="text-xs text-slate-500">www.kuzeydenizinsaat.com.tr</p>
           </a>
         </div>
       </section>

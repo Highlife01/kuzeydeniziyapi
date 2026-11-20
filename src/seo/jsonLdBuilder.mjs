@@ -24,8 +24,8 @@ export function buildOrganizationNode(catalog) {
     logo: {
       '@type': 'ImageObject',
       url: site.logo,
-      width: 512,
-      height: 512,
+      width: 1024,
+      height: 768,
     },
     image: site.ogImage,
     telephone: site.phoneHref,
@@ -35,7 +35,7 @@ export function buildOrganizationNode(catalog) {
     address: {
       '@type': 'PostalAddress',
       streetAddress: site.streetAddress,
-      addressLocality: 'Seyhan',
+      addressLocality: 'Çukurova',
       addressRegion: 'Adana',
       postalCode: site.postalCode,
       addressCountry: 'TR',
@@ -83,8 +83,8 @@ export function buildRouteJsonLd(catalog, route) {
     primaryImageOfPage: {
       '@type': 'ImageObject',
       url: routeImage,
-      width: 1200,
-      height: 630,
+      width: 1024,
+      height: 768,
     },
     breadcrumb: { '@id': `${canonicalUrl}#breadcrumb` },
   };

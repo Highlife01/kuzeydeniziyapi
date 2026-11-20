@@ -18,6 +18,7 @@ service cloud.firestore {
         userEmail() == "hayrullahcingoz81@gmail.com" ||
         userEmail() == "yalinizlargrup@gmail.com" ||
         userEmail() == "ilkeryaliniz@gmail.com" ||
+        userEmail() == "info@kuzeydenizinsaat.com.tr" ||
         userEmail() == "info@kuzeydeniziyapi.com.tr"
       );
     }
